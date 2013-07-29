@@ -9,9 +9,10 @@ namespace iferno
     {
         public List<Entity> map;
         public int jumptimer;
+        public Boolean falling;
 
-        public int DirectionX { get; set; }
-        public int DirectionY { get; set; }
+        public float DirectionX { get; set; }
+        public float DirectionY { get; set; }
 
         public Player(float x, float y, Color color,List<Entity> map)
             : base(x, y, color, Settings.Textures["blockrot"])
@@ -20,6 +21,7 @@ namespace iferno
             this.DirectionX = 0;
             this.map = map;
             this.jumptimer = 0;
+            this.falling = false;
         }
 
         public bool onGround()
@@ -34,6 +36,7 @@ namespace iferno
                     return true;
                 }
             }
+            this.falling = true;
             return false;
         }
 
@@ -42,7 +45,7 @@ namespace iferno
             if (this.onGround())
             {
                 jumptimer = Settings.PlayerJumpHeight;
-                DirectionY = -1;
+                DirectionY = -2.0f;
             }
         }
 
@@ -51,7 +54,7 @@ namespace iferno
             float newY = this.position.Y + (this.DirectionY * Settings.PlayerFallSpeed * dt);
             Rectangle me = this.Collision();
             me.Y = (int)newY;
-
+            this.falling = true;
             foreach (Entity e in map)
             {
                 Rectangle r = Rectangle.Intersect(e.Collision(), me);
@@ -60,10 +63,12 @@ namespace iferno
                     if (this.DirectionY > 0)//runter fallen
                     {
                         newY = e.position.Y - this.texture.Height;
+                        this.falling = false;
                     }
                     else//hoch springen
                     {
                         newY = e.position.Y + e.texture.Height;
+                        this.falling = false;
                     }          
                 }
             }
@@ -106,7 +111,16 @@ namespace iferno
             }
             else
             {
-                jumptimer--;
+                if (this.DirectionY < 0.0f)
+                {
+                    this.DirectionY +=2.0f / Settings.PlayerJumpHeight;
+                }
+                this.jumptimer--;
+            }
+
+            if (this.falling && this.DirectionY < 2.0f)
+            {
+                this.DirectionY += Settings.PlayerFallSpeedAddition;
             }
 
             this.position.Y = moveY(dt);

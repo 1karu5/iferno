@@ -14,7 +14,9 @@ namespace iferno
         //Player werte
         public const int PlayerSpeed = 200;
         public const int PlayerFallSpeed = 200;
-        public const int PlayerJumpHeight = 30;
+        public const float PlayerFallSpeedAddition = 0.05f;
+        public const int PlayerJumpHeight = 100;
+
 
         //zufalls zahlen
         public static Random Rnd = new Random();

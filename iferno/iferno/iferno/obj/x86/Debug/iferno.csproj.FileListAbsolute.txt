@@ -1,0 +1,9 @@
+D:\Bibiotheken\Dokumente\Visual Studio 2010\iferno\iferno\iferno\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Bibiotheken\Dokumente\Visual Studio 2010\iferno\iferno\iferno\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Bibiotheken\Dokumente\Visual Studio 2010\iferno\iferno\iferno\bin\x86\Debug\iferno.exe
+D:\Bibiotheken\Dokumente\Visual Studio 2010\iferno\iferno\iferno\bin\x86\Debug\iferno.pdb
+D:\Bibiotheken\Dokumente\Visual Studio 2010\iferno\iferno\iferno\obj\x86\Debug\iferno.exe
+D:\Bibiotheken\Dokumente\Visual Studio 2010\iferno\iferno\iferno\obj\x86\Debug\iferno.pdb
+D:\Bibiotheken\Dokumente\Visual Studio 2010\iferno\iferno\iferno\bin\x86\Debug\Content\blockgelb.xnb
+D:\Bibiotheken\Dokumente\Visual Studio 2010\iferno\iferno\iferno\bin\x86\Debug\Content\blockgruen.xnb
+D:\Bibiotheken\Dokumente\Visual Studio 2010\iferno\iferno\iferno\bin\x86\Debug\Content\blockrot.xnb

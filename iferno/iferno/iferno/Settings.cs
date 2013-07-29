@@ -7,13 +7,16 @@ namespace iferno
 {
     public static class Settings
     {
+        //fenster größe
         public const int Width = 1024;
         public const int Height = 768;
 
+        //Player werte
         public const int PlayerSpeed = 200;
         public const int PlayerFallSpeed = 200;
         public const int PlayerJumpHeight = 30;
 
+        //zufalls zahlen
         public static Random Rnd = new Random();
 
         public static Dictionary<string, Texture2D> Textures =

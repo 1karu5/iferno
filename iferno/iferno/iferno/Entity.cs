@@ -6,13 +6,11 @@ namespace iferno
 {
     public class Entity
     {
-        private Texture2D texture;
-        private Vector2 position;
-        private Color color;
+        public Texture2D texture;
+        public Vector2 position;
+        public Color color;
 
-        public int Directionx { get; set;}
-        public int Directiony { get; set; }
-
+        
         public Entity(float x, float y,Color color,Texture2D t)
         {
             this.color = color;
@@ -21,10 +19,6 @@ namespace iferno
 
             //Set starting position
             this.position = new Vector2(x, y);
-
-            //No initial movement
-            this.Directionx = 0;
-            this.Directionx = 0;
         }
 
         public Rectangle Collision()

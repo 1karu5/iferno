@@ -11,6 +11,8 @@ namespace iferno
         public const int Height = 768;
 
         public const int PlayerSpeed = 200;
+        public const int PlayerFallSpeed = 200;
+        public const int PlayerJumpHeight = 30;
 
         public static Random Rnd = new Random();
 

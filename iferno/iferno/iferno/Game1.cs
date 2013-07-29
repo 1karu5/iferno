@@ -44,13 +44,15 @@ namespace iferno
 
             //Initialize world
             
-            player = new Player(50, 400, Color.White);
+           
             map = new List<Entity>();
+            player = new Player(50, 400, Color.White,map);
 
             for (int i = 0; i < 16; i++)
             {
                 map.Add(new Entity(i * 64, 11 * 64, Color.White, Settings.Textures["blockgruen"]));
             }
+            map.Add(new Entity(6 * 64, 10 * 64, Color.White, Settings.Textures["blockgruen"]));
         }
 
         protected override void Update(GameTime gameTime)
@@ -58,11 +60,31 @@ namespace iferno
             //Calculate deltatime
             float dt = gameTime.ElapsedGameTime.Milliseconds / 1000.0f;
 
-           
+            //Get keystate
+            KeyboardState keyState = Keyboard.GetState();
+
+            //Check input
+            if (keyState.IsKeyDown(Keys.Right))
+            {
+                player.DirectionX = 1;
+            }
+            else if (keyState.IsKeyDown(Keys.Left))
+            {
+                player.DirectionX = -1;
+            }
+            else
+            {
+                player.DirectionX = 0; 
+            }
+
+            if (keyState.IsKeyDown(Keys.Space))
+            {
+                player.jump();
+            }
 
             //Update world
             player.Update(dt);
-            //player2.Update(dt);
+
             foreach (Entity e in map)
             {
                 e.Update(dt);

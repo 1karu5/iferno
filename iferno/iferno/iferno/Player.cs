@@ -22,9 +22,24 @@ namespace iferno
             this.jumptimer = 0;
         }
 
+        public bool onGround()
+        {
+            Rectangle me = this.Collision();
+            me.Y = me.Y + 1;    //eins runter, falls kollision sind wir auf dem boden
+            foreach (Entity e in map)
+            {
+                Rectangle r = Rectangle.Intersect(e.Collision(), me);
+                if (!r.IsEmpty)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public void jump()
         {
-            if (jumptimer == 0)
+            if (this.onGround())
             {
                 jumptimer = Settings.PlayerJumpHeight;
                 DirectionY = -1;

@@ -35,6 +35,8 @@ namespace iferno
         {
             health += hp;
             healthbar.changeTo(health);
+            if (health <= 0)
+                ;//Todo game over
         }
 
         public void nextLevel()

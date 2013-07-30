@@ -59,7 +59,12 @@ namespace iferno
         public virtual bool CheckCollisionWithPlayer(Rectangle r)
         {
             Rectangle rec = Rectangle.Intersect(this.Collision(), r);
-            return !rec.IsEmpty;
+            if (!rec.IsEmpty)
+            {
+                isDestroying = true;
+                return true;
+            }
+            return false;
         }
 
         private bool CheckCollisionWithMap()

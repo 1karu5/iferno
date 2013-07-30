@@ -30,7 +30,7 @@ namespace iferno
             return false;
         }
 
-        public override bool CheckCollisionWithPlayer(Rectangle r)
+        public override bool CheckCollisionWith(Rectangle r)
         {
             Rectangle rec = Rectangle.Intersect(this.Collision(), r);
 

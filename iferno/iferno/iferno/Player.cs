@@ -79,7 +79,7 @@ namespace iferno
 
             foreach (Block e in map.getVisibleBlocks())
             {
-                if (e.CheckCollisionWithPlayer(me)) //neue koordinate ist nicht richtig, kollision mit e!
+                if (e.CheckCollisionWith(me)) //neue koordinate ist nicht richtig, kollision mit e!
                 {
                     if (e.OnCollisionWithPlayer(this))
                     {
@@ -106,7 +106,7 @@ namespace iferno
 
             foreach (Block e in map.getVisibleBlocks())
             {
-                if (e.CheckCollisionWithPlayer(me))  //neue koordinate ist nicht richtig, kollision mit e!
+                if (e.CheckCollisionWith(me))  //neue koordinate ist nicht richtig, kollision mit e!
                 {
                     if (e.OnCollisionWithPlayer(this))
                     {

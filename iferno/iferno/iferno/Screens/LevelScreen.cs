@@ -63,15 +63,14 @@ namespace iferno
             }
 
             //Update world
+            map.Update(dt);
             player.Update(dt);
-            map.Update(dt);            
         }
 
         public override void Draw(GameTime gameTime)
         {
-            player.Draw(spriteBatch);
-            //player2.Draw(spriteBatch);
-            map.Draw(spriteBatch);           
+            map.Draw(spriteBatch); 
+            player.Draw(spriteBatch);           
         }
     }
 }

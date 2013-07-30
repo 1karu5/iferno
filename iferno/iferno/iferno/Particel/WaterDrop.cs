@@ -66,7 +66,7 @@ namespace iferno
         {
             foreach (Block b in map.getVisibleBlocks())
             {
-                if (!(b is BlockWasserTropfenSpawner) && b.CheckCollisionWithPlayer(Collision()))
+                if (!(b is BlockWasserTropfenSpawner) && b.CheckCollisionWith(Collision()))
                 {
                     return true;
                 }

@@ -44,7 +44,7 @@ namespace iferno
          * */
         public abstract bool OnCollisionWithPlayer(Player p);
 
-        public virtual bool CheckCollisionWithPlayer(Rectangle r)
+        public virtual bool CheckCollisionWith(Rectangle r)
         {
             Rectangle rec = Rectangle.Intersect(this.Collision(), r);
             

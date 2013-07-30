@@ -71,6 +71,10 @@ namespace iferno
                     {
                         newMap.Add(new BlockBlack(map, x, y));
                     }
+                    if (line[x] == 'M')
+                    {
+                        newMap.Add(new BlockKaefer(map, x, y));
+                    }
                 }
                 y++;
             }

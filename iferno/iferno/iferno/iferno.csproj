@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Block.cs" />
+    <Compile Include="Map_level1.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="IntroScreen.cs" />
     <Compile Include="LevelScreen.cs" />

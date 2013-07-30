@@ -26,17 +26,11 @@ namespace iferno
 
         public override void LoadContent()
         {
-            //Load assets
-            Settings.Textures.Add("blockgruen", Content.Load<Texture2D>("blockgruen"));
-            Settings.Textures.Add("blockrot", Content.Load<Texture2D>("blockrot"));
+            //Spielfiguer laden
+            Settings.Textures.Add("iferno", Content.Load<Texture2D>("iferno"));
 
-            //Initialize world
-
-
-            map = new Map();
+            map = new Map_level1(this);
             player = new Player(250, 400, Color.White, map);
-
-            
         }
 
         public override void Update(GameTime gameTime)

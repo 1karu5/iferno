@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 Content\blockgelb.xnb
 Content\blockgruen.xnb
 Content\blockrot.xnb
 Content\textGameBeenden.xnb
 Content\textGameStarten.xnb
+=======
+Content\blockgelb.xnb
+Content\blockgruen.xnb
+Content\textGameBeenden.xnb
+Content\textGameStarten.xnb
+Content\block-wasser.xnb
+Content\block-feuer.xnb
+Content\block-holz-baum.xnb
+Content\iferno.xnb
+>>>>>>> map vererbung

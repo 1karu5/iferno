@@ -19,7 +19,7 @@ namespace iferno
         public float DirectionY { get; set; }
 
         public Player(float x, float y, Color color,Map map)
-            : base(x, y, color, Settings.Textures["blockrot"])
+            : base(x, y, color, Settings.Textures["iferno"])
         {
             this.DirectionY = 1;
             this.DirectionX = 0;
@@ -27,7 +27,7 @@ namespace iferno
             this.width = this.texture.Width / frames;
         }
 
-        public int Width()
+        public override float Width()
         {
             return 128;
         }
@@ -104,12 +104,8 @@ namespace iferno
             return newX;
         }
 
-        public Rectangle Collision()
-        {
-            return new Rectangle((int)this.X(), (int)this.Y(), (int)this.Width(), (int)this.Height());
-        }
-
-        public void Update(float dt)
+       
+        public override void Update(float dt)
         {
             base.Update(dt);
 
@@ -136,10 +132,10 @@ namespace iferno
             //this.position.X = newX;
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(this.texture, position,
-                    new Rectangle(frameCounter * Width(), 0, (int)Width(), (int)Height()),
+                    new Rectangle((int)(frameCounter * Width()), 0, (int)Width(), (int)Height()),
                     Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.0f); //null->>>rotation,scale
         }
     }

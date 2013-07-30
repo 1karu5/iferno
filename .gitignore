@@ -112,12 +112,12 @@ UpgradeLog*.XML
 iferno/iferno/iferno/obj/x86/Debug/*
 iferno/iferno/iferno/iferno.csproj.user
 
-iferno/iferno/iferno/bin/
-iferno/iferno/iferno/obj/
-iferno/iferno/ifernoContent/bin/
-iferno/iferno/ifernoContent/obj/
-iferno/iferno/JigLibX/bin/
-iferno/iferno/JigLibX/obj/
+iferno/iferno/iferno/bin/*
+iferno/iferno/iferno/obj/*
+iferno/iferno/ifernoContent/bin/*
+iferno/iferno/ifernoContent/obj/*
+iferno/iferno/JigLibX/bin/*
+iferno/iferno/JigLibX/obj/*
 
 *.exe
 *.cachefile

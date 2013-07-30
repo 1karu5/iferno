@@ -1,3 +1,0 @@
-D:\Bibiotheken\Dokumente\Visual Studio 2010\iferno\iferno\ifernoContent\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Heike\Documents\GitHub\iferno\iferno\iferno\ifernoContent\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\gamer\Documents\GitHub\iferno\iferno\iferno\ifernoContent\obj\x86\Debug\ResolveAssemblyReference.cache

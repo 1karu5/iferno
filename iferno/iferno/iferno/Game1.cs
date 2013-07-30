@@ -13,10 +13,12 @@ namespace iferno
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        StartScreen screenStart;
 
-        Player player;
-        
-        List<Entity> map;
+        Screen aktuellerScreen;
+        Screen level1;
+        Screen menu;
+
 
         public Game1()
         {
@@ -33,70 +35,38 @@ namespace iferno
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            this.menu = new StartScreen(this, spriteBatch);
+            this.level1 = new LevelScreen(this, spriteBatch);
+
+            this.switchScreen("menu");
+
             base.Initialize();
+        }
+
+        public void switchScreen(string screen)
+        {
+            if (screen == "menu")
+            {
+                aktuellerScreen = menu;
+            }else if(screen == "level1"){
+                aktuellerScreen = level1;
+            }
+            
         }
 
         protected override void LoadContent()
         {
-            //Load assets
-            Settings.Textures.Add("blockgruen", Content.Load<Texture2D>("blockgruen"));
-            Settings.Textures.Add("blockrot", Content.Load<Texture2D>("blockrot"));
-
-            //Initialize world
-            
-           
-            map = new List<Entity>();
-            player = new Player(50, 400, Color.White,map);
-
-            for (int i = 0; i < 16; i++)
-            {
-                map.Add(new Entity(i * 64, 11 * 64, Color.White, Settings.Textures["blockgruen"]));
-            }
-            map.Add(new Entity(6 * 64, 10 * 64, Color.White, Settings.Textures["blockgruen"]));
-            map.Add(new Entity(6 * 64, 9 * 64, Color.White, Settings.Textures["blockgruen"]));
-            map.Add(new Entity(6 * 64, 8 * 64, Color.White, Settings.Textures["blockgruen"]));
-
-            map.Add(new Entity(11 * 64, 10 * 64, Color.White, Settings.Textures["blockgruen"]));
-            map.Add(new Entity(11 * 64, 9 * 64, Color.White, Settings.Textures["blockgruen"]));
-            map.Add(new Entity(11 * 64, 8 * 64, Color.White, Settings.Textures["blockgruen"]));
+            aktuellerScreen.LoadContent();  
         }
 
         protected override void Update(GameTime gameTime)
         {
-            //Calculate deltatime
-            float dt = gameTime.ElapsedGameTime.Milliseconds / 1000.0f;
 
-            //Get keystate
-            KeyboardState keyState = Keyboard.GetState();
 
-            //Check input
-            if (keyState.IsKeyDown(Keys.Right))
-            {
-                player.DirectionX = 1;
-            }
-            else if (keyState.IsKeyDown(Keys.Left))
-            {
-                player.DirectionX = -1;
-            }
-            else
-            {
-                player.DirectionX = 0; 
-            }
-
-            if (keyState.IsKeyDown(Keys.Space))
-            {
-                player.jump();
-            }
-
-            //Update world
-            player.Update(dt);
-
-            foreach (Entity e in map)
-            {
-                e.Update(dt);
-            }
+            aktuellerScreen.Update(gameTime);
 
             base.Update(gameTime);
+            
         }
 
         protected override void Draw(GameTime gameTime)
@@ -107,6 +77,9 @@ namespace iferno
             //Draw world
             spriteBatch.Begin();
 
+<<<<<<< HEAD
+            aktuellerScreen.Draw(gameTime);
+=======
             player.Draw(spriteBatch);
             //player2.Draw(spriteBatch);
 
@@ -114,6 +87,7 @@ namespace iferno
             {
                e.Draw(spriteBatch);
             }
+>>>>>>> 79cd36fedec266efd9b66204ae21e8e9b395073d
 
             spriteBatch.End();
 

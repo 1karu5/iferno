@@ -109,8 +109,10 @@
   <ItemGroup>
     <Compile Include="Block.cs" />
     <Compile Include="Entity.cs" />
+    <Compile Include="IntroScreen.cs" />
     <Compile Include="LevelScreen.cs" />
     <Compile Include="Map.cs" />
+    <Compile Include="MenuScreen.cs" />
     <Compile Include="Screen.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Player.cs" />

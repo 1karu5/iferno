@@ -43,7 +43,7 @@ namespace iferno
             return this.position.Y;
         }
 
-        public Rectangle Collision()
+        public virtual Rectangle Collision()
         {
             return new Rectangle((int)this.X(),(int)this.Y(),(int)this.Width(),(int)this.Height());
         }

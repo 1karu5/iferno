@@ -33,7 +33,10 @@ namespace iferno
 
         public void changeHP(int hp)
         {
-            health += hp;
+            if (health<=100)
+                health += hp;
+            if (health > 100)
+                health = 100;
             healthbar.changeTo(health);
             if (health <= 0)
                 ;//Todo game over
@@ -97,6 +100,12 @@ namespace iferno
                 }
             }
             return newY;    //neue Y koordinate
+        }
+
+        //Todo: beine
+        public override Rectangle Collision()
+        {
+            return new Rectangle((int)(this.X()/*+linkerBeinanfang*/), (int)this.Y(), (int)(this.Width()/*-Beinabstand*/), (int)this.Height());
         }
 
         private float moveX(float dt)

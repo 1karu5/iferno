@@ -16,8 +16,11 @@ namespace iferno
         StartScreen screenStart;
 
         Screen aktuellerScreen;
-        Screen level1;
-        Screen menu;
+        Screen start;
+        Screen level;
+        //Screen menu;
+        //Screen gameover
+        //Screen intro
 
 
         public Game1()
@@ -35,24 +38,43 @@ namespace iferno
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            this.menu = new StartScreen(this, spriteBatch);
-            this.level1 = new LevelScreen(this, spriteBatch);
-            //this.level2 = 
+            this.start = new StartScreen(this, spriteBatch);
+            this.level = new LevelScreen(this, spriteBatch);
+            //this.gameover= new GameoverScreen(this, spriteBatch);
+            //this.menu = new MenuScreen(this, spriteBatch);
+            //this.intro = new IntroScreen(this, spriteBatch);
 
-            this.switchScreen("level1");
+            this.switchScreen("start");
 
             base.Initialize();
         }
 
+        //auswahl welches screen angezeigt wird.
         public void switchScreen(string screen)
         {
-            if (screen == "menu")
+            switch (screen)
             {
-                aktuellerScreen = menu;
-            }else if(screen == "level1"){
-                aktuellerScreen = level1;
+                case "start":
+                    aktuellerScreen = start;
+                    break;
+                case "level":
+                    aktuellerScreen = level;
+                    break;
+                /*
+                case "menu":
+                    aktuellerScreen = menu;
+                    break;
+                case "gameover":
+                    aktuellerScreen = gameover;
+                    break;
+                case "intro":
+                    aktuellerScreen = intro;
+                    break;
+                 */
+                default:
+                    aktuellerScreen = level;
+                    break;
             }
-            
         }
 
         protected override void LoadContent()
@@ -62,12 +84,8 @@ namespace iferno
 
         protected override void Update(GameTime gameTime)
         {
-
-
             aktuellerScreen.Update(gameTime);
-
-            base.Update(gameTime);
-            
+            base.Update(gameTime);         
         }
 
         protected override void Draw(GameTime gameTime)
@@ -78,9 +96,7 @@ namespace iferno
             //Draw world
             spriteBatch.Begin();
 
-
             aktuellerScreen.Draw(gameTime);
-
 
             spriteBatch.End();
 

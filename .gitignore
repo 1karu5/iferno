@@ -109,5 +109,5 @@ UpgradeLog*.XML
 
 #debug
 
-/iferno/iferno/iferno/obj/x86/Debug/*
-/iferno/iferno/iferno/iferno.csproj.user
+iferno/iferno/iferno/obj/x86/Debug/*
+iferno/iferno/iferno/iferno.csproj.user

@@ -13,7 +13,6 @@ namespace iferno
 {
     public class KarteScreen : Screen
     {
-        String karte;
 
         public KarteScreen(Game1 game, SpriteBatch spriteBatch)
             : base(game, spriteBatch)
@@ -31,8 +30,6 @@ namespace iferno
 
         public override void Update(GameTime gameTime)
         {
-           karte = "karte" + Settings.mapNumber;
-
             KeyboardState menuState = Keyboard.GetState();
             if (menuState.IsKeyDown(Keys.Enter))
             {
@@ -42,7 +39,7 @@ namespace iferno
 
         public override void Draw(GameTime gameTime)
         {
-            spriteBatch.Draw(Settings.Textures[karte], new Vector2(0, 0), Color.White );
+            spriteBatch.Draw(Settings.Textures["karte" + Settings.mapNumber], new Vector2(0, 0), Color.White);
         }
     }
 }

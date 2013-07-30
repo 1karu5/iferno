@@ -29,7 +29,7 @@ namespace iferno
 
         public void move(float px)
         {
-            this.position.X += px;
+            this.position.X += (int)px;
         }
 
         public void Update(float dt)

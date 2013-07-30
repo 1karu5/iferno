@@ -114,6 +114,9 @@
     <Compile Include="Blocks\BlockKiste.cs" />
     <Compile Include="Blocks\BlockHolz.cs" />
     <Compile Include="Blocks\BlockLevelEnde.cs" />
+    <Compile Include="Blocks\BlockStein.cs" />
+    <Compile Include="Blocks\BlockBlatt.cs" />
+    <Compile Include="Blocks\BlockWeise.cs" />
     <Compile Include="Screens\GameoverScreen.cs" />
     <Compile Include="Screens\KarteScreen.cs" />
     <Compile Include="MapLoader.cs" />

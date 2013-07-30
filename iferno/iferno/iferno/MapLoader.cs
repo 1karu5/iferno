@@ -51,6 +51,18 @@ namespace iferno
                     {
                         newMap.Add(new BlockLevelEnde(map, x, y));
                     }
+                    if (line[x] == 'I')
+                    {
+                        newMap.Add(new BlockWiese(map, x, y));
+                    }
+                    if (line[x] == 'G')
+                    {
+                        newMap.Add(new BlockStein(map, x, y));
+                    }
+                    if (line[x] == 'L')
+                    {
+                        newMap.Add(new BlockBlatt(map, x, y));
+                    }
                 }
                 y++;
             }

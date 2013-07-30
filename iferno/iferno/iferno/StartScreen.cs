@@ -45,7 +45,7 @@ namespace iferno
             {
                 if (indexPos == 0)
                 {
-                    game.switchScreen("level1");
+                    game.switchScreen("level");
                 }
 
                 else if (indexPos == 1)

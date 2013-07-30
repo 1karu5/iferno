@@ -44,7 +44,7 @@ namespace iferno
             //this.menu = new MenuScreen(this, spriteBatch);
             //this.intro = new IntroScreen(this, spriteBatch);
 
-            this.switchScreen("level");
+            this.switchScreen("start");
 
             base.Initialize();
         }
@@ -79,7 +79,8 @@ namespace iferno
 
         protected override void LoadContent()
         {
-            aktuellerScreen.LoadContent();  
+            start.LoadContent();
+            level.LoadContent();
         }
 
         protected override void Update(GameTime gameTime)

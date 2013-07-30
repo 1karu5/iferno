@@ -8,6 +8,12 @@ namespace iferno
     public class Player : Entity
     {
         public List<Entity> map;
+        const int frames = 2;
+        const float delay = 0.7f;
+
+        int width;
+        int frameCounter = 0;
+        float time = 0;
 
         public float DirectionX { get; set; }
         public float DirectionY { get; set; }
@@ -18,6 +24,12 @@ namespace iferno
             this.DirectionY = 1;
             this.DirectionX = 0;
             this.map = map;
+            this.width = this.texture.Width / frames;
+        }
+
+        public int Width()
+        {
+            return 128;
         }
 
         public bool onGround()
@@ -92,9 +104,26 @@ namespace iferno
             return newX;
         }
 
+        public Rectangle Collision()
+        {
+            return new Rectangle((int)this.X(), (int)this.Y(), this.Width(), this.Height());
+        }
+
         public void Update(float dt)
         {
             base.Update(dt);
+
+            //Einzelne Frames abarbeiten
+            time += dt;
+            if (time > delay)
+            {
+                time -= delay;
+                if (frameCounter < frames - 1)
+                    frameCounter++;
+                else
+                    frameCounter = 0;
+            }
+
 
             if (this.DirectionY < Settings.PlayerMaxYDirection) //fall/sprung geschwindigkeit immer erhören/verringen
             {   //todo, auf 1 rücksetzen falls man auf dem boden steht
@@ -107,7 +136,9 @@ namespace iferno
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            base.Draw(spriteBatch);
+            spriteBatch.Draw(this.texture, position,
+                    new Rectangle(frameCounter * Width(), 0, Width(), Height()),
+                    Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.0f); //null->>>rotation,scale
         }
     }
 }

@@ -13,7 +13,6 @@ namespace iferno
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        StartScreen screenStart;
 
         Screen aktuellerScreen;
         Screen start;

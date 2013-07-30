@@ -21,22 +21,22 @@ namespace iferno
             this.position = new Vector2(x, y);
         }
 
-        public float Width()
+        public virtual float Width()
         {
             return this.texture.Width;
         }
 
-        public float Height()
+        public virtual float Height()
         {
             return this.texture.Height;
         }
 
-        public float X()
+        public virtual float X()
         {
             return this.position.X;
         }
 
-        public float Y()
+        public virtual float Y()
         {
             return this.position.Y;
         }
@@ -46,12 +46,12 @@ namespace iferno
             return new Rectangle((int)this.X(),(int)this.Y(),(int)this.Width(),(int)this.Height());
         }
 
-        public void Update(float dt)
+        public virtual void Update(float dt)
         {
            
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public virtual void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(texture, position, this.color);
         }

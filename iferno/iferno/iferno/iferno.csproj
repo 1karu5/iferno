@@ -117,6 +117,8 @@
     <Compile Include="Blocks\BlockStein.cs" />
     <Compile Include="Blocks\BlockBlatt.cs" />
     <Compile Include="Blocks\BlockWeise.cs" />
+    <Compile Include="Blocks\BlockWasserTropfenSpawner.cs" />
+    <Compile Include="Particel\WaterDrop.cs" />
     <Compile Include="Screens\GameoverScreen.cs" />
     <Compile Include="Screens\KarteScreen.cs" />
     <Compile Include="MapLoader.cs" />

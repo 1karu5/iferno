@@ -29,17 +29,29 @@ namespace iferno
             return true;
         }
 
-        public void move(float px)
+        public virtual void move(float px)
         {
             this.position.X += (int)px;
         }
 
-        public void Update(float dt)
+        public override void Update(float dt)
         {
             base.Update(dt);
         }
+        /**
+         *  return: true -> collision
+         *          false -> just dmg, player moves normaly
+         * */
+        public abstract bool OnCollisionWithPlayer(Player p);
 
-        public void Draw(SpriteBatch spriteBatch)
+        public virtual bool CheckCollisionWithPlayer(Rectangle r)
+        {
+            Rectangle rec = Rectangle.Intersect(this.Collision(), r);
+            
+            return !rec.IsEmpty;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch)
         {
             if (this.isVisible())
             {

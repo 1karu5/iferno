@@ -31,11 +31,6 @@ namespace iferno
             this.healthbar = new HealthBar(10,210);
         }
 
-        public override void collisionWithPlayer(Player p)
-        {
-           
-        }
-
         public void changeHP(int hp)
         {
             health += hp;
@@ -84,18 +79,19 @@ namespace iferno
 
             foreach (Block e in map.getVisibleBlocks())
             {
-                Rectangle r = Rectangle.Intersect(e.Collision(), me);
-                if (!r.IsEmpty) //neue koordinate ist nicht richtig, kollision mit e!
+                if (e.CheckCollisionWithPlayer(me)) //neue koordinate ist nicht richtig, kollision mit e!
                 {
-                    e.collisionWithPlayer(this);
-                    if (this.DirectionY > 0)//runter fallen
-                    {   //genau auf den block stellen
-                        newY = e.Y() - this.Height();
+                    if (e.OnCollisionWithPlayer(this))
+                    {
+                        if (this.DirectionY > 0)//runter fallen
+                        {   //genau auf den block stellen
+                            newY = e.Y() - this.Height();
+                        }
+                        else//hoch springen
+                        {   //genau unten an den block stoßen
+                            newY = e.Y() + e.Height();
+                        }
                     }
-                    else//hoch springen
-                    {   //genau unten an den block stoßen
-                        newY = e.Y() + e.Height();
-                    }          
                 }
             }
             return newY;    //neue Y koordinate
@@ -110,18 +106,18 @@ namespace iferno
 
             foreach (Block e in map.getVisibleBlocks())
             {
-                Rectangle r = Rectangle.Intersect(e.Collision(), me);
-                if (!r.IsEmpty)  //neue koordinate ist nicht richtig, kollision mit e!
+                if (e.CheckCollisionWithPlayer(me))  //neue koordinate ist nicht richtig, kollision mit e!
                 {
-                    e.collisionWithPlayer(this);
-                    if (this.DirectionX > 0)//rechts angestoßen
+                    if (e.OnCollisionWithPlayer(this))
                     {
-                        newX = e.X() - this.Width();
-                        
-                    }
-                    else//links angestoßen
-                    {
-                        newX = e.X() + e.Width();
+                        if (this.DirectionX > 0)//rechts angestoßen
+                        {
+                            newX = e.X() - this.Width();
+                        }
+                        else//links angestoßen
+                        {
+                            newX = e.X() + e.Width();
+                        }
                     }
                 }
             }

@@ -11,9 +11,9 @@ namespace iferno
            
         }
 
-        public override void collisionWithPlayer(Player p)
+        public override bool OnCollisionWithPlayer(Player p)
         {
-          
+            return true;
         }
     }
 }

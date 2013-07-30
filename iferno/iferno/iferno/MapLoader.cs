@@ -63,6 +63,10 @@ namespace iferno
                     {
                         newMap.Add(new BlockBlatt(map, x, y));
                     }
+                    if (line[x] == 'C')
+                    {
+                        newMap.Add(new BlockWasserTropfenSpawner(map, x, y));
+                    }
                 }
                 y++;
             }

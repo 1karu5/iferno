@@ -11,9 +11,10 @@ namespace iferno
             dmg = 100;
         }
 
-        public override void collisionWithPlayer(Player p)
+        public override bool OnCollisionWithPlayer(Player p)
         {
             p.changeHP(-1);
+            return true;
         }
     }
 }

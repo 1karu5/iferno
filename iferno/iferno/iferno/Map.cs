@@ -52,6 +52,8 @@ namespace iferno
         {
             Settings.Textures.Add("blockgruen", screen.Content.Load<Texture2D>("blockgruen"));
 
+            Settings.Textures.Add("waterdrop", screen.Content.Load<Texture2D>("waterdrop"));
+
 
             Settings.Textures.Add("block-feuer", screen.Content.Load<Texture2D>("block-feuer"));
             Settings.Textures.Add("block-wasser", screen.Content.Load<Texture2D>("block-wasser"));
@@ -83,7 +85,6 @@ namespace iferno
 
         public void Update(float dt)
         {
-
             foreach (Block e in getVisibleBlocks())
             {
                 e.Update(dt);

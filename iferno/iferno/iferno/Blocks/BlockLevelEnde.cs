@@ -13,9 +13,11 @@ namespace iferno
             dmg = 0;
         }
 
-        public override void collisionWithPlayer(Player p)
+        public override bool OnCollisionWithPlayer(Player p)
         {
-            p.nextLevel();    
+            p.nextLevel();
+
+            return true;
         }
     }
 }

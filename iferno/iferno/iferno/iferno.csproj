@@ -141,6 +141,9 @@
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
+    <EmbeddedResource Include="level\level0.txt" />
+    <EmbeddedResource Include="level\level1.txt" />
+    <EmbeddedResource Include="level\level2.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ifernoContent\ifernoContent.contentproj">

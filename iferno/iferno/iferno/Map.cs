@@ -45,7 +45,7 @@ namespace iferno
         public void nextMap()
         {
             Settings.mapNumber++;
-            this.blocks = new MapLoader().Load(this,"..\\..\\..\\..\\ifernoContent\\level\\level" + Settings.mapNumber + ".txt");
+            this.blocks = new MapLoader().Load(this,"level" + Settings.mapNumber + ".txt");
         }
 
         public virtual void LoadContent()

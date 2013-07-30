@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.IO;
+using System.Reflection;
+
 
 namespace iferno
 {
@@ -12,14 +14,15 @@ namespace iferno
 
         public MapLoader()
         {
-
+           
         }
 
         public List<Block> Load(Map map,string path)
         {
             List<Block> newMap = new List<Block>();
 
-            StreamReader reader = new StreamReader(path);
+            
+            StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("iferno.level."+path));
             string line;
             int y=0;
             while(!reader.EndOfStream){

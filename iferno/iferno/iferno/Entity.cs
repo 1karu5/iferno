@@ -21,9 +21,29 @@ namespace iferno
             this.position = new Vector2(x, y);
         }
 
+        public int Width()
+        {
+            return this.texture.Width;
+        }
+
+        public int Height()
+        {
+            return this.texture.Height;
+        }
+
+        public float X()
+        {
+            return this.position.X;
+        }
+
+        public float Y()
+        {
+            return this.position.Y;
+        }
+
         public Rectangle Collision()
         {
-            return new Rectangle((int)this.position.X,(int)this.position.Y,this.texture.Width,this.texture.Height);
+            return new Rectangle((int)this.X(),(int)this.Y(),this.Width(),this.Height());
         }
 
         public void Update(float dt)

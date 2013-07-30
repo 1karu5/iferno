@@ -115,8 +115,6 @@ namespace iferno
                e.Draw(spriteBatch);
             }
 
-          
-
             spriteBatch.End();
 
             base.Draw(gameTime);

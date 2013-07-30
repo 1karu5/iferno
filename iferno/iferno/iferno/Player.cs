@@ -45,47 +45,47 @@ namespace iferno
 
         private float moveY(float dt)
         {
-            float newY = this.position.Y + (this.DirectionY * Settings.PlayerFallSpeed * dt);
+            float newY = this.Y() + (this.DirectionY * Settings.PlayerFallSpeed * dt);
             Rectangle me = this.Collision();
-            me.Y = (int)newY;
+            me.Y = (int)newY;   //kollision mit neuer koordinate
 
             foreach (Entity e in map)
             {
                 Rectangle r = Rectangle.Intersect(e.Collision(), me);
-                if (!r.IsEmpty)
+                if (!r.IsEmpty) //neue koordinate ist nicht richtig, kollision mit e!
                 {
                     if (this.DirectionY > 0)//runter fallen
-                    {
-                        newY = e.position.Y - this.texture.Height;
+                    {   //genau auf den block stellen
+                        newY = e.Y() - this.Height();
                     }
                     else//hoch springen
-                    {
-                        newY = e.position.Y + e.texture.Height;
+                    {   //genau unten an den block stoßen
+                        newY = e.Y() + e.Height();
                     }          
                 }
             }
-            return newY;
+            return newY;    //neue Y koordinate
         }
 
         private float moveX(float dt)
         {
-            float newX = this.position.X + (this.DirectionX * Settings.PlayerSpeed * dt);
+            float newX = this.X() + (this.DirectionX * Settings.PlayerSpeed * dt);
 
             Rectangle me = this.Collision();
-            me.X = (int)newX;
+            me.X = (int)newX; //kollision mit neuer koordinate
 
             foreach (Entity e in map)
             {
                 Rectangle r = Rectangle.Intersect(e.Collision(), me);
-                if (!r.IsEmpty)
+                if (!r.IsEmpty)  //neue koordinate ist nicht richtig, kollision mit e!
                 {
                     if (this.DirectionX > 0)//rechts angestoßen
                     {
-                        newX = e.position.X - this.texture.Width;
+                        newX = e.X() - this.Width();
                     }
                     else//links angestoßen
                     {
-                        newX = e.position.X + e.texture.Width;
+                        newX = e.X() + e.Width();
                     }
                 }
             }
@@ -96,13 +96,13 @@ namespace iferno
         {
             base.Update(dt);
 
-            if (this.DirectionY < Settings.PlayerMaxYDirection)
-            {
+            if (this.DirectionY < Settings.PlayerMaxYDirection) //fall/sprung geschwindigkeit immer erhören/verringen
+            {   //todo, auf 1 rücksetzen falls man auf dem boden steht
                 this.DirectionY += Settings.PlayerFallSpeedAddition;
             }
 
-            this.position.Y = moveY(dt);
-            this.position.X = moveX(dt);
+            this.position.Y = this.moveY(dt);
+            this.position.X = this.moveX(dt);
         }
 
         public void Draw(SpriteBatch spriteBatch)

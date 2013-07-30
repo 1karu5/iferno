@@ -21,7 +21,7 @@ namespace iferno
 
         public void spawnDrop()
         {
-            tropfen.Add(new WaterDrop(X()+(Width()/2)-8,Y()+Height(),Color.White));
+            tropfen.Add(new WaterDrop(X()+(Width()/2)-8,Y()+Height()+10,Color.White,map));
         }
 
         public override bool OnCollisionWithPlayer(Player p)

@@ -11,9 +11,11 @@ namespace iferno
         public Color color;
         public float speed;
         public bool isDestroying = false;
+        public Map map;
         
-        public WaterDrop(float x, float y,Color color)
+        public WaterDrop(float x, float y,Color color,Map map)
         {
+            this.map = map;
             this.color = color;
             //Get texture
             this.texture = Settings.Textures["waterdrop"];
@@ -60,10 +62,22 @@ namespace iferno
             return !rec.IsEmpty;
         }
 
+        private bool CheckCollisionWithMap()
+        {
+            foreach (Block b in map.getVisibleBlocks())
+            {
+                if (!(b is BlockWasserTropfenSpawner) && b.CheckCollisionWithPlayer(Collision()))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public void Update(float dt)
         {
             position.Y += speed;
-            if (position.Y > Settings.Height)
+            if (position.Y > Settings.Height || CheckCollisionWithMap())
             {
                 isDestroying = true;
             }

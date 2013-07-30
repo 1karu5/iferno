@@ -10,6 +10,7 @@ namespace iferno
         public Map map;
         const int frames = 2;
         const float delay = 0.7f;
+        int health = 100;
 
         int width;
         int frameCounter = 0;
@@ -25,6 +26,11 @@ namespace iferno
             this.DirectionX = 0;
             this.map = map;
             this.width = this.texture.Width / frames;
+        }
+
+        public override int collisionWithPlayer()
+        {
+            return 0;
         }
 
         public override float Width()
@@ -66,6 +72,7 @@ namespace iferno
                 Rectangle r = Rectangle.Intersect(e.Collision(), me);
                 if (!r.IsEmpty) //neue koordinate ist nicht richtig, kollision mit e!
                 {
+                    health += e.collisionWithPlayer();
                     if (this.DirectionY > 0)//runter fallen
                     {   //genau auf den block stellen
                         newY = e.Y() - this.Height();
@@ -91,9 +98,11 @@ namespace iferno
                 Rectangle r = Rectangle.Intersect(e.Collision(), me);
                 if (!r.IsEmpty)  //neue koordinate ist nicht richtig, kollision mit e!
                 {
+                    health += e.collisionWithPlayer();
                     if (this.DirectionX > 0)//rechts angestoßen
                     {
                         newX = e.X() - this.Width();
+                        
                     }
                     else//links angestoßen
                     {

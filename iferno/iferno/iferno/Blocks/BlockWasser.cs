@@ -8,7 +8,13 @@ namespace iferno
     {
         public BlockWasser(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["block-wasser"])
         {
-           
+            dmg = 100;
+        }
+
+        public override int collisionWithPlayer()
+        {
+
+            return dmg;
         }
     }
 }

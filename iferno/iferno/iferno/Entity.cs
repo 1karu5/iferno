@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace iferno
 {
-    public class Entity
+    public abstract class Entity
     {
         public Texture2D texture;
         public Vector2 position;
@@ -20,6 +20,8 @@ namespace iferno
             //Set starting position
             this.position = new Vector2(x, y);
         }
+
+        public abstract int collisionWithPlayer();
 
         public virtual float Width()
         {

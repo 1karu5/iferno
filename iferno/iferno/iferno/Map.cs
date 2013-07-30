@@ -83,15 +83,22 @@ namespace iferno
 
         public void Update(float dt)
         {
-            foreach (Block b in blocks)
+
+            foreach (Block e in getVisibleBlocks())
             {
-                b.Update(dt);
-            }   
+                e.Update(dt);
+            }
+
+            for (int i = blocks.Count-1; i >= 0; i--)
+            {
+                if (blocks[i].isDestroying)
+                    blocks.RemoveAt(i);
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            foreach (Block b in blocks)
+            foreach (Block b in getVisibleBlocks())
             {
                 b.Draw(spriteBatch);
             }

@@ -62,28 +62,14 @@ namespace iferno
 
             //Update world
             player.Update(dt);
-
-            foreach (Block e in map.getVisibleBlocks())
-            {
-                e.Update(dt);
-            }
-
-            
+            map.Update(dt);            
         }
 
         public override void Draw(GameTime gameTime)
         {
-           
-
             player.Draw(spriteBatch);
             //player2.Draw(spriteBatch);
-
-            foreach (Block e in map.getVisibleBlocks())
-            {
-                e.Draw(spriteBatch);
-            }
-
-           
+            map.Draw(spriteBatch);           
         }
     }
 }

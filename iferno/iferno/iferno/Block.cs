@@ -4,11 +4,13 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace iferno
 {
-    public class Block:Entity
+    public abstract class Block:Entity
     {
         public int mapPositionX;
         public int mapPositionY;
         public Map map;
+        public bool isDestroying = false;
+        public int dmg=0;
 
         public Block(Map map,int x, int y, Color color,Texture2D t):base(x*64,y*64,color,t)
         {

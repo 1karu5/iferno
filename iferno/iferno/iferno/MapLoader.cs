@@ -10,18 +10,10 @@ namespace iferno
 {
     public class MapLoader
     {
-
-
-        public MapLoader()
-        {
-           
-        }
-
         public List<Block> Load(Map map,string path)
         {
             List<Block> newMap = new List<Block>();
-
-            
+ 
             StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("iferno.level."+path));
             string line;
             int y=0;
@@ -81,9 +73,7 @@ namespace iferno
                 }
                 y++;
             }
-
             return newMap;
         }
-        
     }
 }

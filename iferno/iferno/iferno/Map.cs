@@ -20,12 +20,14 @@ namespace iferno
         public int visibleWidth;
         public int visibleHeight;
         public Screen screen;
+        public int mapNumber;
 
         public Map(Screen screen)
         {
             this.screen = screen;
             this.LoadContent();
-            this.blocks = this.createMap();
+            this.mapNumber = -1;
+            this.nextMap();
             this.firstVisibleBlock = 0;
             this.width = 100;
             this.height = 12;
@@ -40,20 +42,22 @@ namespace iferno
          * 
          **/
 
-        public virtual List<Block> createMap(){
-            List<Block> newMap = new List<Block>();
-
-            for (int i = 0; i < 100; i++)
-            {
-                newMap.Add(new Block(this,i, 11, Color.White, Settings.Textures["blockgruen"]));
-            }
-            
-            return newMap;
+        public void nextMap()
+        {
+            this.mapNumber++;
+            this.blocks = new MapLoader().Load(this,"C:\\Users\\gamer\\Documents\\GitHub\\iferno\\iferno\\iferno\\ifernoContent\\level" + this.mapNumber + ".txt");
         }
 
         public virtual void LoadContent()
         {
             Settings.Textures.Add("blockgruen", screen.Content.Load<Texture2D>("blockgruen"));
+
+
+            Settings.Textures.Add("block-feuer", screen.Content.Load<Texture2D>("block-feuer"));
+            Settings.Textures.Add("block-wasser", screen.Content.Load<Texture2D>("block-wasser"));
+            Settings.Textures.Add("block-holz-baum", screen.Content.Load<Texture2D>("block-holz-baum"));
+            Settings.Textures.Add("block-sand", screen.Content.Load<Texture2D>("block-sand"));
+            Settings.Textures.Add("block-holz-kiste", screen.Content.Load<Texture2D>("block-holz-kiste"));
         }
 
         public List<Block> getVisibleBlocks()

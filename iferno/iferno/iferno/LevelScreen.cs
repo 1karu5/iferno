@@ -29,7 +29,7 @@ namespace iferno
             //Spielfiguer laden
             Settings.Textures.Add("iferno", Content.Load<Texture2D>("iferno"));
 
-            map = new Map_level1(this);
+            map = new Map(this);
             player = new Player(250, 400, Color.White, map);
         }
 

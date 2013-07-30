@@ -108,7 +108,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Block.cs" />
-    <Compile Include="Map_level1.cs" />
+    <Compile Include="Blocks\BlockWasser.cs" />
+    <Compile Include="Blocks\BlockSand.cs" />
+    <Compile Include="Blocks\BlockFeuer.cs" />
+    <Compile Include="Blocks\BlockKiste.cs" />
+    <Compile Include="Blocks\BlockHolz.cs" />
+    <Compile Include="MapLoader.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="IntroScreen.cs" />
     <Compile Include="LevelScreen.cs" />

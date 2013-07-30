@@ -37,8 +37,9 @@ namespace iferno
 
             this.menu = new StartScreen(this, spriteBatch);
             this.level1 = new LevelScreen(this, spriteBatch);
+            //this.level2 = 
 
-            this.switchScreen("menu");
+            this.switchScreen("level1");
 
             base.Initialize();
         }
@@ -77,17 +78,9 @@ namespace iferno
             //Draw world
             spriteBatch.Begin();
 
-<<<<<<< HEAD
-            aktuellerScreen.Draw(gameTime);
-=======
-            player.Draw(spriteBatch);
-            //player2.Draw(spriteBatch);
 
-            foreach (Entity e in map)
-            {
-               e.Draw(spriteBatch);
-            }
->>>>>>> 79cd36fedec266efd9b66204ae21e8e9b395073d
+            aktuellerScreen.Draw(gameTime);
+
 
             spriteBatch.End();
 

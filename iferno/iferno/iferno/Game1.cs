@@ -44,7 +44,7 @@ namespace iferno
             //this.menu = new MenuScreen(this, spriteBatch);
             //this.intro = new IntroScreen(this, spriteBatch);
 
-            this.switchScreen("start");
+            this.switchScreen("level");
 
             base.Initialize();
         }

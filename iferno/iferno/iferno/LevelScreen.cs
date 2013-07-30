@@ -34,7 +34,7 @@ namespace iferno
 
 
             map = new Map();
-            player = new Player(50, 400, Color.White, map);
+            player = new Player(250, 400, Color.White, map);
 
             
         }

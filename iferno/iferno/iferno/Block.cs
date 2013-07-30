@@ -6,7 +6,6 @@ namespace iferno
 {
     public class Block:Entity
     {
-
         public int mapPositionX;
         public int mapPositionY;
         public Map map;
@@ -17,12 +16,20 @@ namespace iferno
             
             this.mapPositionX = x;
             this.mapPositionY = y;
-
         }
 
         public bool isVisible()
         {
-            return true;
+            if (this.mapPositionX >= map.firstVisibleBlock && this.mapPositionX < map.firstVisibleBlock+map.visibleWidth)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public void move(float px)
+        {
+            this.position.X += px;
         }
 
         public void Update(float dt)

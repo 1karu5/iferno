@@ -21,12 +21,12 @@ namespace iferno
             this.position = new Vector2(x, y);
         }
 
-        public int Width()
+        public float Width()
         {
             return this.texture.Width;
         }
 
-        public int Height()
+        public float Height()
         {
             return this.texture.Height;
         }
@@ -43,7 +43,7 @@ namespace iferno
 
         public Rectangle Collision()
         {
-            return new Rectangle((int)this.X(),(int)this.Y(),this.Width(),this.Height());
+            return new Rectangle((int)this.X(),(int)this.Y(),(int)this.Width(),(int)this.Height());
         }
 
         public void Update(float dt)

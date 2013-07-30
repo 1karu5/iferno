@@ -106,7 +106,7 @@ namespace iferno
 
         public Rectangle Collision()
         {
-            return new Rectangle((int)this.X(), (int)this.Y(), this.Width(), this.Height());
+            return new Rectangle((int)this.X(), (int)this.Y(), (int)this.Width(), (int)this.Height());
         }
 
         public void Update(float dt)
@@ -131,13 +131,15 @@ namespace iferno
             }
 
             this.position.Y = this.moveY(dt);
-            this.position.X = this.moveX(dt);
+            float newX = this.moveX(dt);
+            this.map.move(this.X() - newX);
+            //this.position.X = newX;
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(this.texture, position,
-                    new Rectangle(frameCounter * Width(), 0, Width(), Height()),
+                    new Rectangle(frameCounter * Width(), 0, (int)Width(), (int)Height()),
                     Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.0f); //null->>>rotation,scale
         }
     }

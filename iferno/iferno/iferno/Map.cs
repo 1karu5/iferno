@@ -7,12 +7,21 @@ namespace iferno
 {
     public class Map
     {
-
         public List<Block> blocks;
-        
+        public int firstVisibleBlock;
+        public int width;
+        public int height;
+        public int visibleWidth;
+        public int visibleHeight;
         public Map()
         {
             this.blocks = this.createMap();
+            this.firstVisibleBlock = 0;
+            this.width = 50;
+            this.height = 12;
+
+            this.visibleWidth = 16;
+            this.visibleHeight = 12;
         }
 
         /**
@@ -28,7 +37,11 @@ namespace iferno
             {
                 newMap.Add(new Block(this,i, 11, Color.White, Settings.Textures["blockgruen"]));
             }
-            newMap.Add(new Block(this, 5, 10, Color.White, Settings.Textures["blockgruen"]));
+            newMap.Add(new Block(this, 3, 10, Color.White, Settings.Textures["blockgruen"]));
+            newMap.Add(new Block(this, 7, 10, Color.White, Settings.Textures["blockgruen"]));
+            newMap.Add(new Block(this, 8, 10, Color.White, Settings.Textures["blockgruen"]));
+            newMap.Add(new Block(this, 9, 10, Color.White, Settings.Textures["blockgruen"]));
+            newMap.Add(new Block(this, 8, 9, Color.White, Settings.Textures["blockgruen"]));
             return newMap;
         }
 
@@ -45,9 +58,17 @@ namespace iferno
             return visibleBlocks;
         }
 
+        public void move(float px)
+        {
+            foreach (Block b in blocks)
+            {
+                b.move(px);
+            }  
+        }
+
         public void Update(float dt)
         {
-            foreach (Entity b in blocks)
+            foreach (Block b in blocks)
             {
                 b.Update(dt);
             }   
@@ -55,7 +76,7 @@ namespace iferno
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            foreach (Entity b in blocks)
+            foreach (Block b in blocks)
             {
                 b.Draw(spriteBatch);
             }

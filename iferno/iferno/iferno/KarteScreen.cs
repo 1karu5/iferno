@@ -10,10 +10,13 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
 namespace iferno
+namespace iferno
 {
-    public class IntroScreen : Screen
+    public class KarteScreen : Screen
     {
-        public IntroScreen(Game1 game, SpriteBatch spriteBatch)
+        String karte;
+
+        public KarteScreen(Game1 game, SpriteBatch spriteBatch)
             : base(game, spriteBatch)
         {
 
@@ -21,17 +24,26 @@ namespace iferno
 
         public override void LoadContent()
         {
-
+            Settings.Textures.Add("karte1", Content.Load<Texture2D>("karte1"));
+            Settings.Textures.Add("karte2", Content.Load<Texture2D>("karte2"));
+            Settings.Textures.Add("karte3", Content.Load<Texture2D>("karte3"));
+            Settings.Textures.Add("karte4", Content.Load<Texture2D>("karte4"));
         }
 
         public override void Update(GameTime gameTime)
         {
+            karte = "karte" + levelnummer;
 
+            KeyboardState menuState = Keyboard.GetState();
+            if (menuState.IsKeyDown(Keys.Enter))
+            {
+                
+            }
         }
 
         public override void Draw(GameTime gameTime)
         {
-
+            spriteBatch.Draw(Settings.Textures[karte], new Vector2(0, 0), Color.White );
         }
     }
 }

@@ -13,7 +13,7 @@ namespace iferno
 
         public override void collisionWithPlayer(Player p)
         {
-            p.changeHP(-100);
+            p.changeHP(-1);
         }
     }
 }

@@ -132,6 +132,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Screens\StartScreen.cs" />
+    <Compile Include="UI\HealthBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

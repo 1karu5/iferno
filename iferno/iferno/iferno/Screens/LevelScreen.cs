@@ -28,6 +28,8 @@ namespace iferno
         {
             //Spielfiguer laden
             Settings.Textures.Add("iferno", Content.Load<Texture2D>("iferno"));
+            //healthbar laden
+            Settings.Textures.Add("healthbar", Content.Load<Texture2D>("healthbar"));
 
             map = new Map(this);
             player = new Player(250, 400, Color.White, map);

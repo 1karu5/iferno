@@ -16,6 +16,8 @@ namespace iferno
         int frameCounter = 0;
         float time = 0;
 
+        HealthBar healthbar;
+
         public float DirectionX { get; set; }
         public float DirectionY { get; set; }
 
@@ -26,6 +28,7 @@ namespace iferno
             this.DirectionX = 0;
             this.map = map;
             this.width = this.texture.Width / frames;
+            this.healthbar = new HealthBar(10,210);
         }
 
         public override void collisionWithPlayer(Player p)
@@ -36,6 +39,7 @@ namespace iferno
         public void changeHP(int hp)
         {
             health += hp;
+            healthbar.changeTo(health);
         }
 
         public void nextLevel()
@@ -154,6 +158,8 @@ namespace iferno
 
         public override void Draw(SpriteBatch spriteBatch)
         {
+            healthbar.Draw(spriteBatch);
+
             spriteBatch.Draw(this.texture, position,
                     new Rectangle((int)(frameCounter * Width()), 0, (int)Width(), (int)Height()),
                     Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.0f); //null->>>rotation,scale

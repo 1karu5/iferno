@@ -18,6 +18,7 @@ namespace iferno
         public const float PlayerMaxYDirection = 5.1f;
 
         public static Game1 game;
+        public static int mapNumber;
 
         //zufalls zahlen
         public static Random Rnd = new Random();

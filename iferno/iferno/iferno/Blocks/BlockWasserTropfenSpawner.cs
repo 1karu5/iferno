@@ -12,7 +12,7 @@ namespace iferno
         public List<WaterDrop> tropfen;
 
         public BlockWasserTropfenSpawner(Map map, int x, int y)
-            : base(map, x, y, Color.White, Settings.Textures["blockgruen"])
+            : base(map, x, y, Color.White, Settings.Textures["block-transparent"])
         {
             dmg = 100;
             anzahl = 100;
@@ -21,7 +21,7 @@ namespace iferno
 
         public void spawnDrop()
         {
-            tropfen.Add(new WaterDrop(X()+(Width()/2)-8,Y()+Height()+10,Color.White,map));
+            tropfen.Add(new WaterDrop(X()+(Width()/2)-8,Y()+Height(),Color.White,map));
         }
 
         public override bool OnCollisionWithPlayer(Player p)

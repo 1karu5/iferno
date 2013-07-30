@@ -20,13 +20,13 @@ namespace iferno
         public int visibleWidth;
         public int visibleHeight;
         public Screen screen;
-        public int mapNumber;
+        
 
         public Map(Screen screen)
         {
             this.screen = screen;
+            Settings.mapNumber = -1;
             this.LoadContent();
-            this.mapNumber = -1;
             this.nextMap();
             this.firstVisibleBlock = 0;
             this.width = 100;
@@ -44,8 +44,8 @@ namespace iferno
 
         public void nextMap()
         {
-            this.mapNumber++;
-            this.blocks = new MapLoader().Load(this,"..\\..\\..\\..\\ifernoContent\\level\\level" + this.mapNumber + ".txt");
+            Settings.mapNumber++;
+            this.blocks = new MapLoader().Load(this,"..\\..\\..\\..\\ifernoContent\\level\\level" + Settings.mapNumber + ".txt");
         }
 
         public virtual void LoadContent()
@@ -54,6 +54,7 @@ namespace iferno
 
             Settings.Textures.Add("waterdrop", screen.Content.Load<Texture2D>("waterdrop"));
 
+            Settings.Textures.Add("block-transparent", screen.Content.Load<Texture2D>("block-transparent"));
             Settings.Textures.Add("block-black", screen.Content.Load<Texture2D>("block-black"));
             Settings.Textures.Add("block-feuer", screen.Content.Load<Texture2D>("block-feuer"));
             Settings.Textures.Add("block-wasser", screen.Content.Load<Texture2D>("block-wasser"));

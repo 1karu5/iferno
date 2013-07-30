@@ -8,7 +8,7 @@ namespace iferno
     {
 
         public BlockLevelEnde(Map map, int x, int y)
-            : base(map, x, y, Color.White, Settings.Textures["blockgruen"])
+            : base(map, x, y, Color.White, Settings.Textures["block-transparent"])
         {
             dmg = 0;
         }

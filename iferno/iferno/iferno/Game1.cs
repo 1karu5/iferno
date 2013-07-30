@@ -53,6 +53,12 @@ namespace iferno
                 map.Add(new Entity(i * 64, 11 * 64, Color.White, Settings.Textures["blockgruen"]));
             }
             map.Add(new Entity(6 * 64, 10 * 64, Color.White, Settings.Textures["blockgruen"]));
+            map.Add(new Entity(6 * 64, 9 * 64, Color.White, Settings.Textures["blockgruen"]));
+            map.Add(new Entity(6 * 64, 8 * 64, Color.White, Settings.Textures["blockgruen"]));
+
+            map.Add(new Entity(11 * 64, 10 * 64, Color.White, Settings.Textures["blockgruen"]));
+            map.Add(new Entity(11 * 64, 9 * 64, Color.White, Settings.Textures["blockgruen"]));
+            map.Add(new Entity(11 * 64, 8 * 64, Color.White, Settings.Textures["blockgruen"]));
         }
 
         protected override void Update(GameTime gameTime)
@@ -96,7 +102,7 @@ namespace iferno
         protected override void Draw(GameTime gameTime)
         {
             //Clear background
-            GraphicsDevice.Clear(Color.Orange);
+            GraphicsDevice.Clear(Color.Cyan);
 
             //Draw world
             spriteBatch.Begin();

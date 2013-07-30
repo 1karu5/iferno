@@ -14,8 +14,8 @@ namespace iferno
         //Player werte
         public const int PlayerSpeed = 200;
         public const int PlayerFallSpeed = 200;
-        public const float PlayerFallSpeedAddition = 0.05f;
-        public const int PlayerJumpHeight = 100;
+        public const float PlayerFallSpeedAddition = 0.2f;
+        public const float PlayerMaxYDirection = 5.1f;
 
 
         //zufalls zahlen

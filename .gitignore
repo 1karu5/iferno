@@ -111,3 +111,7 @@ UpgradeLog*.XML
 
 iferno/iferno/iferno/obj/x86/Debug/*
 iferno/iferno/iferno/iferno.csproj.user
+
+*.exe
+*.cachefile
+*FileListAbsolute.txt

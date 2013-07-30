@@ -7,7 +7,7 @@ namespace iferno
 {
     public class Player : Entity
     {
-        public List<Entity> map;
+        public Map map;
         const int frames = 2;
         const float delay = 0.7f;
 
@@ -18,7 +18,7 @@ namespace iferno
         public float DirectionX { get; set; }
         public float DirectionY { get; set; }
 
-        public Player(float x, float y, Color color,List<Entity> map)
+        public Player(float x, float y, Color color,Map map)
             : base(x, y, color, Settings.Textures["blockrot"])
         {
             this.DirectionY = 1;
@@ -36,7 +36,7 @@ namespace iferno
         {
             Rectangle me = this.Collision();
             me.Y = me.Y + 1;    //eins runter, falls kollision sind wir auf dem boden
-            foreach (Entity e in map)
+            foreach (Block e in map.getVisibleBlocks())
             {
                 Rectangle r = Rectangle.Intersect(e.Collision(), me);
                 if (!r.IsEmpty)
@@ -61,7 +61,7 @@ namespace iferno
             Rectangle me = this.Collision();
             me.Y = (int)newY;   //kollision mit neuer koordinate
 
-            foreach (Entity e in map)
+            foreach (Block e in map.getVisibleBlocks())
             {
                 Rectangle r = Rectangle.Intersect(e.Collision(), me);
                 if (!r.IsEmpty) //neue koordinate ist nicht richtig, kollision mit e!
@@ -86,7 +86,7 @@ namespace iferno
             Rectangle me = this.Collision();
             me.X = (int)newX; //kollision mit neuer koordinate
 
-            foreach (Entity e in map)
+            foreach (Block e in map.getVisibleBlocks())
             {
                 Rectangle r = Rectangle.Intersect(e.Collision(), me);
                 if (!r.IsEmpty)  //neue koordinate ist nicht richtig, kollision mit e!

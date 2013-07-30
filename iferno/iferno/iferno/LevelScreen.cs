@@ -17,7 +17,7 @@ namespace iferno
 
         Player player;
 
-        List<Entity> map;
+        Map map;
 
         public LevelScreen(Game1 game, SpriteBatch spriteBatch) : base(game, spriteBatch)
         {
@@ -33,20 +33,10 @@ namespace iferno
             //Initialize world
 
 
-            map = new List<Entity>();
+            map = new Map();
             player = new Player(50, 400, Color.White, map);
 
-            for (int i = 0; i < 16; i++)
-            {
-                map.Add(new Entity(i * 64, 11 * 64, Color.White, Settings.Textures["blockgruen"]));
-            }
-            map.Add(new Entity(6 * 64, 10 * 64, Color.White, Settings.Textures["blockgruen"]));
-            map.Add(new Entity(6 * 64, 9 * 64, Color.White, Settings.Textures["blockgruen"]));
-            map.Add(new Entity(6 * 64, 8 * 64, Color.White, Settings.Textures["blockgruen"]));
-
-            map.Add(new Entity(11 * 64, 10 * 64, Color.White, Settings.Textures["blockgruen"]));
-            map.Add(new Entity(11 * 64, 9 * 64, Color.White, Settings.Textures["blockgruen"]));
-            map.Add(new Entity(11 * 64, 8 * 64, Color.White, Settings.Textures["blockgruen"]));
+            
         }
 
         public override void Update(GameTime gameTime)
@@ -79,7 +69,7 @@ namespace iferno
             //Update world
             player.Update(dt);
 
-            foreach (Entity e in map)
+            foreach (Block e in map.getVisibleBlocks())
             {
                 e.Update(dt);
             }
@@ -94,7 +84,7 @@ namespace iferno
             player.Draw(spriteBatch);
             //player2.Draw(spriteBatch);
 
-            foreach (Entity e in map)
+            foreach (Block e in map.getVisibleBlocks())
             {
                 e.Draw(spriteBatch);
             }

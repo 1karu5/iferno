@@ -4,16 +4,18 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace iferno
 {
-    public class BlockWasser:Block
+    public class BlockLevelEnde:Block
     {
-        public BlockWasser(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["block-wasser"])
+
+        public BlockLevelEnde(Map map, int x, int y)
+            : base(map, x, y, Color.White, Settings.Textures["blockgruen"])
         {
-            dmg = 100;
+            dmg = 0;
         }
 
         public override void collisionWithPlayer(Player p)
         {
-            p.changeHP(-100);
+            p.nextLevel();    
         }
     }
 }

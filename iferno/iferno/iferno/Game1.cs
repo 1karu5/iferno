@@ -18,19 +18,21 @@ namespace iferno
         Screen start;
         Screen level;
         Screen menu;
-        //Screen gameover
-        //Screen intro
-        //Screen karte
+        Screen gameover;
+        Screen intro;
+        Screen karte;
 
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+           
         }
 
         protected override void Initialize()
         {
+            Settings.game = this;
             //Initialize game
             graphics.PreferredBackBufferWidth = Settings.Width;
             graphics.PreferredBackBufferHeight = Settings.Height;
@@ -41,9 +43,9 @@ namespace iferno
             this.start = new StartScreen(this, spriteBatch);
             this.level = new LevelScreen(this, spriteBatch);
             this.menu = new MenuScreen(this, spriteBatch);
-            //this.karte = new KarteScreen(this, spriteBatch);
-            //this.gameover= new GameoverScreen(this, spriteBatch);
-            //this.intro = new IntroScreen(this, spriteBatch);
+            this.karte = new KarteScreen(this, spriteBatch);
+            this.gameover= new GameoverScreen(this, spriteBatch);
+            this.intro = new IntroScreen(this, spriteBatch);
 
             this.switchScreen("start");
 
@@ -64,7 +66,6 @@ namespace iferno
                 case "menu":
                     aktuellerScreen = menu;
                     break;
-                /*
                 case "gameover":
                     aktuellerScreen = gameover;
                     break;
@@ -74,7 +75,7 @@ namespace iferno
                  case "karte":
                     aktuellerScreen = karte;
                     break;
-                 */
+                 
                 default:
                     aktuellerScreen = level;
                     break;
@@ -85,6 +86,10 @@ namespace iferno
         {
             start.LoadContent();
             level.LoadContent();
+            menu.LoadContent();
+            gameover.LoadContent();
+            intro.LoadContent();
+            karte.LoadContent();
         }
 
         protected override void Update(GameTime gameTime)

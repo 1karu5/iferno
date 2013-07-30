@@ -21,7 +21,7 @@ namespace iferno
             this.position = new Vector2(x, y);
         }
 
-        public abstract int collisionWithPlayer();
+        public abstract void collisionWithPlayer(Player p);
 
         public virtual float Width()
         {

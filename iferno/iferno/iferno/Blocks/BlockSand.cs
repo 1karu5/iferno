@@ -11,10 +11,9 @@ namespace iferno
            
         }
 
-        public override int collisionWithPlayer()
+        public override void collisionWithPlayer(Player p)
         {
-
-            return dmg;
+          
         }
     }
 }

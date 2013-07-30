@@ -12,10 +12,10 @@ namespace iferno
             dmg = -10;
         }
 
-        public override int collisionWithPlayer()
+        public override void collisionWithPlayer(Player p)
         {
             isDestroying = true;
-            return dmg;
+            p.changeHP(10);
         }
     }
 }

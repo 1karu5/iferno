@@ -47,6 +47,10 @@ namespace iferno
                     {
                         newMap.Add(new BlockHolz(map, x, y));
                     }
+                    if (line[x] == 'E')
+                    {
+                        newMap.Add(new BlockLevelEnde(map, x, y));
+                    }
                 }
                 y++;
             }

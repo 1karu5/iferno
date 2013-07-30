@@ -28,9 +28,20 @@ namespace iferno
             this.width = this.texture.Width / frames;
         }
 
-        public override int collisionWithPlayer()
+        public override void collisionWithPlayer(Player p)
         {
-            return 0;
+           
+        }
+
+        public void changeHP(int hp)
+        {
+            health += hp;
+        }
+
+        public void nextLevel()
+        {
+            Settings.game.switchScreen("karte");
+            map.nextMap();
         }
 
         public override float Width()
@@ -72,7 +83,7 @@ namespace iferno
                 Rectangle r = Rectangle.Intersect(e.Collision(), me);
                 if (!r.IsEmpty) //neue koordinate ist nicht richtig, kollision mit e!
                 {
-                    health += e.collisionWithPlayer();
+                    e.collisionWithPlayer(this);
                     if (this.DirectionY > 0)//runter fallen
                     {   //genau auf den block stellen
                         newY = e.Y() - this.Height();
@@ -98,7 +109,7 @@ namespace iferno
                 Rectangle r = Rectangle.Intersect(e.Collision(), me);
                 if (!r.IsEmpty)  //neue koordinate ist nicht richtig, kollision mit e!
                 {
-                    health += e.collisionWithPlayer();
+                    e.collisionWithPlayer(this);
                     if (this.DirectionX > 0)//rechts angestoßen
                     {
                         newX = e.X() - this.Width();

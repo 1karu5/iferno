@@ -10,11 +10,10 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
 namespace iferno
-namespace iferno
 {
     public class KarteScreen : Screen
     {
-        String karte;
+        String karte="karte1";
 
         public KarteScreen(Game1 game, SpriteBatch spriteBatch)
             : base(game, spriteBatch)
@@ -32,12 +31,12 @@ namespace iferno
 
         public override void Update(GameTime gameTime)
         {
-            karte = "karte" + levelnummer;
+           karte = "karte" + 1;
 
             KeyboardState menuState = Keyboard.GetState();
             if (menuState.IsKeyDown(Keys.Enter))
             {
-                
+                Settings.game.switchScreen("level");  
             }
         }
 

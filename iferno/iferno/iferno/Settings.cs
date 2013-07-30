@@ -17,6 +17,7 @@ namespace iferno
         public const float PlayerFallSpeedAddition = 0.2f;
         public const float PlayerMaxYDirection = 5.1f;
 
+        public static Game1 game;
 
         //zufalls zahlen
         public static Random Rnd = new Random();

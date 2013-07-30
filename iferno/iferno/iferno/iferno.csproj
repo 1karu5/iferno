@@ -113,6 +113,7 @@
     <Compile Include="Blocks\BlockFeuer.cs" />
     <Compile Include="Blocks\BlockKiste.cs" />
     <Compile Include="Blocks\BlockHolz.cs" />
+    <Compile Include="KarteScreen.cs" />
     <Compile Include="MapLoader.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="IntroScreen.cs" />

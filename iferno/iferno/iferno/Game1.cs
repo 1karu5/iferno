@@ -21,6 +21,7 @@ namespace iferno
         Screen menu;
         //Screen gameover
         //Screen intro
+        //Screen karte
 
 
         public Game1()
@@ -40,8 +41,9 @@ namespace iferno
 
             this.start = new StartScreen(this, spriteBatch);
             this.level = new LevelScreen(this, spriteBatch);
-            //this.gameover= new GameoverScreen(this, spriteBatch);
             this.menu = new MenuScreen(this, spriteBatch);
+            //this.karte = new KarteScreen(this, spriteBatch);
+            //this.gameover= new GameoverScreen(this, spriteBatch);
             //this.intro = new IntroScreen(this, spriteBatch);
 
             this.switchScreen("start");
@@ -69,6 +71,9 @@ namespace iferno
                     break;
                 case "intro":
                     aktuellerScreen = intro;
+                    break;
+                 case "karte":
+                    aktuellerScreen = karte;
                     break;
                  */
                 default:

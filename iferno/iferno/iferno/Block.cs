@@ -22,9 +22,9 @@ namespace iferno
         {
             if (this.mapPositionX >= map.firstVisibleBlock && this.mapPositionX < map.firstVisibleBlock+map.visibleWidth)
             {
-                return true;
+                return true;    //TODO
             }
-            return false;
+            return true;
         }
 
         public void move(float px)

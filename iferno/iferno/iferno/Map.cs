@@ -27,7 +27,7 @@ namespace iferno
             this.LoadContent();
             this.blocks = this.createMap();
             this.firstVisibleBlock = 0;
-            this.width = 50;
+            this.width = 100;
             this.height = 12;
 
             this.visibleWidth = 16;
@@ -43,7 +43,7 @@ namespace iferno
         public virtual List<Block> createMap(){
             List<Block> newMap = new List<Block>();
 
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 100; i++)
             {
                 newMap.Add(new Block(this,i, 11, Color.White, Settings.Textures["blockgruen"]));
             }

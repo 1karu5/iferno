@@ -65,9 +65,16 @@ namespace iferno
 
         public void nextLevel()
         {
-            Settings.game.switchScreen("karte");
-            map.loadMap(Settings.mapNumber+1);
-            background.loadMap();
+            if (Settings.mapNumber == 4)
+            {
+                Settings.game.switchScreen("ende");
+            }
+            else
+            {
+                Settings.game.switchScreen("karte");
+                map.loadMap(Settings.mapNumber + 1);
+                background.loadMap();
+            }
         }
 
         public override float Width()

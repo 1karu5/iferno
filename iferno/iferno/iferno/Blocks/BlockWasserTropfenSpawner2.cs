@@ -12,10 +12,10 @@ namespace iferno
         public List<WaterDrop> tropfen;
 
         public BlockWasserTropfenSpawner2(Map map, int x, int y)
-            : base(map, x, y, Color.White, Settings.Textures["block-transparent"])
+            : base(map, x, y, Color.White, Settings.Textures["block-feuer"])
         {
             dmg = -10;
-            anzahl = 500;
+            anzahl = 35;
             tropfen = new List<WaterDrop>();
         }
 

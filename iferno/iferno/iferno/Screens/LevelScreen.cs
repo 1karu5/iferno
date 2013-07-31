@@ -69,6 +69,10 @@ namespace iferno
             {
                 player.jump();
             }
+        if(keyState.IsKeyDown(Keys.Escape))
+            {
+                game.switchScreen("menu");
+            }
 
             //Update world
             map.Update(dt);

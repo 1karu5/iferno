@@ -15,6 +15,7 @@ namespace iferno
     public class MenuScreen : Screen
     {
         int indexPos = 0;
+        KeyboardState oldKeyboardState = Keyboard.GetState();
         public MenuScreen(Game1 game, SpriteBatch spriteBatch)
             : base(game, spriteBatch)
         {
@@ -27,15 +28,20 @@ namespace iferno
             Settings.Textures.Add("textGameWeiter", Content.Load<Texture2D>("textGameWeiter"));
         }
 
+        public override void activate()
+        {
+            oldKeyboardState = Keyboard.GetState();
+        }
+
         public override void Update(GameTime gameTime)
         {
             KeyboardState menuState = Keyboard.GetState();
 
-            if(menuState.IsKeyDown(Keys.Up) && indexPos > 0)
+            if(menuState.IsKeyDown(Keys.Up) && oldKeyboardState.IsKeyUp(Keys.Up) && indexPos > 0)
             {
                 indexPos--;
             }
-            else if (menuState.IsKeyDown(Keys.Down) && indexPos < 3)
+            else if (menuState.IsKeyDown(Keys.Down) && oldKeyboardState.IsKeyUp(Keys.Down) && indexPos < 3)
             {
                 indexPos++;
             }
@@ -58,6 +64,8 @@ namespace iferno
                         break;
                 }
             }
+
+            oldKeyboardState = menuState;
 
         }
 

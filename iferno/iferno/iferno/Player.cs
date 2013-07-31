@@ -16,6 +16,8 @@ namespace iferno
         int frameCounter = 0;
         float time = 0;
 
+        Background background;
+
         HealthBar healthbar;
 
         float oldDirection=0;
@@ -23,7 +25,7 @@ namespace iferno
         public float DirectionX { get; set; }
         public float DirectionY { get; set; }
 
-        public Player(Color color,Map map)
+        public Player(Color color,Map map, Background background)
             : base(Settings.playerStartX, Settings.playerStartY, color, Settings.Textures["iferno"])
         {
             Settings.player = this;
@@ -32,6 +34,7 @@ namespace iferno
             this.map = map;
             this.width = this.texture.Width / frames;
             this.healthbar = new HealthBar(10,210);
+            this.background = background;
         }
 
         public void reset()
@@ -194,6 +197,7 @@ namespace iferno
                 frameCounter = 0;
             }
             this.map.move(this.X() - newX);
+            this.background.move(this.X() - newX);
 
             oldDirection=DirectionX;
         }

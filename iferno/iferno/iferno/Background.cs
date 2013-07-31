@@ -73,24 +73,31 @@ namespace iferno
         {
             this.position.X += ((int)px) / Settings.BackgroundSpeed;
             this.position2.X += ((int)px) / Settings.BackgroundSpeed;
-                ;
 
             if (position.X < position2.X)
             {
                 if (position.X <= -2048)
                 {
-                     position.X = 2048+position2.X;
+                    position.X = 2048+position2.X;
                     texture = getRandomBackground();
+                }else if(position.X>0){
+                    position2.X = -2048 + position.X;
+                    texture2 = getRandomBackground();
                 }
             }
             else
-                {
+            {
                     if(position2.X <= -2048)
                     {
-                    position2.X = 2048+position.X;
-                    texture2 = getRandomBackground();
+                        position2.X = 2048+position.X;
+                        texture2 = getRandomBackground();
                     }
-                }
+                    else if (position2.X > 0)
+                    {
+                        position.X = -2048 + position2.X;
+                        texture = getRandomBackground();
+                    }
+            }
         }
 
         public void Update(float dt)

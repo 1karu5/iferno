@@ -108,14 +108,15 @@ namespace iferno
                 {
                     if (e.OnCollisionWithPlayer(this))
                     {
-                        if (this.DirectionY > 0)//runter fallen
-                        {   //genau auf den block stellen
-                            newY = e.Y() - this.Height();
-                        }
-                        else//hoch springen
-                        {   //genau unten an den block stoßen
-                            newY = e.Y() + e.Height();
-                        }
+                         if (this.DirectionY > 0)//runter fallen
+                         {   //genau auf den block stellen
+                             newY = e.Y() - this.Height();
+                         }
+                         else//hoch springen
+                         {   //genau unten an den block stoßen
+                             newY = e.Y() + e.Height();
+                         }
+
                     }
                 }
             }
@@ -124,13 +125,13 @@ namespace iferno
 
         public override float X()
         {
-            return this.position.X + 50;
+            return this.position.X + 53;
         }
 
         //Todo: beine
         public override Rectangle Collision()
         {
-            return new Rectangle((int)(this.X()), (int)this.Y(), (int)(width-50-50/*-linkerBeinAnfang-Beinabstand*/), (int)this.Height());
+            return new Rectangle((int)(this.X()), (int)this.Y(), (int)(width-53-53/*-linkerBeinAnfang-Beinabstand*/), (int)this.Height());
         }
 
         private float moveX(float dt)
@@ -146,14 +147,7 @@ namespace iferno
                 {
                     if (e.OnCollisionWithPlayer(this))
                     {
-                        if (this.DirectionX > 0)//rechts angestoßen
-                        {
-                            newX = e.X() - this.Width();
-                        }
-                        else//links angestoßen
-                        {
-                            newX = e.X() + e.Width();
-                        }
+                        newX = X();   
                     }
                 }
             }

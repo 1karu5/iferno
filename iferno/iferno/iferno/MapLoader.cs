@@ -90,6 +90,10 @@ namespace iferno
                     {
                         newMap.Add(new BlockVentilator(map, x, y));
                     }
+                    if (line[x] == 'VG')
+                    {
+                        newMap.Add(new BlockGestein(map, x, y));
+                    }
                 }
                 y++;
             }

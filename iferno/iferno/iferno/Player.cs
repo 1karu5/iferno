@@ -67,6 +67,7 @@ namespace iferno
         {
             Settings.game.switchScreen("karte");
             map.loadMap(Settings.mapNumber+1);
+            background.loadMap();
         }
 
         public override float Width()

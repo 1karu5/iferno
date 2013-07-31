@@ -31,6 +31,12 @@ namespace iferno
             texture2 = getRandomBackground();
         }
 
+        public void loadMap()
+        {
+            texture = getRandomBackground();
+            texture2 = getRandomBackground();
+        }
+
         public Texture2D getRandomBackground()
         {
             rndZahl = Settings.Rnd.Next(0, 2);
@@ -38,29 +44,29 @@ namespace iferno
             if (rndZahl == 0)
             {
                 //hier später Setting.mapNumber eintragen
-                return Settings.Textures["level" + 1 + ".1"];
+                return Settings.Textures["level" + Settings.mapNumber + ".1"];
             }
                 //hier später Setting.mapNumber eintragen
-                return Settings.Textures["level" + 1 + ".2"];
+                return Settings.Textures["level" + Settings.mapNumber + ".2"];
         }
 
         public virtual void LoadContent()
         {
             //erstes Level
-            Settings.Textures.Add("level1.1", screen.Content.Load<Texture2D>("level1.1"));
-            Settings.Textures.Add("level1.2", screen.Content.Load<Texture2D>("level1.2"));
-        /*    //zweites level
-            Settings.Textures.Add("level2.1", screen.Content.Load<Texture2D>("level2.1"));
-            Settings.Textures.Add("level2.2", screen.Content.Load<Texture2D>("level2.2"));
+            Settings.Textures.Add("level0.1", screen.Content.Load<Texture2D>("background/level0.1"));
+            Settings.Textures.Add("level0.2", screen.Content.Load<Texture2D>("background/level0.2"));
+            //zweites level
+            Settings.Textures.Add("level1.1", screen.Content.Load<Texture2D>("background/level1.1"));
+            Settings.Textures.Add("level1.2", screen.Content.Load<Texture2D>("background/level1.2"));
             //drittes level
-            Settings.Textures.Add("level3.1", screen.Content.Load<Texture2D>("level3.1"));
-            Settings.Textures.Add("level3.2", screen.Content.Load<Texture2D>("level3.2"));
+            Settings.Textures.Add("level2.1", screen.Content.Load<Texture2D>("background/level1.1"));
+            Settings.Textures.Add("level2.2", screen.Content.Load<Texture2D>("background/level1.2"));
             //viertes level
-            Settings.Textures.Add("level4.1", screen.Content.Load<Texture2D>("level4.1"));
-            Settings.Textures.Add("level4.2", screen.Content.Load<Texture2D>("level4.2"));
+            Settings.Textures.Add("level3.1", screen.Content.Load<Texture2D>("background/level1.1"));
+            Settings.Textures.Add("level3.2", screen.Content.Load<Texture2D>("background/level1.2"));
             //fünftes level
-            Settings.Textures.Add("level5.1", screen.Content.Load<Texture2D>("level5.1"));
-            Settings.Textures.Add("level5.2", screen.Content.Load<Texture2D>("level5.2"));  */
+            Settings.Textures.Add("level4.1", screen.Content.Load<Texture2D>("background/level1.1"));
+            Settings.Textures.Add("level4.2", screen.Content.Load<Texture2D>("background/level1.2"));  
         }
 
         public void move(float px)

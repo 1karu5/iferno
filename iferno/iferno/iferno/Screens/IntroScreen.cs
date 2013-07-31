@@ -30,11 +30,11 @@ namespace iferno
 
         public override void LoadContent()
         {
-            Settings.Textures.Add("intro1", Content.Load<Texture2D>("intro1"));
-            Settings.Textures.Add("intro2", Content.Load<Texture2D>("intro2"));
-            Settings.Textures.Add("intro3", Content.Load<Texture2D>("intro3"));
-            Settings.Textures.Add("intro4", Content.Load<Texture2D>("intro4"));
-            Settings.Textures.Add("intro5", Content.Load<Texture2D>("intro5"));
+            Settings.Textures.Add("intro1", Content.Load<Texture2D>("intro/intro1"));
+            Settings.Textures.Add("intro2", Content.Load<Texture2D>("intro/intro2"));
+            Settings.Textures.Add("intro3", Content.Load<Texture2D>("intro/intro3"));
+            Settings.Textures.Add("intro4", Content.Load<Texture2D>("intro/intro4"));
+            Settings.Textures.Add("intro5", Content.Load<Texture2D>("intro/intro5"));
         }
 
         public override void Update(GameTime gameTime)

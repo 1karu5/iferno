@@ -28,10 +28,10 @@ namespace iferno
 
         public override void LoadContent()
         {
-            Settings.Textures.Add("karte1", Content.Load<Texture2D>("karte1"));
-            Settings.Textures.Add("karte2", Content.Load<Texture2D>("karte2"));
-            Settings.Textures.Add("karte3", Content.Load<Texture2D>("karte3"));
-            Settings.Textures.Add("karte4", Content.Load<Texture2D>("karte4"));
+            Settings.Textures.Add("karte1", Content.Load<Texture2D>("laden/karte1"));
+            Settings.Textures.Add("karte2", Content.Load<Texture2D>("laden/karte2"));
+            Settings.Textures.Add("karte3", Content.Load<Texture2D>("laden/karte3"));
+            Settings.Textures.Add("karte4", Content.Load<Texture2D>("laden/karte4"));
         }
 
         public override void Update(GameTime gameTime)

@@ -99,22 +99,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="karte1.png">
+    <Compile Include="laden\karte1.png">
       <Name>karte1</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="karte2.png">
+    <Compile Include="laden\karte2.png">
       <Name>karte2</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="karte3.png">
+    <Compile Include="laden\karte3.png">
       <Name>karte3</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="karte4.png">
+    <Compile Include="laden\karte4.png">
       <Name>karte4</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -149,27 +149,27 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="intro1.png">
+    <Compile Include="intro\intro1.png">
       <Name>intro1</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="intro2.png">
+    <Compile Include="intro\intro2.png">
       <Name>intro2</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="intro3.png">
+    <Compile Include="intro\intro3.png">
       <Name>intro3</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="intro4.png">
+    <Compile Include="intro\intro4.png">
       <Name>intro4</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="intro5.png">
+    <Compile Include="intro\intro5.png">
       <Name>intro5</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -223,13 +223,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="level1.1.png">
-      <Name>level1.1</Name>
+    <Compile Include="background\level0.1.png">
+      <Name>level0.1</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="level1.2.png">
-      <Name>level1.2</Name>
+    <Compile Include="background\level0.2.png">
+      <Name>level0.2</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -248,6 +248,21 @@
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="background\level1.2.png">
+      <Name>level1.2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="background\level1.1.png">
+      <Name>level1.1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

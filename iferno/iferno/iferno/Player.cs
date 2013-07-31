@@ -206,7 +206,7 @@ namespace iferno
 
             if (dmg)
             {
-                if (DirectionX > 0)
+                if (DirectionX >= 0)
                 {
                     this.texture = Settings.Textures["ifernodmg"];
                 }

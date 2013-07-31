@@ -20,6 +20,8 @@ namespace iferno
         public int visibleWidth;
         public int visibleHeight;
         public Screen screen;
+
+        private float mapPosition = 0.0f;
         
 
         public Map(Screen screen)
@@ -79,8 +81,13 @@ namespace iferno
             return visibleBlocks;
         }
 
+        public float getMapPosition(){
+            return mapPosition;
+        }
+
         public void move(float px)
         {
+            mapPosition += px;
             foreach (Block b in blocks)
             {
                 b.move(px);

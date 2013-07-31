@@ -34,6 +34,8 @@ namespace iferno
         //zufalls zahlen
         public static Random Rnd = new Random();
 
+        public static SpriteFont font;
+
         public static Dictionary<string, Texture2D> Textures =
             new Dictionary<string, Texture2D>();
     }

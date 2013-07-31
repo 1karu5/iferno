@@ -39,8 +39,10 @@ namespace iferno
             Settings.Textures.Add("ifernoback", Content.Load<Texture2D>("player/playerbacksprite"));
             Settings.Textures.Add("ifernodmg", Content.Load<Texture2D>("player/playerdmgsprite"));
             Settings.Textures.Add("ifernodmgback", Content.Load<Texture2D>("player/playerdmgspriteback"));
-            //healthbar laden
-            Settings.Textures.Add("healthbar", Content.Load<Texture2D>("healthbar"));
+            //ui laden
+            Settings.Textures.Add("healthbar", Content.Load<Texture2D>("ui/healthbar"));
+            Settings.Textures.Add("jump", Content.Load<Texture2D>("ui/jump"));
+            Settings.font = Content.Load<SpriteFont>("ui/font");
 
             background = new Background(this);
             map = new Map(this);

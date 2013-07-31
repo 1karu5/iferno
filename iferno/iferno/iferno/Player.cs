@@ -19,7 +19,8 @@ namespace iferno
 
         Background background;
 
-        HealthBar healthbar;
+        UI ui;
+        List<string> helpOnce = new List<string>();
 
         float oldDirection=0;
 
@@ -36,7 +37,7 @@ namespace iferno
             this.DirectionX = 0;
             this.map = map;
             this.width = this.texture.Width / frames;
-            this.healthbar = new HealthBar(10,210);
+            this.ui = new UI();
             this.background = background;
         }
 
@@ -58,7 +59,7 @@ namespace iferno
                 health += hp;
             if (health > 100)
                 health = 100;
-            healthbar.changeTo(health);
+            ui.changeHPTo(health);
             //if (health <= 0)
                 //Settings.game.switchScreen("gameover");
         }
@@ -162,10 +163,22 @@ namespace iferno
             return newX;
         }
 
+        public void updateHelpText()
+        {
+            float mapPosition = map.getMapPosition();
+
+            if (!helpOnce.Contains("jump") && mapPosition< -1000)
+            {
+                helpOnce.Add("jump");
+                ui.addHelpText(100,100,Settings.Textures["jump"],3.0f);
+            }
+        }
        
         public override void Update(float dt)
         {
             base.Update(dt);
+
+            ui.debug("fps: "+(1/dt));
 
             //Einzelne Frames abarbeiten
             time += dt;
@@ -230,11 +243,14 @@ namespace iferno
                     delay = 0.3f;
                 }
             }
+
+            updateHelpText();
+            ui.Update(dt);
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            healthbar.Draw(spriteBatch);
+            ui.Draw(spriteBatch);
             spriteBatch.Draw(this.texture, position,
                     new Rectangle((int)(frameCounter * textureWidth), 0, (int)textureWidth, (int)Height()),
                     Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.0f); //null->>>rotation,scale

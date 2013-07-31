@@ -1,6 +1,5 @@
 Content\textGameBeenden.xnb
 Content\textGameStarten.xnb
-Content\healthbar.xnb
 Content\gameover.xnb
 Content\textGameSound.xnb
 Content\textGameWeiter.xnb
@@ -13,10 +12,10 @@ Content\intro\intro2.xnb
 Content\intro\intro3.xnb
 Content\intro\intro4.xnb
 Content\intro\intro5.xnb
+Content\background\level1.1.xnb
+Content\background\level1.2.xnb
 Content\background\level0.1.xnb
 Content\background\level0.2.xnb
-Content\background\level1.2.xnb
-Content\background\level1.1.xnb
 Content\block\blockgelb.xnb
 Content\block\blockgruen.xnb
 Content\block\block-wasser.xnb
@@ -24,7 +23,6 @@ Content\block\block-feuer.xnb
 Content\block\block-holz-baum.xnb
 Content\block\block-sand.xnb
 Content\block\block-holz-kiste.xnb
-Content\block\waterdrop.xnb
 Content\block\block-black.xnb
 Content\block\block-transparent.xnb
 Content\player\playersprite.xnb
@@ -35,6 +33,10 @@ Content\player\playerdmgsprite.xnb
 Content\player\playerdmgspriteback.xnb
 Content\block\ventilatorSprite.xnb
 Content\block\blattSprite.xnb
+Content\block\waterdrop.xnb
 Content\background\level2.1.xnb
 Content\background\level2.2.xnb
 Content\ende.xnb
+Content\ui\healthbar.xnb
+Content\ui\jump.xnb
+Content\ui\font.xnb

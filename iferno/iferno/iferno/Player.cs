@@ -50,7 +50,7 @@ namespace iferno
 
         public override float Width()
         {
-            return 128;
+            return 60;
         }
 
         public bool onGround()
@@ -102,10 +102,15 @@ namespace iferno
             return newY;    //neue Y koordinate
         }
 
+        public override float X()
+        {
+            return this.position.X + 50;
+        }
+
         //Todo: beine
         public override Rectangle Collision()
         {
-            return new Rectangle((int)(this.X()/*+linkerBeinanfang*/), (int)this.Y(), (int)(this.Width()/*-Beinabstand*/), (int)this.Height());
+            return new Rectangle((int)(this.X()/*+linkerBeinanfang*/), (int)this.Y(), (int)(width-50-18/*-linkerbeinanfang-Beinabstand*/), (int)this.Height());
         }
 
         private float moveX(float dt)
@@ -160,7 +165,6 @@ namespace iferno
             this.position.Y = this.moveY(dt);
             float newX = this.moveX(dt);
             this.map.move(this.X() - newX);
-            //this.position.X = newX;
         }
 
         public override void Draw(SpriteBatch spriteBatch)
@@ -168,7 +172,7 @@ namespace iferno
             healthbar.Draw(spriteBatch);
 
             spriteBatch.Draw(this.texture, position,
-                    new Rectangle((int)(frameCounter * Width()), 0, (int)Width(), (int)Height()),
+                    new Rectangle((int)(frameCounter * width), 0, (int)width, (int)Height()),
                     Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.0f); //null->>>rotation,scale
         }
     }

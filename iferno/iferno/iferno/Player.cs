@@ -205,7 +205,15 @@ namespace iferno
 
             if (dmg)
             {
-                this.texture = Settings.Textures["ifernodmg"];
+                if (DirectionX > 0)
+                {
+                    this.texture = Settings.Textures["ifernodmg"];
+                }
+                else
+                {
+                    this.texture = Settings.Textures["ifernodmgback"];
+                }
+                
                 frames = 5;
                 if (frameCounter == 4)
                 {

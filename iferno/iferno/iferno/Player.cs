@@ -26,6 +26,9 @@ namespace iferno
 
         public int textureWidth = 166;
 
+        //cheat mode :D
+        public bool immortal = false;
+
         public float DirectionX { get; set; }
         public float DirectionY { get; set; }
 
@@ -49,19 +52,22 @@ namespace iferno
 
         public void changeHP(int hp)
         {
-            if (hp < 0)
+            if (!immortal)
             {
-                dmg = true;
-                frameCounter = 0;
-                delay = 0.5f;
+                if (hp < 0)
+                {
+                    dmg = true;
+                    frameCounter = 0;
+                    delay = 0.5f;
+                }
+                if (health <= 100)
+                    health += hp;
+                if (health > 100)
+                    health = 100;
+                ui.changeHPTo(health);
+                if (health <= 0)
+                    Settings.game.switchScreen("gameover");
             }
-            if (health<=100)
-                health += hp;
-            if (health > 100)
-                health = 100;
-            ui.changeHPTo(health);
-            //if (health <= 0)
-                //Settings.game.switchScreen("gameover");
         }
 
         public void nextLevel()

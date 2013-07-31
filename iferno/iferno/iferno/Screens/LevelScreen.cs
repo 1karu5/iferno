@@ -75,9 +75,19 @@ namespace iferno
             {
                 player.jump();
             }
-        if(keyState.IsKeyDown(Keys.Escape))
+            if(keyState.IsKeyDown(Keys.Escape))
             {
                 game.switchScreen("menu");
+            }
+
+            //cheat mode :D
+            if (keyState.IsKeyDown(Keys.LeftAlt))
+            {
+                player.immortal = true;
+            }
+            else
+            {
+                player.immortal = false;
             }
 
             //Update world

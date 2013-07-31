@@ -35,7 +35,7 @@ namespace iferno
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(texture, position,
-                   null, Color.White, 0, new Vector2(0,200), new Vector2(1f,health), SpriteEffects.None, 0.0f); 
+                   null, Color.White, 0, new Vector2(0,200), new Vector2(health,1f), SpriteEffects.None, 0.0f); 
         }
     }
 }

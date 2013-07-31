@@ -52,8 +52,8 @@ namespace iferno
 
         public void move(float px)
         {
-            this.position.X += ((int)px) * 3;
-            this.position2.X += ((int)px) * 3;
+            this.position.X += ((int)px) / 2;
+            this.position2.X += ((int)px) / 2;
 
             if (position.X < position2.X)
             {

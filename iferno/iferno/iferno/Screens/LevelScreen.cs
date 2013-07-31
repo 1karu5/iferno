@@ -42,7 +42,7 @@ namespace iferno
 
             background = new Background(this);
             map = new Map(this);
-            player = new Player(250, 400, Color.White, map);
+            player = new Player(Color.White, map);
         }
 
         public override void Update(GameTime gameTime)

@@ -27,7 +27,7 @@ namespace iferno
             this.screen = screen;
             Settings.mapNumber = -1;
             this.LoadContent();
-            this.nextMap();
+            this.loadMap(0);
             this.firstVisibleBlock = 0;
             this.width = 100;
             this.height = 12;
@@ -42,10 +42,10 @@ namespace iferno
          * 
          **/
 
-        public void nextMap()
+        public void loadMap(int number)
         {
-            Settings.mapNumber++;
-            this.blocks = new MapLoader().Load(this,"level" + Settings.mapNumber + ".txt");
+            Settings.mapNumber=number;
+            this.blocks = new MapLoader().Load(this,"level" + number + ".txt");
         }
 
         public virtual void LoadContent()

@@ -23,14 +23,21 @@ namespace iferno
         public float DirectionX { get; set; }
         public float DirectionY { get; set; }
 
-        public Player(float x, float y, Color color,Map map)
-            : base(x, y, color, Settings.Textures["iferno"])
+        public Player(Color color,Map map)
+            : base(Settings.playerStartX, Settings.playerStartY, color, Settings.Textures["iferno"])
         {
+            Settings.player = this;
             this.DirectionY = 1;
             this.DirectionX = 0;
             this.map = map;
             this.width = this.texture.Width / frames;
             this.healthbar = new HealthBar(10,210);
+        }
+
+        public void reset()
+        {
+            position = new Vector2(Settings.playerStartX, Settings.playerStartY);
+            changeHP(101);
         }
 
         public void changeHP(int hp)
@@ -47,7 +54,7 @@ namespace iferno
         public void nextLevel()
         {
             Settings.game.switchScreen("karte");
-            map.nextMap();
+            map.loadMap(Settings.mapNumber+1);
         }
 
         public override float Width()

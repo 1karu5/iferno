@@ -9,7 +9,7 @@ namespace iferno
     {
         public int timer=0;
         public bool direction = false;
-        public int speed = 250;
+        public int speed = 300;
        
         public BlockKaefer(Map map, int x, int y)
             : base(map, x, y, Color.White, Settings.Textures["blockgruen"])

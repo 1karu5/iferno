@@ -22,8 +22,11 @@ namespace iferno
         public const float PlayerMaxYDirection = 5.1f;
 
         public static Game1 game;
+        public static Player player;
         public static int mapNumber;
 
+        public static float playerStartX = 250;
+        public static float playerStartY = 400;
 
         public static Color[] levelBackground = { Color.White, Color.Black, Color.Black, Color.Black, Color.Black, Color.Black };
 

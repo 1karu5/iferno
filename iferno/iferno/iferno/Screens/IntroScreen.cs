@@ -48,6 +48,8 @@ namespace iferno
                 }
                 else
                 {
+                    Settings.player.reset();
+                    Settings.player.map.loadMap(Settings.mapNumber);
                     Settings.game.switchScreen("level");  
                 }   
             }

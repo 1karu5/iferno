@@ -15,12 +15,12 @@ namespace iferno
             : base(map, x, y, Color.White, Settings.Textures["blockgruen"])
         {
             dmg = 100;
+            collideWithPlayer = false;
         }
 
-        public override bool OnCollisionWithPlayer(Player p)
+        public override void OnCollisionWithPlayer(Player p)
         {
             p.changeHP(-1);
-            return false;    //true, blockieren aber buggy
         }
 
         public override void Update(float dt)

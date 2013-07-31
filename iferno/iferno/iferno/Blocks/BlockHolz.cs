@@ -12,11 +12,9 @@ namespace iferno
            dmg = -10;
         }
 
-        public override bool OnCollisionWithPlayer(Player p)
+        public override void OnCollisionWithPlayer(Player p)
         {
             isDestroying = true;
-
-            return true;
         }
     }
 }

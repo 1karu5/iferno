@@ -13,10 +13,9 @@ namespace iferno
             delay = 0.1f;
         }
 
-        public override bool OnCollisionWithPlayer(Player p)
+        public override void OnCollisionWithPlayer(Player p)
         {
             markDestroy = true;
-            return true;
         }
 
         public override void Update(float dt)

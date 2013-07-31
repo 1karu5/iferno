@@ -9,12 +9,12 @@ namespace iferno
         public BlockWind(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["block-transparent"])
         {
             dmg = -10;
+            collideWithPlayer = false;
         }
 
-        public override bool OnCollisionWithPlayer(Player p)
+        public override void OnCollisionWithPlayer(Player p)
         {
             p.changeHP(dmg);
-            return false;
         }
     }
 }

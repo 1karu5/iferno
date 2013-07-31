@@ -95,7 +95,7 @@ namespace iferno
             me.Y = me.Y + 1;    //eins runter, falls kollision sind wir auf dem boden
             foreach (Block e in map.getVisibleBlocks())
             {
-                if (e.CheckCollisionWith(me))
+                if (e.CheckCollisionWith(me) && e.collideWithPlayer)
                 {
                     return true;
                 }
@@ -121,7 +121,8 @@ namespace iferno
             {
                 if (e.CheckCollisionWith(me)) //neue koordinate ist nicht richtig, kollision mit e!
                 {
-                    if (e.OnCollisionWithPlayer(this))
+                    e.OnCollisionWithPlayer(this);
+                    if (e.collideWithPlayer)
                     {
                          if (this.DirectionY > 0)//runter fallen
                          {   //genau auf den block stellen
@@ -160,7 +161,8 @@ namespace iferno
             {
                 if (e.CheckCollisionWith(me))  //neue koordinate ist nicht richtig, kollision mit e!
                 {
-                    if (e.OnCollisionWithPlayer(this))
+                    e.OnCollisionWithPlayer(this);
+                    if (e.collideWithPlayer)
                     {
                         newX = X();   
                     }

@@ -17,12 +17,6 @@ namespace iferno
             dmg = 100;
         }
 
-        public override bool OnCollisionWithPlayer(Player p)
-        {
-            //p.changeHP(-1);
-            return true;    //true, blockieren aber buggy
-        }
-
         public override void Update(float dt)
         {
             if (isVisible())

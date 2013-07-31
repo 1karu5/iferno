@@ -11,10 +11,5 @@ namespace iferno
         {
             dmg = 0;  
         }
-
-        public override bool OnCollisionWithPlayer(Player p)
-        {
-            return true;
-        }
     }
 }

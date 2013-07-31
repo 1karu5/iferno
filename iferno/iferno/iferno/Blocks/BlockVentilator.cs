@@ -13,10 +13,5 @@ namespace iferno
             frames = 4;
             delay = 0.1f;
         }
-
-        public override bool OnCollisionWithPlayer(Player p)
-        {
-            return true;
-        }
     }
 }

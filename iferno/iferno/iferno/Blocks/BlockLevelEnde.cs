@@ -11,13 +11,12 @@ namespace iferno
             : base(map, x, y, Color.White, Settings.Textures["block-transparent"])
         {
             dmg = 0;
+            collideWithPlayer = false;
         }
 
-        public override bool OnCollisionWithPlayer(Player p)
+        public override void OnCollisionWithPlayer(Player p)
         {
             p.nextLevel();
-
-            return true;
         }
     }
 }

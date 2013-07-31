@@ -16,11 +16,10 @@ namespace iferno
             animate = true;
         }
 
-        public override bool OnCollisionWithPlayer(Player p)
+        public override void OnCollisionWithPlayer(Player p)
         {
             isDestroying = true;
             p.changeHP(10);
-            return true;
         }
     }
 }

@@ -17,6 +17,7 @@ namespace iferno
             dmg = -10;
             anzahl = 20;
             tropfen = new List<WaterDrop>();
+            collideWithPlayer = false;
         }
 
         public void spawnDrop()
@@ -24,10 +25,9 @@ namespace iferno
             tropfen.Add(new WaterDrop(X()+(Width()/2)-8,Y()+Height(),Color.White,map));
         }
 
-        public override bool OnCollisionWithPlayer(Player p)
+        public override void OnCollisionWithPlayer(Player p)
         {
             p.changeHP(dmg);
-            return false;
         }
 
         public override bool CheckCollisionWith(Rectangle r)

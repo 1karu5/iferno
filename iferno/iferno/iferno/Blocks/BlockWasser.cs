@@ -10,11 +10,5 @@ namespace iferno
         {
             dmg = -100;
         }
-
-        public override bool OnCollisionWithPlayer(Player p)
-        {
-            p.changeHP(dmg);
-            return true;
-        }
     }
 }

@@ -16,6 +16,7 @@ namespace iferno
         public int frameCounter = 0;
         public bool markDestroy = false;
         public bool animate = false;
+        public bool collideWithPlayer = true;
 
         public Block(Map map,int x, int y, Color color,Texture2D t):base(x*64,y*64,color,t)
         {
@@ -59,11 +60,11 @@ namespace iferno
                 }
             }
         }
-        /**
-         *  return: true -> collision
-         *          false -> just dmg, player moves normaly
-         * */
-        public abstract bool OnCollisionWithPlayer(Player p);
+        
+        public virtual void OnCollisionWithPlayer(Player p)
+        {
+
+        }
 
         public virtual bool CheckCollisionWith(Rectangle r)
         {

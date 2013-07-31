@@ -13,10 +13,9 @@ namespace iferno
             animate = true;
         }
 
-        public override bool OnCollisionWithPlayer(Player p)
+        public override void OnCollisionWithPlayer(Player p)
         {
             markDestroy = true;
-            return true;
         }
     }
 }

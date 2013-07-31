@@ -20,6 +20,8 @@ Content\playerbacksprite.xnb
 Content\playerwaitsprite.xnb
 Content\playerdmgsprite.xnb
 Content\playerdmgspriteback.xnb
+Content\blattSprite.xnb
+Content\ventilatorSprite.xnb
 Content\laden\karte1.xnb
 Content\laden\karte2.xnb
 Content\laden\karte3.xnb
@@ -29,7 +31,7 @@ Content\intro\intro2.xnb
 Content\intro\intro3.xnb
 Content\intro\intro4.xnb
 Content\intro\intro5.xnb
-Content\background\level1.1.xnb
-Content\background\level1.2.xnb
 Content\background\level0.1.xnb
 Content\background\level0.2.xnb
+Content\background\level1.2.xnb
+Content\background\level1.1.xnb

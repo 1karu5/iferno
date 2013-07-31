@@ -21,6 +21,9 @@ namespace iferno
         public const float PlayerFallSpeedAddition = 0.2f;
         public const float PlayerMaxYDirection = 5.1f;
 
+        //Background
+        public const int BackgroundSpeed = 2;
+
         public static Game1 game;
         public static Player player;
         public static int mapNumber;

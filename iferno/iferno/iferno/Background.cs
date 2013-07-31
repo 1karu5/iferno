@@ -33,8 +33,7 @@ namespace iferno
 
         public Texture2D getRandomBackground()
         {
-            Random rnd = new Random();
-            rndZahl = rnd.Next(0, 2);
+            rndZahl = Settings.Rnd.Next(0, 2);
 
             if (rndZahl == 0)
             {
@@ -52,8 +51,9 @@ namespace iferno
 
         public void move(float px)
         {
-            this.position.X += ((int)px) / 2;
-            this.position2.X += ((int)px) / 2;
+            this.position.X += ((int)px) / Settings.BackgroundSpeed;
+            this.position2.X += ((int)px) / Settings.BackgroundSpeed;
+                ;
 
             if (position.X < position2.X)
             {

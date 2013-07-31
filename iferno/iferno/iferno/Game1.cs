@@ -95,6 +95,7 @@ namespace iferno
             gameover.LoadContent();
             intro.LoadContent();
             karte.LoadContent();
+            ende.LoadContent();
         }
 
         protected override void Update(GameTime gameTime)

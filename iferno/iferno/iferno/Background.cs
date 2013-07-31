@@ -59,8 +59,8 @@ namespace iferno
             Settings.Textures.Add("level1.1", screen.Content.Load<Texture2D>("background/level1.1"));
             Settings.Textures.Add("level1.2", screen.Content.Load<Texture2D>("background/level1.2"));
             //drittes level
-            Settings.Textures.Add("level2.1", screen.Content.Load<Texture2D>("background/level1.1"));
-            Settings.Textures.Add("level2.2", screen.Content.Load<Texture2D>("background/level1.2"));
+            Settings.Textures.Add("level2.1", screen.Content.Load<Texture2D>("background/level2.1"));
+            Settings.Textures.Add("level2.2", screen.Content.Load<Texture2D>("background/level2.2"));
             //viertes level
             Settings.Textures.Add("level3.1", screen.Content.Load<Texture2D>("background/level1.1"));
             Settings.Textures.Add("level3.2", screen.Content.Load<Texture2D>("background/level1.2"));

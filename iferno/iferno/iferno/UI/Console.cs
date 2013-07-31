@@ -15,6 +15,8 @@ namespace iferno
         public List<string> output;
         public string outputString;
 
+        public int maxLines = 2;
+
         public Console(float x, float y)
         {
             //Set starting position
@@ -36,8 +38,10 @@ namespace iferno
             outputString = "";
             for (int i = output.Count - 1; i >= 0; i--)
             {
-                if (i < 10)
+                if (i - (output.Count-1) > -maxLines)
                     outputString += output[i] + "\n";
+                else
+                    output.RemoveAt(i);
             }        
         }
 

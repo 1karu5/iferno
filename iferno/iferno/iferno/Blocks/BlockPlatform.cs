@@ -41,7 +41,7 @@ namespace iferno
                 collsionMesh.X = (int)newX;
                 foreach (Block b in map.getVisibleBlocks())
                 {
-                    if (!(b is BlockKaefer) && b.CheckCollisionWith(collsionMesh))
+                    if (!(b is BlockPlatform) && b.CheckCollisionWith(collsionMesh))
                     {
                         newX = X();
                         direction = !direction; //umdrehen

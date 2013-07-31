@@ -148,6 +148,7 @@
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
+    <EmbeddedResource Include="level\level4.txt" />
     <EmbeddedResource Include="level\level3.txt" />
     <EmbeddedResource Include="level\level0.txt" />
     <EmbeddedResource Include="level\level1.txt" />

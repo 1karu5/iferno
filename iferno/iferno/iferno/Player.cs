@@ -8,7 +8,7 @@ namespace iferno
     public class Player : Entity
     {
         public Map map;
-        const int frames = 4;
+        int frames = 4;
         const float delay = 0.3f;
         int health = 100;
 
@@ -17,6 +17,8 @@ namespace iferno
         float time = 0;
 
         HealthBar healthbar;
+
+        float oldDirection=0;
 
         public float DirectionX { get; set; }
         public float DirectionY { get; set; }
@@ -110,7 +112,7 @@ namespace iferno
         //Todo: beine
         public override Rectangle Collision()
         {
-            return new Rectangle((int)(this.X()/*+linkerBeinanfang*/), (int)this.Y(), (int)(width-50-18/*-linkerbeinanfang-Beinabstand*/), (int)this.Height());
+            return new Rectangle((int)(this.X()), (int)this.Y(), (int)(width-50-18/*-linkerBeinAnfang-Beinabstand*/), (int)this.Height());
         }
 
         private float moveX(float dt)
@@ -164,13 +166,34 @@ namespace iferno
 
             this.position.Y = this.moveY(dt);
             float newX = this.moveX(dt);
+            //Nach Links oder Rechts
+            //Je nach textur andere frames setzten
+            if (oldDirection != DirectionX && DirectionX < 0)
+            {
+                this.texture = Settings.Textures["ifernoback"];
+                frames = 4;
+                frameCounter = 0;
+            }
+            else if (oldDirection != DirectionX && DirectionX > 0)
+            {
+                this.texture = Settings.Textures["iferno"];
+                frames = 4;
+                frameCounter = 0;
+            }
+            else if (oldDirection != DirectionX && DirectionX == 0)
+            {
+                this.texture = Settings.Textures["ifernowait"];
+                frames = 8;
+                frameCounter = 0;
+            }
             this.map.move(this.X() - newX);
+
+            oldDirection=DirectionX;
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
             healthbar.Draw(spriteBatch);
-
             spriteBatch.Draw(this.texture, position,
                     new Rectangle((int)(frameCounter * width), 0, (int)width, (int)Height()),
                     Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.0f); //null->>>rotation,scale

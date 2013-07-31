@@ -35,6 +35,8 @@ namespace iferno
         {
             //Spielfiguer laden
             Settings.Textures.Add("iferno", Content.Load<Texture2D>("playersprite"));
+            Settings.Textures.Add("ifernowait", Content.Load<Texture2D>("playerwaitsprite"));
+            Settings.Textures.Add("ifernoback", Content.Load<Texture2D>("playerbacksprite"));
             //healthbar laden
             Settings.Textures.Add("healthbar", Content.Load<Texture2D>("healthbar"));
 

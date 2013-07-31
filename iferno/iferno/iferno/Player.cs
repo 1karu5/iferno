@@ -179,6 +179,7 @@ namespace iferno
             base.Update(dt);
 
             ui.debug("fps: "+(1/dt));
+            ui.debug("map: " + Settings.mapNumber);
             ui.debug("mappos: " + map.getMapPosition());
 
             //Einzelne Frames abarbeiten

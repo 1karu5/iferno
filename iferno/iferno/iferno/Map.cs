@@ -46,6 +46,7 @@ namespace iferno
 
         public void loadMap(int number)
         {
+            mapPosition = 0;
             Settings.mapNumber=number;
             this.blocks = new MapLoader().Load(this,"level" + number + ".txt");
         }

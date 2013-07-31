@@ -15,7 +15,7 @@ namespace iferno
         public List<string> output;
         public string outputString;
 
-        public int maxLines = 2;
+        public int maxLines = 3;
 
         public Console(float x, float y)
         {
@@ -36,13 +36,15 @@ namespace iferno
         public virtual void Update(float dt)
         {
             outputString = "";
-            for (int i = output.Count - 1; i >= 0; i--)
+
+            for (int i = output.Count - 1 - maxLines; i >= 0; i--)
             {
-                if (i - (output.Count-1) > -maxLines)
-                    outputString += output[i] + "\n";
-                else
-                    output.RemoveAt(i);
-            }        
+                output.RemoveAt(i);
+            }
+            foreach (string o in output)
+            {
+                outputString += o + "\n";
+            }
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)

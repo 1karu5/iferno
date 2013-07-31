@@ -15,7 +15,7 @@ namespace iferno
         {
             healthbar = new HealthBar(10,210);
             texts = new List<HelpText>();
-            console = new Console(500,100);
+            console = new Console(800,0);
         }
 
         public void debug(string s)

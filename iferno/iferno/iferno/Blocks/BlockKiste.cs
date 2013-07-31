@@ -4,18 +4,30 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace iferno
 {
-    public class BlockKiste:Block
+    public class BlockKiste : Block
     {
-        public BlockKiste(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["block-holz-kiste"])
+        public BlockKiste(Map map, int x, int y)
+            : base(map, x, y, Color.White, Settings.Textures["block-holz-kiste"])
         {
-            dmg = -10;  
+            frames = 4;
+            delay = 0.1f;
         }
 
         public override bool OnCollisionWithPlayer(Player p)
         {
-            isDestroying = true;
-
+            markDestroy = true;
             return true;
+        }
+
+        public override void Update(float dt)
+        {
+            base.Update(dt);
+        }
+
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            base.Draw(spriteBatch);
+
         }
     }
 }

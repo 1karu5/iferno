@@ -9,7 +9,7 @@ namespace iferno
         public Texture2D texture;
         public Vector2 position;
         public Color color;
-
+        public int frames=1;
         
         public Entity(float x, float y,Color color,Texture2D t)
         {
@@ -25,7 +25,7 @@ namespace iferno
 
         public virtual float Width()
         {
-            return this.texture.Width;
+            return this.texture.Width/frames;
         }
 
         public virtual float Height()

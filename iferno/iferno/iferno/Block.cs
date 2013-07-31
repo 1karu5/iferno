@@ -11,6 +11,10 @@ namespace iferno
         public Map map;
         public bool isDestroying = false;
         public int dmg=0;
+        public float time = 0;
+        public float delay = 0.3f;
+        public int frameCounter = 0;
+        public bool markDestroy = false;
 
         public Block(Map map,int x, int y, Color color,Texture2D t):base(x*64,y*64,color,t)
         {
@@ -37,6 +41,20 @@ namespace iferno
         public override void Update(float dt)
         {
             base.Update(dt);
+
+            if (markDestroy)
+            {
+                //Einzelne Frames abarbeiten
+                time += dt;
+                if (time > delay)
+                {
+                    time -= delay;
+                    if (frameCounter < frames - 1)
+                        frameCounter++;
+                    else
+                        isDestroying = true;
+                }
+            }
         }
         /**
          *  return: true -> collision
@@ -47,7 +65,6 @@ namespace iferno
         public virtual bool CheckCollisionWith(Rectangle r)
         {
             Rectangle rec = Rectangle.Intersect(this.Collision(), r);
-            
             return !rec.IsEmpty;
         }
 
@@ -55,7 +72,9 @@ namespace iferno
         {
             if (this.isVisible())
             {
-                base.Draw(spriteBatch);
+                spriteBatch.Draw(this.texture, position,
+                        new Rectangle((int)(frameCounter * (int)Width()), 0, (int)Width(), (int)Height()),
+                        Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.0f);
             }
         }
     }

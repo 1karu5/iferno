@@ -8,9 +8,10 @@ namespace iferno
     public class Player : Entity
     {
         public Map map;
-        int frames = 4;
-        const float delay = 0.3f;
+        int frames = 8;
+        float delay = 0.3f;
         int health = 100;
+        bool dmg = false;
 
         int width;
         int frameCounter = 0;
@@ -26,7 +27,7 @@ namespace iferno
         public float DirectionY { get; set; }
 
         public Player(Color color,Map map, Background background)
-            : base(Settings.playerStartX, Settings.playerStartY, color, Settings.Textures["iferno"])
+            : base(Settings.playerStartX, Settings.playerStartY, color, Settings.Textures["ifernowait"])
         {
             Settings.player = this;
             this.DirectionY = 1;
@@ -45,6 +46,12 @@ namespace iferno
 
         public void changeHP(int hp)
         {
+            if (hp < 0)
+            {
+                dmg = true;
+                frameCounter = 0;
+                delay = 0.5f;
+            }
             if (health<=100)
                 health += hp;
             if (health > 100)
@@ -178,19 +185,19 @@ namespace iferno
             float newX = this.moveX(dt);
             //Nach Links oder Rechts
             //Je nach textur andere frames setzten
-            if (oldDirection != DirectionX && DirectionX < 0)
+            if (!dmg && oldDirection != DirectionX && DirectionX < 0)
             {
                 this.texture = Settings.Textures["ifernoback"];
                 frames = 4;
                 frameCounter = 0;
             }
-            else if (oldDirection != DirectionX && DirectionX > 0)
+            else if (!dmg && oldDirection != DirectionX && DirectionX > 0)
             {
                 this.texture = Settings.Textures["iferno"];
                 frames = 4;
                 frameCounter = 0;
             }
-            else if (oldDirection != DirectionX && DirectionX == 0)
+            else if (!dmg && oldDirection != DirectionX && DirectionX == 0)
             {
                 this.texture = Settings.Textures["ifernowait"];
                 frames = 8;
@@ -200,6 +207,18 @@ namespace iferno
             this.background.move(this.X() - newX);
 
             oldDirection=DirectionX;
+
+            if (dmg)
+            {
+                this.texture = Settings.Textures["ifernodmg"];
+                frames = 5;
+                if (frameCounter == 4)
+                {
+                    dmg = false;
+                    oldDirection = 5;
+                    delay = 0.3f;
+                }
+            }
         }
 
         public override void Draw(SpriteBatch spriteBatch)

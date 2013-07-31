@@ -23,6 +23,8 @@ namespace iferno
 
         float oldDirection=0;
 
+        public int textureWidth = 166;
+
         public float DirectionX { get; set; }
         public float DirectionY { get; set; }
 
@@ -128,7 +130,7 @@ namespace iferno
         //Todo: beine
         public override Rectangle Collision()
         {
-            return new Rectangle((int)(this.X()), (int)this.Y(), (int)(width-50-18/*-linkerBeinAnfang-Beinabstand*/), (int)this.Height());
+            return new Rectangle((int)(this.X()), (int)this.Y(), (int)(width-50-50/*-linkerBeinAnfang-Beinabstand*/), (int)this.Height());
         }
 
         private float moveX(float dt)
@@ -224,7 +226,7 @@ namespace iferno
         {
             healthbar.Draw(spriteBatch);
             spriteBatch.Draw(this.texture, position,
-                    new Rectangle((int)(frameCounter * width), 0, (int)width, (int)Height()),
+                    new Rectangle((int)(frameCounter * textureWidth), 0, (int)textureWidth, (int)Height()),
                     Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.0f); //null->>>rotation,scale
         }
     }

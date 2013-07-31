@@ -245,8 +245,8 @@ namespace iferno
                     this.texture = Settings.Textures["ifernodmgback"];
                 }
                 
-                frames = 5;
-                if (frameCounter == 4)
+                frames = 6;
+                if (frameCounter == 5)
                 {
                     dmg = false;
                     oldDirection = 5;

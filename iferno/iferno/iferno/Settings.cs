@@ -31,8 +31,6 @@ namespace iferno
         public static float playerStartX = 250;
         public static float playerStartY = 400;
 
-        public static Color[] levelBackground = { Color.White, Color.Black, Color.Black, Color.Black, Color.Black, Color.Black };
-
         //zufalls zahlen
         public static Random Rnd = new Random();
 

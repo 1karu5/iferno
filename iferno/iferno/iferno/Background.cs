@@ -37,16 +37,30 @@ namespace iferno
 
             if (rndZahl == 0)
             {
-                return Settings.Textures["level1.1"];
+                //hier später Setting.mapNumber eintragen
+                return Settings.Textures["level" + 1 + ".1"];
             }
-           
-                return Settings.Textures["level1.2"];
+                //hier später Setting.mapNumber eintragen
+                return Settings.Textures["level" + 1 + ".2"];
         }
 
         public virtual void LoadContent()
         {
+            //erstes Level
             Settings.Textures.Add("level1.1", screen.Content.Load<Texture2D>("level1.1"));
             Settings.Textures.Add("level1.2", screen.Content.Load<Texture2D>("level1.2"));
+        /*    //zweites level
+            Settings.Textures.Add("level2.1", screen.Content.Load<Texture2D>("level2.1"));
+            Settings.Textures.Add("level2.2", screen.Content.Load<Texture2D>("level2.2"));
+            //drittes level
+            Settings.Textures.Add("level3.1", screen.Content.Load<Texture2D>("level3.1"));
+            Settings.Textures.Add("level3.2", screen.Content.Load<Texture2D>("level3.2"));
+            //viertes level
+            Settings.Textures.Add("level4.1", screen.Content.Load<Texture2D>("level4.1"));
+            Settings.Textures.Add("level4.2", screen.Content.Load<Texture2D>("level4.2"));
+            //fünftes level
+            Settings.Textures.Add("level5.1", screen.Content.Load<Texture2D>("level5.1"));
+            Settings.Textures.Add("level5.2", screen.Content.Load<Texture2D>("level5.2"));  */
         }
 
         public void move(float px)

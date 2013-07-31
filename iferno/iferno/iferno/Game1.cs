@@ -102,7 +102,8 @@ namespace iferno
         protected override void Draw(GameTime gameTime)
         {
             //Clear background
-            GraphicsDevice.Clear(Settings.levelBackground[Settings.mapNumber]);
+         //   GraphicsDevice.Clear(Settings.levelBackground[Settings.mapNumber]);
+            GraphicsDevice.Clear(Color.White);
 
             //Draw world
             spriteBatch.Begin();

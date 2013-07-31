@@ -50,20 +50,20 @@ namespace iferno
 
         public virtual void LoadContent()
         {
-            Settings.Textures.Add("blockgruen", screen.Content.Load<Texture2D>("blockgruen"));
+            Settings.Textures.Add("blockgruen", screen.Content.Load<Texture2D>("block/blockgruen"));
 
-            Settings.Textures.Add("waterdrop", screen.Content.Load<Texture2D>("waterdrop"));
+            Settings.Textures.Add("waterdrop", screen.Content.Load<Texture2D>("block/waterdrop"));
 
-            Settings.Textures.Add("blattSprite", screen.Content.Load<Texture2D>("blattSprite"));
-            Settings.Textures.Add("ventilatorSprite", screen.Content.Load<Texture2D>("ventilatorSprite"));
-            Settings.Textures.Add("block-white", screen.Content.Load<Texture2D>("block-white"));
-            Settings.Textures.Add("block-transparent", screen.Content.Load<Texture2D>("block-transparent"));
-            Settings.Textures.Add("block-black", screen.Content.Load<Texture2D>("block-black"));
-            Settings.Textures.Add("block-feuer", screen.Content.Load<Texture2D>("block-feuer"));
-            Settings.Textures.Add("block-wasser", screen.Content.Load<Texture2D>("block-wasser"));
-            Settings.Textures.Add("block-holz-baum", screen.Content.Load<Texture2D>("block-holz-baum"));
-            Settings.Textures.Add("block-sand", screen.Content.Load<Texture2D>("block-sand"));
-            Settings.Textures.Add("block-holz-kiste", screen.Content.Load<Texture2D>("block-holz-kiste"));
+            Settings.Textures.Add("blattSprite", screen.Content.Load<Texture2D>("block/blattSprite"));
+            Settings.Textures.Add("ventilatorSprite", screen.Content.Load<Texture2D>("block/ventilatorSprite"));
+            Settings.Textures.Add("block-white", screen.Content.Load<Texture2D>("block/block-white"));
+            Settings.Textures.Add("block-transparent", screen.Content.Load<Texture2D>("block/block-transparent"));
+            Settings.Textures.Add("block-black", screen.Content.Load<Texture2D>("block/block-black"));
+            Settings.Textures.Add("block-feuer", screen.Content.Load<Texture2D>("block/block-feuer"));
+            Settings.Textures.Add("block-wasser", screen.Content.Load<Texture2D>("block/block-wasser"));
+            Settings.Textures.Add("block-holz-baum", screen.Content.Load<Texture2D>("block/block-holz-baum"));
+            Settings.Textures.Add("block-sand", screen.Content.Load<Texture2D>("block/block-sand"));
+            Settings.Textures.Add("block-holz-kiste", screen.Content.Load<Texture2D>("block/block-holz-kiste"));
         }
 
         public List<Block> getVisibleBlocks()

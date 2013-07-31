@@ -42,12 +42,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="blockgelb.png">
+    <Compile Include="block\blockgelb.png">
       <Name>blockgelb</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="blockgruen.png">
+    <Compile Include="block\blockgruen.png">
       <Name>blockgruen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -66,33 +66,33 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="block-wasser.png">
+    <Compile Include="block\block-wasser.png">
       <Name>block-wasser</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="block-feuer.png">
+    <Compile Include="block\block-feuer.png">
       <Name>block-feuer</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="block-holz-baum.png">
+    <Compile Include="block\block-holz-baum.png">
       <Name>block-holz-baum</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="block-sand.png">
+    <Compile Include="block\block-sand.png">
       <Name>block-sand</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="block-holz-kiste.png">
+    <Compile Include="block\block-holz-kiste.png">
       <Name>block-holz-kiste</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -128,21 +128,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="waterdrop.png">
+    <Compile Include="block\waterdrop.png">
       <Name>waterdrop</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="block-black.png">
+    <Compile Include="block\block-black.png">
       <Name>block-black</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="block-transparent.png">
+    <Compile Include="block\block-transparent.png">
       <Name>block-transparent</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -183,14 +183,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="playersprite.png">
+    <Compile Include="player\playersprite.png">
       <Name>playersprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="block-white.png">
+    <Compile Include="block\block-white.png">
       <Name>block-white</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -211,12 +211,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="playerbacksprite.png">
+    <Compile Include="player\playerbacksprite.png">
       <Name>playerbacksprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="playerwaitsprite.png">
+    <Compile Include="player\playerwaitsprite.png">
       <Name>playerwaitsprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -235,14 +235,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="playerdmgsprite.png">
+    <Compile Include="player\playerdmgsprite.png">
       <Name>playerdmgsprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="playerdmgspriteback.png">
+    <Compile Include="player\playerdmgspriteback.png">
       <Name>playerdmgspriteback</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -263,14 +263,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ventilatorSprite.png">
+    <Compile Include="block\ventilatorSprite.png">
       <Name>ventilatorSprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="blattSprite.png">
+    <Compile Include="block\blattSprite.png">
       <Name>blattSprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>

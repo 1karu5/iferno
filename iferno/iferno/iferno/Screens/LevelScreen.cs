@@ -34,11 +34,11 @@ namespace iferno
         public override void LoadContent()
         {
             //Spielfiguer laden
-            Settings.Textures.Add("iferno", Content.Load<Texture2D>("playersprite"));
-            Settings.Textures.Add("ifernowait", Content.Load<Texture2D>("playerwaitsprite"));
-            Settings.Textures.Add("ifernoback", Content.Load<Texture2D>("playerbacksprite"));
-            Settings.Textures.Add("ifernodmg", Content.Load<Texture2D>("playerdmgsprite"));
-            Settings.Textures.Add("ifernodmgback", Content.Load<Texture2D>("playerdmgspriteback"));
+            Settings.Textures.Add("iferno", Content.Load<Texture2D>("player/playersprite"));
+            Settings.Textures.Add("ifernowait", Content.Load<Texture2D>("player/playerwaitsprite"));
+            Settings.Textures.Add("ifernoback", Content.Load<Texture2D>("player/playerbacksprite"));
+            Settings.Textures.Add("ifernodmg", Content.Load<Texture2D>("player/playerdmgsprite"));
+            Settings.Textures.Add("ifernodmgback", Content.Load<Texture2D>("player/playerdmgspriteback"));
             //healthbar laden
             Settings.Textures.Add("healthbar", Content.Load<Texture2D>("healthbar"));
 

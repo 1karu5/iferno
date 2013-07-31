@@ -121,6 +121,11 @@
     <Compile Include="Blocks\BlockBlack.cs" />
     <Compile Include="Blocks\BlockKaefer.cs" />
     <Compile Include="Background.cs" />
+    <Compile Include="Blocks\BlockDschungel.cs" />
+    <Compile Include="Blocks\BlockWasserTropfenSpawner2.cs" />
+    <Compile Include="Blocks\BlockPlatform.cs" />
+    <Compile Include="Blocks\BlockWind.cs" />
+    <Compile Include="Blocks\BlockVentilator.cs" />
     <Compile Include="Particel\WaterDrop.cs" />
     <Compile Include="Screens\GameoverScreen.cs" />
     <Compile Include="Screens\KarteScreen.cs" />

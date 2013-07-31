@@ -62,6 +62,10 @@ namespace iferno
                     {
                         newMap.Add(new BlockWasserTropfenSpawner(map, x, y));
                     }
+                    if (line[x] == 'Q')
+                    {
+                        newMap.Add(new BlockWasserTropfenSpawner2(map, x, y));
+                    }
                     if (line[x] == 'B')
                     {
                         newMap.Add(new BlockBlack(map, x, y));
@@ -69,6 +73,22 @@ namespace iferno
                     if (line[x] == 'M')
                     {
                         newMap.Add(new BlockKaefer(map, x, y));
+                    }
+                    if (line[x] == 'O')
+                    {
+                        newMap.Add(new BlockDschungel(map, x, y));
+                    }
+                    if (line[x] == 'P')
+                    {
+                        newMap.Add(new BlockPlatform(map, x, y));
+                    }
+                    if (line[x] == 'D')
+                    {
+                        newMap.Add(new BlockWind(map, x, y));
+                    }
+                    if (line[x] == 'V')
+                    {
+                        newMap.Add(new BlockVentilator(map, x, y));
                     }
                 }
                 y++;

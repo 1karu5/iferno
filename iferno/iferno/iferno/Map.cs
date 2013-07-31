@@ -27,7 +27,7 @@ namespace iferno
             this.screen = screen;
             Settings.mapNumber = -1;
             this.LoadContent();
-            this.loadMap(0);
+            this.loadMap(3);
             this.firstVisibleBlock = 0;
             this.width = 100;
             this.height = 12;

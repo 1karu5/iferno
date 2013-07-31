@@ -54,6 +54,8 @@ namespace iferno
 
             Settings.Textures.Add("waterdrop", screen.Content.Load<Texture2D>("waterdrop"));
 
+
+            Settings.Textures.Add("block-white", screen.Content.Load<Texture2D>("block-white"));
             Settings.Textures.Add("block-transparent", screen.Content.Load<Texture2D>("block-transparent"));
             Settings.Textures.Add("block-black", screen.Content.Load<Texture2D>("block-black"));
             Settings.Textures.Add("block-feuer", screen.Content.Load<Texture2D>("block-feuer"));

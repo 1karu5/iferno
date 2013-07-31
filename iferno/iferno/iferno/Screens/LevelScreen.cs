@@ -19,6 +19,8 @@ namespace iferno
 
         Map map;
 
+        Background background;
+
         public LevelScreen(Game1 game, SpriteBatch spriteBatch) : base(game, spriteBatch)
         {
             
@@ -36,6 +38,7 @@ namespace iferno
             //healthbar laden
             Settings.Textures.Add("healthbar", Content.Load<Texture2D>("healthbar"));
 
+            background = new Background(this);
             map = new Map(this);
             player = new Player(250, 400, Color.White, map);
         }

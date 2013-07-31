@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace iferno
 {
@@ -19,6 +23,9 @@ namespace iferno
 
         public static Game1 game;
         public static int mapNumber;
+
+
+        public static Color[] levelBackground = { Color.White, Color.Black, Color.Black, Color.Black, Color.Black, Color.Black };
 
         //zufalls zahlen
         public static Random Rnd = new Random();

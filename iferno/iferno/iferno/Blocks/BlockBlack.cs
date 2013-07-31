@@ -7,7 +7,7 @@ namespace iferno
     public class BlockBlack:Block
     {
         public BlockBlack(Map map, int x, int y)
-            : base(map, x, y, Color.White, Settings.Textures["block-black"])
+            : base(map, x, y, Settings.levelBackground[Settings.mapNumber], Settings.Textures["block-white"])
         {
             dmg = 0;  
         }

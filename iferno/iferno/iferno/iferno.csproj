@@ -120,6 +120,7 @@
     <Compile Include="Blocks\BlockWasserTropfenSpawner.cs" />
     <Compile Include="Blocks\BlockBlack.cs" />
     <Compile Include="Blocks\BlockKaefer.cs" />
+    <Compile Include="Background.cs" />
     <Compile Include="Particel\WaterDrop.cs" />
     <Compile Include="Screens\GameoverScreen.cs" />
     <Compile Include="Screens\KarteScreen.cs" />

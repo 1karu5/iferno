@@ -35,8 +35,8 @@ namespace iferno
 
         public override void Update(GameTime gameTime)
         {
-            KeyboardState menuState = Keyboard.GetState();
 
+            KeyboardState menuState = Keyboard.GetState();
             if (menuState.IsKeyDown(Keys.Up) && oldKeyboardState.IsKeyUp(Keys.Up) && indexPos == 1)
             {
                 indexPos--;

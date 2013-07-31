@@ -40,8 +40,8 @@ namespace iferno
             if (health > 100)
                 health = 100;
             healthbar.changeTo(health);
-            if (health <= 0)
-                Settings.game.switchScreen("gameover");
+            //if (health <= 0)
+                //Settings.game.switchScreen("gameover");
         }
 
         public void nextLevel()

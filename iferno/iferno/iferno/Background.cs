@@ -59,7 +59,7 @@ namespace iferno
             {
                 if (position.X <= -2048)
                 {
-                    position.X = 2048;
+                     position.X = 2048+position2.X;
                     texture = getRandomBackground();
                 }
             }
@@ -67,7 +67,7 @@ namespace iferno
                 {
                     if(position2.X <= -2048)
                     {
-                    position2.X = 2048;
+                    position2.X = 2048+position.X;
                     texture2 = getRandomBackground();
                     }
                 }

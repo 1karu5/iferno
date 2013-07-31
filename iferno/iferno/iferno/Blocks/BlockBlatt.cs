@@ -6,13 +6,16 @@ namespace iferno
 {
     public class BlockBlatt:Block
     {
-        public BlockBlatt(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["blockgruen"])
+        public BlockBlatt(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["blattSprite"])
         {
-           
+            frames = 4;
+            delay = 0.1f;
+            animate = true;
         }
 
         public override bool OnCollisionWithPlayer(Player p)
         {
+            markDestroy = true;
             return true;
         }
     }

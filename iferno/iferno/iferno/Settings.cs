@@ -16,7 +16,7 @@ namespace iferno
         public const int Height = 768;
 
         //Player werte
-        public const int PlayerSpeed = 200;
+        public const int PlayerSpeed = 250;
         public const int PlayerFallSpeed = 200;
         public const float PlayerFallSpeedAddition = 0.2f;
         public const float PlayerMaxYDirection = 5.1f;

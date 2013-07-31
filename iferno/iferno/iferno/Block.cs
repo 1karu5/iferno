@@ -15,6 +15,7 @@ namespace iferno
         public float delay = 0.3f;
         public int frameCounter = 0;
         public bool markDestroy = false;
+        public bool animate = false;
 
         public Block(Map map,int x, int y, Color color,Texture2D t):base(x*64,y*64,color,t)
         {
@@ -42,7 +43,7 @@ namespace iferno
         {
             base.Update(dt);
 
-            if (markDestroy)
+            if (markDestroy || animate)
             {
                 //Einzelne Frames abarbeiten
                 time += dt;
@@ -51,8 +52,10 @@ namespace iferno
                     time -= delay;
                     if (frameCounter < frames - 1)
                         frameCounter++;
-                    else
+                    else if (markDestroy)
                         isDestroying = true;
+                    else
+                        frameCounter = 0;
                 }
             }
         }

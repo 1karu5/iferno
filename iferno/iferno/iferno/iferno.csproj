@@ -132,6 +132,7 @@
     <Compile Include="MapLoader.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="Screens\IntroScreen.cs" />
+    <Compile Include="Screens\EndSreen.cs" />
     <Compile Include="Screens\LevelScreen.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Screens\MenuScreen.cs" />

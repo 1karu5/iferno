@@ -78,8 +78,7 @@ namespace iferno
             me.Y = me.Y + 1;    //eins runter, falls kollision sind wir auf dem boden
             foreach (Block e in map.getVisibleBlocks())
             {
-                Rectangle r = Rectangle.Intersect(e.Collision(), me);
-                if (!r.IsEmpty)
+                if (e.CheckCollisionWith(me))
                 {
                     return true;
                 }

@@ -10,6 +10,10 @@ namespace iferno
         public BlockFeuer(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["block-feuer"])
         {
             dmg = -10;
+
+            frames = 4;
+            delay = 0.1f;
+            animate = true;
         }
 
         public override bool OnCollisionWithPlayer(Player p)

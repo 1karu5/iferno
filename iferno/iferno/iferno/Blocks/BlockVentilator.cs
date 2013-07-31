@@ -7,9 +7,11 @@ namespace iferno
     public class BlockVentilator:Block
     {
         public BlockVentilator(Map map, int x, int y)
-            : base(map, x, y, Color.White, Settings.Textures["blockgruen"])
+            : base(map, x, y, Color.White, Settings.Textures["ventilatorSprite"])
         {
-           
+            animate = true;
+            frames = 4;
+            delay = 0.1f;
         }
 
         public override bool OnCollisionWithPlayer(Player p)

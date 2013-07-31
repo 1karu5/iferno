@@ -1,11 +1,11 @@
 Content\blockgelb.xnb
 Content\blockgruen.xnb
+Content\iferno.xnb
 Content\textGameBeenden.xnb
 Content\textGameStarten.xnb
 Content\block-wasser.xnb
 Content\block-feuer.xnb
 Content\block-holz-baum.xnb
-Content\iferno.xnb
 Content\block-sand.xnb
 Content\block-holz-kiste.xnb
 Content\karte1.xnb
@@ -16,3 +16,10 @@ Content\healthbar.xnb
 Content\waterdrop.xnb
 Content\block-black.xnb
 Content\block-transparent.xnb
+Content\intro1.xnb
+Content\intro2.xnb
+Content\intro3.xnb
+Content\intro4.xnb
+Content\intro5.xnb
+Content\gameover.xnb
+Content\playersprite.xnb

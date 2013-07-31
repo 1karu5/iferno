@@ -13,11 +13,17 @@ namespace iferno
 {
     public class KarteScreen : Screen
     {
+        KeyboardState oldKeyboardState = Keyboard.GetState();
 
         public KarteScreen(Game1 game, SpriteBatch spriteBatch)
             : base(game, spriteBatch)
         {
 
+        }
+
+        public override void activate()
+        {
+            oldKeyboardState = Keyboard.GetState();
         }
 
         public override void LoadContent()
@@ -31,10 +37,11 @@ namespace iferno
         public override void Update(GameTime gameTime)
         {
             KeyboardState menuState = Keyboard.GetState();
-            if (menuState.IsKeyDown(Keys.Enter))
+            if (menuState.IsKeyDown(Keys.Enter) && oldKeyboardState.IsKeyUp(Keys.Enter))
             {
                 Settings.game.switchScreen("level");  
             }
+            oldKeyboardState = menuState;
         }
 
         public override void Draw(GameTime gameTime)

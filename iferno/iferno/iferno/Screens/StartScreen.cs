@@ -15,10 +15,16 @@ namespace iferno
     class StartScreen : Screen
     {
         int indexPos = 0;
+        KeyboardState oldKeyboardState = Keyboard.GetState();
 
         public StartScreen(Game1 game, SpriteBatch spriteBatch) : base(game, spriteBatch)
         {
 
+        }
+
+        public override void activate()
+        {
+            oldKeyboardState = Keyboard.GetState();
         }
 
         public override void LoadContent()
@@ -31,19 +37,19 @@ namespace iferno
         {
             KeyboardState menuState = Keyboard.GetState();
 
-            if (menuState.IsKeyDown(Keys.Up) && indexPos == 1)
+            if (menuState.IsKeyDown(Keys.Up) && oldKeyboardState.IsKeyUp(Keys.Up) && indexPos == 1)
             {
                 indexPos--;
             }
-            else if (menuState.IsKeyDown(Keys.Down) && indexPos == 0)
+            else if (menuState.IsKeyDown(Keys.Down) && oldKeyboardState.IsKeyUp(Keys.Down) && indexPos == 0)
             {
                 indexPos++;
             }
-            else if (menuState.IsKeyDown(Keys.Enter))
+            else if (menuState.IsKeyDown(Keys.Enter) && oldKeyboardState.IsKeyUp(Keys.Enter))
             {
                 if (indexPos == 0)
                 {
-                    game.switchScreen("level");
+                    game.switchScreen("intro");
                 }
 
                 else if (indexPos == 1)
@@ -53,6 +59,8 @@ namespace iferno
             {
                 game.Exit();
             }
+
+            oldKeyboardState = menuState;
 
         }
 

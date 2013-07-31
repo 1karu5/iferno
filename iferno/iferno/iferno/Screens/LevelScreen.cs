@@ -24,10 +24,15 @@ namespace iferno
             
         }
 
+        public override void activate()
+        {
+           
+        }
+
         public override void LoadContent()
         {
             //Spielfiguer laden
-            Settings.Textures.Add("iferno", Content.Load<Texture2D>("iferno"));
+            Settings.Textures.Add("iferno", Content.Load<Texture2D>("playersprite"));
             //healthbar laden
             Settings.Textures.Add("healthbar", Content.Load<Texture2D>("healthbar"));
 

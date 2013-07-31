@@ -32,6 +32,8 @@ namespace iferno
         {
         }
 
+        public abstract void activate();
+
         public abstract void Update(GameTime gameTime);
 
         public abstract void Draw(GameTime gameTime);

@@ -14,10 +14,17 @@ namespace iferno
 {
     public class MenuScreen : Screen
     {
+        KeyboardState oldKeyboardState = Keyboard.GetState();
+
         public MenuScreen(Game1 game, SpriteBatch spriteBatch)
             : base(game, spriteBatch)
         {
 
+        }
+
+        public override void activate()
+        {
+            oldKeyboardState = Keyboard.GetState();
         }
 
         public override void LoadContent()

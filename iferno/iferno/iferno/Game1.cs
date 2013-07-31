@@ -77,9 +77,10 @@ namespace iferno
                     break;
                  
                 default:
-                    aktuellerScreen = level;
+                    aktuellerScreen = start;
                     break;
             }
+            aktuellerScreen.activate();
         }
 
         protected override void LoadContent()

@@ -8,8 +8,8 @@ namespace iferno
     public class Player : Entity
     {
         public Map map;
-        const int frames = 2;
-        const float delay = 0.7f;
+        const int frames = 4;
+        const float delay = 0.3f;
         int health = 100;
 
         int width;
@@ -39,7 +39,7 @@ namespace iferno
                 health = 100;
             healthbar.changeTo(health);
             if (health <= 0)
-                ;//Todo game over
+                Settings.game.switchScreen("gameover");
         }
 
         public void nextLevel()

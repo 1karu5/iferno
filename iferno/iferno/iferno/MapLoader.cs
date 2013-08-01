@@ -64,7 +64,11 @@ namespace iferno
                     }
                     if (line[x] == 'Q')
                     {
-                        newMap.Add(new BlockWasserTropfenSpawner2(map, x, y));
+                        newMap.Add(new BlockWasserTropfenSpawner(map, x, y, Settings.Textures["block-wolke"+Settings.Rnd.Next(0,2)], 20));
+                    }
+                    if (line[x] == 'N')
+                    {
+                        newMap.Add(new BlockWasserTropfenSpawner(map, x, y, Settings.Textures["block-stein" + Settings.Rnd.Next(0, 4)]));
                     }
                     if (line[x] == 'B')
                     {

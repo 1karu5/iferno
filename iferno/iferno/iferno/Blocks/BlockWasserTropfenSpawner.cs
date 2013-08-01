@@ -11,8 +11,26 @@ namespace iferno
         public int anzahl;
         public List<WaterDrop> tropfen;
 
+        public BlockWasserTropfenSpawner(Map map, int x, int y, Texture2D t,int anzahl)
+            : base(map, x, y, Color.White, t)
+        {
+            dmg = -10;
+            this.anzahl = anzahl;
+            tropfen = new List<WaterDrop>();
+            collideWithPlayer = false;
+        }
+
+        public BlockWasserTropfenSpawner(Map map, int x, int y,Texture2D t)
+            : base(map, x, y, Color.White, t)
+        {
+            dmg = -10;
+            anzahl = 100;
+            tropfen = new List<WaterDrop>();
+            collideWithPlayer = false;
+        }
+
         public BlockWasserTropfenSpawner(Map map, int x, int y)
-            : base(map, x, y, Color.White, Settings.Textures["block-transparent"])
+            : base(map, x, y, Color.White, Settings.Textures["block-wolke" + Settings.Rnd.Next(0, 2)])
         {
             dmg = -10;
             anzahl = 100;

@@ -142,7 +142,6 @@
     <Compile Include="Blocks\BlockKaefer.cs" />
     <Compile Include="Background.cs" />
     <Compile Include="Blocks\BlockDschungel.cs" />
-    <Compile Include="Blocks\BlockWasserTropfenSpawner2.cs" />
     <Compile Include="Blocks\BlockPlatform.cs" />
     <Compile Include="Blocks\BlockWind.cs" />
     <Compile Include="Blocks\BlockVentilator.cs" />

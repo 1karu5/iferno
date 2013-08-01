@@ -50,11 +50,22 @@ namespace iferno
             Settings.Textures.Add("VorsichtWind", Content.Load<Texture2D>("ui/VorsichtWind"));
             Settings.Textures.Add("VorsichtKäfer", Content.Load<Texture2D>("ui/VorsichtKäfer"));
 
-            //sound
+            //##########sound
             Settings.SoundEffects.Add("dmg", Content.Load<SoundEffect>("sound/damage"));
             Settings.SoundEffects.Add("death", Content.Load<SoundEffect>("sound/death"));
             Settings.SoundEffects.Add("jump", Content.Load<SoundEffect>("sound/jump"));
             Settings.SoundEffects.Add("burn", Content.Load<SoundEffect>("sound/burn"));
+            //tropfen
+            Settings.SoundEffects.Add("tropfen0", Content.Load<SoundEffect>("sound/tropfen/tropfen0"));
+            Settings.SoundEffects.Add("tropfen1", Content.Load<SoundEffect>("sound/tropfen/tropfen1"));
+            Settings.SoundEffects.Add("tropfen2", Content.Load<SoundEffect>("sound/tropfen/tropfen2"));
+            Settings.SoundEffects.Add("tropfen3", Content.Load<SoundEffect>("sound/tropfen/tropfen3"));
+            Settings.SoundEffects.Add("tropfen4", Content.Load<SoundEffect>("sound/tropfen/tropfen4"));
+            Settings.SoundEffects.Add("tropfen5", Content.Load<SoundEffect>("sound/tropfen/tropfen5"));
+            Settings.SoundEffects.Add("tropfen6", Content.Load<SoundEffect>("sound/tropfen/tropfen6"));
+            Settings.SoundEffects.Add("tropfen7", Content.Load<SoundEffect>("sound/tropfen/tropfen7"));
+
+
 
             Settings.font = Content.Load<SpriteFont>("ui/font");
 

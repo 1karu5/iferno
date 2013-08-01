@@ -12,9 +12,11 @@ namespace iferno
         public float speed;
         public bool isDestroying = false;
         public Map map;
+        public Block parent;
         
-        public WaterDrop(float x, float y,Color color,Map map)
+        public WaterDrop(float x, float y,Color color,Map map, Block parent)
         {
+            this.parent = parent;
             this.map = map;
             this.color = color;
             //Get texture
@@ -85,6 +87,10 @@ namespace iferno
             if (position.Y > Settings.Height || CheckCollisionWithMap())
             {
                 isDestroying = true;
+                if (parent.isVisible())
+                {
+                    Settings.SoundEffects["tropfen" + Settings.Rnd.Next(0, 8)].Play();
+                }
             }
         }
 

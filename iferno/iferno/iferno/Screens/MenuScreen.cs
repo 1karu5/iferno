@@ -56,6 +56,8 @@ namespace iferno
                         game.switchScreen("level");
                         break;
                     case 1:
+                        Settings.didhedied = true;
+                        Settings.mapNumber = 0;
                         game.switchScreen("start");
                         break;
                     case 2:

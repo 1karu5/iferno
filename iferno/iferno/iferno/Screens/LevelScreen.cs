@@ -68,11 +68,11 @@ namespace iferno
             Settings.SoundEffects.Add("tropfen6", Content.Load<SoundEffect>("sound/tropfen/tropfen6"));
             Settings.SoundEffects.Add("tropfen7", Content.Load<SoundEffect>("sound/tropfen/tropfen7"));
             //musik
-            Settings.Songs.Add("level0", Content.Load<Song>("sound/songs/dorf"));
-            Settings.Songs.Add("level1", Content.Load<Song>("sound/songs/dorf"));
+            Settings.Songs.Add("level0", Content.Load<Song>("sound/songs/strand"));
+            Settings.Songs.Add("level1", Content.Load<Song>("sound/songs/wiese"));
             Settings.Songs.Add("level2", Content.Load<Song>("sound/songs/dorf"));
-            Settings.Songs.Add("level3", Content.Load<Song>("sound/songs/dorf"));
-            Settings.Songs.Add("level4", Content.Load<Song>("sound/songs/dorf"));
+            Settings.Songs.Add("level3", Content.Load<Song>("sound/songs/dschungel"));
+            Settings.Songs.Add("level4", Content.Load<Song>("sound/songs/hoehle"));
 
 
             Settings.font = Content.Load<SpriteFont>("ui/font");

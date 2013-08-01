@@ -11,8 +11,8 @@ namespace iferno
         {
             dmg = -10;
 
-            frames = 4;
-            delay = 0.1f;
+            frames = 8;
+            delay = 0.2f;
             animate = true;
         }
 

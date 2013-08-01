@@ -143,6 +143,10 @@ namespace iferno
                     }
                 }
             }
+            if (newY > 1000)
+            {
+                Settings.game.switchScreen("gameover");
+            }
             return newY;    //neue Y koordinate
         }
 

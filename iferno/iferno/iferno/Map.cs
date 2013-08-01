@@ -89,7 +89,10 @@ namespace iferno
             Settings.Textures.Add("blockgruen", screen.Content.Load<Texture2D>("block/blockgruen"));
 
             Settings.Textures.Add("waterdrop", screen.Content.Load<Texture2D>("block/waterdrop"));
+            
+            Settings.Textures.Add("block-ende", screen.Content.Load<Texture2D>("block/level_ende_pfeil"));
 
+            
             Settings.Textures.Add("blattSprite", screen.Content.Load<Texture2D>("block/blattSprite"));
             Settings.Textures.Add("ventilatorSprite", screen.Content.Load<Texture2D>("block/ventilatorSprite"));
             Settings.Textures.Add("block-white", screen.Content.Load<Texture2D>("block/block-white"));

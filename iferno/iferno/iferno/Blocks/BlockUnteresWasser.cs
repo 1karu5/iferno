@@ -8,12 +8,8 @@ namespace iferno
     {
         public BlockUnteresWasser(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["block-untereswasser"])
         {
-            dmg = -100;
+            dmg = 0;
             collideWithPlayer = false;
-        }
-        public override void OnCollisionWithPlayer(Player p)
-        {
-            p.changeHP(dmg);
         }
     }
 }

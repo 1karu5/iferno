@@ -9,17 +9,18 @@ namespace iferno
 
         public BlockFeuer(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["block-feuer"])
         {
-            dmg = -10;
+            dmg = 10;
 
             frames = 8;
             delay = 0.2f;
             animate = true;
+            collideWithPlayer = false;
         }
 
         public override void OnCollisionWithPlayer(Player p)
         {
             isDestroying = true;
-            p.changeHP(10);
+            p.changeHP(dmg);
         }
     }
 }

@@ -48,7 +48,7 @@ namespace iferno
         public void reset()
         {
             position = new Vector2(Settings.playerStartX, Settings.playerStartY);
-            
+             
             changeHP(101);
         }
 

@@ -6,7 +6,7 @@ namespace iferno
 {
     public class BlockWind:Block
     {
-        public BlockWind(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["block-transparent"])
+        public BlockWind(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["block-black"])
         {
             dmg = -5;
             collideWithPlayer = false;

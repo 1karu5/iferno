@@ -60,13 +60,20 @@ namespace iferno
                     frameCounter = 0;
                     delay = 0.5f;
                 }
-                if (health <= 100)
-                    health += hp;
-                if (health > 100)
+                if (hp > 100)
+                {
                     health = 100;
-                ui.changeHPTo(health);
-                if (health <= 0)
-                    Settings.game.switchScreen("gameover");
+                }
+                else
+                {
+                    if (health <= 100)
+                        health += hp;
+                    if (health > 100)
+                        health = 100;
+                    ui.changeHPTo(health);
+                    if (health <= 0)
+                        Settings.game.switchScreen("gameover");
+                }
             }
         }
 

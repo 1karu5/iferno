@@ -25,6 +25,8 @@ namespace iferno
         public override void activate()
         {
             oldKeyboardState = Keyboard.GetState();
+            Settings.mapNumber = 0;
+            Settings.didhedied = false;
         }
 
         public override void LoadContent()

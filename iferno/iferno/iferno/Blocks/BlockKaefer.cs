@@ -23,6 +23,13 @@ namespace iferno
             p.changeHP(-1);
         }
 
+        public override Rectangle Collision()
+        {
+            Rectangle collision = base.Collision();
+            collision.Y = collision.Y + (collision.Height * 2 / 3);
+            return collision;
+        }
+
         public override void Update(float dt)
         {
             

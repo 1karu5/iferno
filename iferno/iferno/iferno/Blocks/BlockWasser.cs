@@ -10,6 +10,9 @@ namespace iferno
         {
             dmg = -100;
             collideWithPlayer = false;
+            frames = 2;
+            delay = 0.3f;
+            animate = true;
         }
         public override void OnCollisionWithPlayer(Player p)
         {

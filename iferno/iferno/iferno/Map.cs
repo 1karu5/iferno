@@ -96,9 +96,7 @@ namespace iferno
             Settings.Textures.Add("block-transparent", screen.Content.Load<Texture2D>("block/block-transparent"));
             Settings.Textures.Add("block-black", screen.Content.Load<Texture2D>("block/block-black"));
             Settings.Textures.Add("block-feuer", screen.Content.Load<Texture2D>("block/block-feuer"));
-            Settings.Textures.Add("block-wasser", screen.Content.Load<Texture2D>("block/block-wasser"));
-            Settings.Textures.Add("block-sand", screen.Content.Load<Texture2D>("block/block-sand"));
-            Settings.Textures.Add("block-holz-kiste", screen.Content.Load<Texture2D>("block/block-holz-kiste"));
+            Settings.Textures.Add("block-wasser", screen.Content.Load<Texture2D>("block/wassersprite"));
         }
 
         public List<Block> getVisibleBlocks()

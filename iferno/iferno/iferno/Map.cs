@@ -17,13 +17,15 @@ namespace iferno
         public int width;
         public int height;
         public Screen screen;
+        public Background background;
 
         private float mapPosition = 0.0f;
         
 
-        public Map(Screen screen)
+        public Map(Screen screen, Background b)
         {
             this.screen = screen;
+            this.background = b;
             Settings.mapNumber = -1;
             this.LoadContent();
             this.loadMap(4);
@@ -42,6 +44,7 @@ namespace iferno
         {
             mapPosition = 0;
             Settings.mapNumber=number;
+            background.loadMap();
             this.blocks = new MapLoader().Load(this,"level" + number + ".txt");
         }
 

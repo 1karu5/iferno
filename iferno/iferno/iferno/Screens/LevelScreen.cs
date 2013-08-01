@@ -59,7 +59,7 @@ namespace iferno
             Settings.font = Content.Load<SpriteFont>("ui/font");
 
             background = new Background(this);
-            map = new Map(this);
+            map = new Map(this, background);
             player = new Player(Color.White, map, background);
         }
 

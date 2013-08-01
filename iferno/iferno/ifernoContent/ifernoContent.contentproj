@@ -475,13 +475,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="block\blockburn.png">
-      <Name>blockburn</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="text\textGameBeenden2.png">
       <Name>textGameBeenden2</Name>
       <Importer>TextureImporter</Importer>

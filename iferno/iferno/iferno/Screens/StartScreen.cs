@@ -31,6 +31,8 @@ namespace iferno
         {
              Settings.Textures.Add("textGameStarten", Content.Load<Texture2D>("text/textGameStarten"));
              Settings.Textures.Add("textGameBeenden", Content.Load<Texture2D>("text/textGameBeenden"));
+             Settings.Textures.Add("textGameStarten2", Content.Load<Texture2D>("text/textGameStart2"));
+             Settings.Textures.Add("textGameBeenden2", Content.Load<Texture2D>("text/textGameBeenden2"));
         }
 
         public override void Update(GameTime gameTime)
@@ -68,11 +70,22 @@ namespace iferno
         {
             //Spiel im Hintergrund verdunkeln
             //spriteBatch.Draw(Const.TEX_EMPTY, Const.SCREEN_RECTANGLE, new Color(0, 0, 0, 0.75f));
-
+            if (indexPos == 0)
+            {
+                 spriteBatch.Draw(Settings.Textures["textGameStarten2"], new Vector2(750, 550), Color.White);
+                 spriteBatch.Draw(Settings.Textures["textGameBeenden"], new Vector2(750, 630), Color.White);
+            }
+            if (indexPos == 1)
+            {
+                spriteBatch.Draw(Settings.Textures["textGameStarten"], new Vector2(750, 550), Color.White);
+                spriteBatch.Draw(Settings.Textures["textGameBeenden2"], new Vector2(750, 630), Color.White);
+            }
+            /*
             //New Game
            spriteBatch.Draw(Settings.Textures["textGameStarten"], new Vector2(750, 550), indexPos == 0 ? Color.White : Color.DimGray);
             //Exit
            spriteBatch.Draw(Settings.Textures["textGameBeenden"], new Vector2(750, 650), indexPos == 1 ? Color.White : Color.DimGray);
+             * */
         }
     }
 }

@@ -26,6 +26,8 @@ namespace iferno
         {
             Settings.Textures.Add("textGameSound", Content.Load<Texture2D>("text/textGameSound"));
             Settings.Textures.Add("textGameWeiter", Content.Load<Texture2D>("text/textGameWeiter"));
+            Settings.Textures.Add("textGameSound2", Content.Load<Texture2D>("text/textGameSound2"));
+            Settings.Textures.Add("textGameWeiter2", Content.Load<Texture2D>("text/textGameWeiter2"));
         }
 
         public override void activate()
@@ -54,12 +56,9 @@ namespace iferno
                         game.switchScreen("level");
                         break;
                     case 1:
-                        game.switchScreen("level");
+                        game.switchScreen("start");
                         break;
                     case 2:
-                        //Sound an und ausschalten
-                        break;
-                    case 3:
                         game.Exit();
                         break;
                 }
@@ -72,13 +71,32 @@ namespace iferno
         public override void Draw(GameTime gameTime)
         {
             //Weiter
+            if (indexPos == 0)
+            {
+                spriteBatch.Draw(Settings.Textures["textGameWeiter2"], new Vector2(750, 100), Color.White);
+                spriteBatch.Draw(Settings.Textures["textGameStarten"], new Vector2(750, 180), Color.White);
+                spriteBatch.Draw(Settings.Textures["textGameBeenden"], new Vector2(750, 260), Color.White);
+            }
+            if (indexPos == 1)
+            {
+                spriteBatch.Draw(Settings.Textures["textGameWeiter"], new Vector2(750, 100), Color.White);
+                spriteBatch.Draw(Settings.Textures["textGameStarten2"], new Vector2(750, 180), Color.White);
+                spriteBatch.Draw(Settings.Textures["textGameBeenden"], new Vector2(750, 260), Color.White);
+            }
+            if (indexPos == 2)
+            {
+                spriteBatch.Draw(Settings.Textures["textGameWeiter"], new Vector2(750, 100), Color.White);
+                spriteBatch.Draw(Settings.Textures["textGameStarten"], new Vector2(750, 180), Color.White);
+                spriteBatch.Draw(Settings.Textures["textGameBeenden2"], new Vector2(750, 260), Color.White);
+            }
+            /*
+            //Weiter
             spriteBatch.Draw(Settings.Textures["textGameWeiter"], new Vector2(750, 100), indexPos == 0 ? Color.White : Color.DimGray);
             //New Game
             spriteBatch.Draw(Settings.Textures["textGameStarten"], new Vector2(750, 200), indexPos == 1 ? Color.White : Color.DimGray);
-            //Sound
-            spriteBatch.Draw(Settings.Textures["textGameSound"], new Vector2(750, 300), indexPos == 2 ? Color.White : Color.DimGray);
             //Exit
-            spriteBatch.Draw(Settings.Textures["textGameBeenden"], new Vector2(750, 400), indexPos == 3 ? Color.White : Color.DimGray);
+            spriteBatch.Draw(Settings.Textures["textGameBeenden"], new Vector2(750, 300), indexPos == 2 ? Color.White : Color.DimGray);
+             * */
         }
     }
 }

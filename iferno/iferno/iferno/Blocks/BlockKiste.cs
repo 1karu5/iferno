@@ -6,7 +6,7 @@ namespace iferno
 {
     public class BlockKiste : Block
     {
-
+        private bool collided = false;
 
         public BlockKiste(Map map, int x, int y)
             : base(map, x, y, Color.White, Settings.Textures["block-kiste" + Settings.Rnd.Next(0, 4)])
@@ -16,9 +16,13 @@ namespace iferno
 
         public override void OnCollisionWithPlayer(Player p)
         {
-            Settings.SoundEffects["burn"].Play();
-            markDestroy = true;
-            burn = true;
+            if (!collided)
+            {
+                collided = true;
+                Settings.SoundEffects["burn"].Play();
+                markDestroy = true;
+                burn = true;
+            }
         }
 
         public override void Update(float dt)

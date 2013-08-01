@@ -6,6 +6,8 @@ namespace iferno
 {
     public class BlockBlatt:Block
     {
+        private bool collided = false;
+
         public BlockBlatt(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["blattSprite"])
         {
             frames = 4;
@@ -15,9 +17,13 @@ namespace iferno
 
         public override void OnCollisionWithPlayer(Player p)
         {
-            Settings.SoundEffects["burn"].Play();
-            markDestroy = true;
-            burn = true;
+            if (!collided)
+            {
+                collided = true;
+                Settings.SoundEffects["burn"].Play();
+                markDestroy = true;
+                burn = true;
+            }
         }
     }
 }

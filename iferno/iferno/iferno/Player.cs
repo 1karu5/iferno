@@ -123,7 +123,7 @@ namespace iferno
         {
             if (this.onGround())
             {
-                Settings.SoundEffects["jump"].Play();
+                //Settings.SoundEffects["jump"].Play();
                 DirectionY = -Settings.PlayerMaxYDirection;
             }
         }

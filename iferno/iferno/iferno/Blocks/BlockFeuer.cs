@@ -19,6 +19,7 @@ namespace iferno
 
         public override void OnCollisionWithPlayer(Player p)
         {
+            Settings.SoundEffects["pickup"].Play();
             isDestroying = true;
             p.changeHP(dmg);
         }

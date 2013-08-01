@@ -58,6 +58,7 @@ namespace iferno
             Settings.SoundEffects.Add("death", Content.Load<SoundEffect>("sound/death"));
             Settings.SoundEffects.Add("jump", Content.Load<SoundEffect>("sound/jump"));
             Settings.SoundEffects.Add("burn", Content.Load<SoundEffect>("sound/burn"));
+            Settings.SoundEffects.Add("pickup", Content.Load<SoundEffect>("sound/pickup"));
             //tropfen
             Settings.SoundEffects.Add("tropfen0", Content.Load<SoundEffect>("sound/tropfen/tropfen0"));
             Settings.SoundEffects.Add("tropfen1", Content.Load<SoundEffect>("sound/tropfen/tropfen1"));

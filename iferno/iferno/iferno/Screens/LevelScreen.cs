@@ -23,11 +23,14 @@ namespace iferno
 
         public LevelScreen(Game1 game, SpriteBatch spriteBatch) : base(game, spriteBatch)
         {
-            
+
         }
 
         public override void activate()
         {
+            MediaPlayer.Stop();
+            MediaPlayer.IsRepeating = true;
+            MediaPlayer.Play(Settings.Songs["level"+Settings.mapNumber]);
             Settings.player.reset();
             Settings.player.map.loadMap(Settings.mapNumber);
         }
@@ -64,7 +67,12 @@ namespace iferno
             Settings.SoundEffects.Add("tropfen5", Content.Load<SoundEffect>("sound/tropfen/tropfen5"));
             Settings.SoundEffects.Add("tropfen6", Content.Load<SoundEffect>("sound/tropfen/tropfen6"));
             Settings.SoundEffects.Add("tropfen7", Content.Load<SoundEffect>("sound/tropfen/tropfen7"));
-
+            //musik
+            Settings.Songs.Add("level0", Content.Load<Song>("sound/songs/dorf"));
+            Settings.Songs.Add("level1", Content.Load<Song>("sound/songs/dorf"));
+            Settings.Songs.Add("level2", Content.Load<Song>("sound/songs/dorf"));
+            Settings.Songs.Add("level3", Content.Load<Song>("sound/songs/dorf"));
+            Settings.Songs.Add("level4", Content.Load<Song>("sound/songs/dorf"));
 
 
             Settings.font = Content.Load<SpriteFont>("ui/font");

@@ -39,11 +39,15 @@ namespace iferno
 
         public static SpriteFont font;
 
+        
+
         public static Dictionary<string, Texture2D> Textures =
             new Dictionary<string, Texture2D>();
 
         public static Dictionary<string, SoundEffect> SoundEffects =
            new Dictionary<string, SoundEffect>();
 
+        public static Dictionary<string, Song> Songs =
+           new Dictionary<string, Song>();
     }
 }

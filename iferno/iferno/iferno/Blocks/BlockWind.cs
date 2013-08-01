@@ -16,6 +16,7 @@ namespace iferno
         {
             Rectangle collision = base.Collision();
             collision.Y = collision.Y + (collision.Height*2/3);
+            collision.Height = collision.Height * 1 / 3; 
             return collision;
         }
         public override void OnCollisionWithPlayer(Player p)

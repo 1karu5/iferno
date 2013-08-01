@@ -72,10 +72,10 @@ namespace iferno
             Settings.Textures.Add("block-sand2", screen.Content.Load<Texture2D>("block/sand/3sand"));
             Settings.Textures.Add("block-sand3", screen.Content.Load<Texture2D>("block/sand/4sand"));
             //dschungel
-            Settings.Textures.Add("block-dschnugel0", screen.Content.Load<Texture2D>("block/wald/1wald"));
-            Settings.Textures.Add("block-dschnugel1", screen.Content.Load<Texture2D>("block/wald/2wald"));
-            Settings.Textures.Add("block-dschnugel2", screen.Content.Load<Texture2D>("block/wald/3wald"));
-            Settings.Textures.Add("block-dschnugel3", screen.Content.Load<Texture2D>("block/wald/4wald"));
+            Settings.Textures.Add("block-dschungel0", screen.Content.Load<Texture2D>("block/wald/1wald"));
+            Settings.Textures.Add("block-dschungel1", screen.Content.Load<Texture2D>("block/wald/2wald"));
+            Settings.Textures.Add("block-dschungel2", screen.Content.Load<Texture2D>("block/wald/3wald"));
+            Settings.Textures.Add("block-dschungel3", screen.Content.Load<Texture2D>("block/wald/4wald"));
             //uneteres wasser
             Settings.Textures.Add("block-untereswasser", screen.Content.Load<Texture2D>("block/wasser/wasser_still"));
             //platform

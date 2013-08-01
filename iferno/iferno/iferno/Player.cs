@@ -183,32 +183,32 @@ namespace iferno
         {
             float mapPosition = map.getMapPosition();
 
-            if (!helpOnce.Contains("rechts_links") && mapPosition < 0 )
+            if (!helpOnce.Contains("rechts_links") && mapPosition < 0 && Settings.mapNumber == 0)
             {
                 helpOnce.Add("rechts_links");
                 ui.addHelpText(100, 100, Settings.Textures["rechts_links"], 3.0f);
             }
-            if (!helpOnce.Contains("jump") && mapPosition< -500)
+            if (!helpOnce.Contains("jump") && mapPosition < -500 && Settings.mapNumber == 0)
             {
                 helpOnce.Add("jump");
                 ui.addHelpText(100,100,Settings.Textures["jump"],3.0f);
             }
-            if (!helpOnce.Contains("VorsichtWasser") && mapPosition < -2200)
+            if (!helpOnce.Contains("VorsichtWasser") && mapPosition < -2200 && Settings.mapNumber == 0)
             {
                 helpOnce.Add("VorsichtWasser");
                 ui.addHelpText(100, 100, Settings.Textures["VorsichtWasser"], 3.0f);
             }
-            if (!helpOnce.Contains("HolzIstBrennbar") && mapPosition < -4800)
+            if (!helpOnce.Contains("HolzIstBrennbar") && mapPosition < -4800 && Settings.mapNumber == 0)
             {
                 helpOnce.Add("HolzIstBrennbar");
                 ui.addHelpText(100, 100, Settings.Textures["HolzIstBrennbar"], 3.0f);
             }
-            if (!helpOnce.Contains("VorsichtWind") && mapPosition < -1000 && Settings.mapNumber == 2)
+            if (!helpOnce.Contains("VorsichtWind") && mapPosition < 0 && Settings.mapNumber == 2)
             {
                 helpOnce.Add("VorsichtWind");
                 ui.addHelpText(100, 100, Settings.Textures["VorsichtWind"], 3.0f);
             }
-            if (!helpOnce.Contains("VorsichtKäfer") && mapPosition < -1000 && Settings.mapNumber == 3)
+            if (!helpOnce.Contains("VorsichtKäfer") && mapPosition < 0 && Settings.mapNumber == 3)
             {
                 helpOnce.Add("VorsichtKäfer");
                 ui.addHelpText(100, 100, Settings.Textures["VorsichtKäfer"], 3.0f);

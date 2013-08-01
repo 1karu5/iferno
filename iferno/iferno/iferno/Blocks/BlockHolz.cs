@@ -7,7 +7,7 @@ namespace iferno
     public class BlockHolz:Block
     {
 
-        public BlockHolz(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["block-holz-baum"])
+        public BlockHolz(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["block-holz-baum"+Settings.Rnd.Next(0, 3)])
         {
            dmg = -10;
         }

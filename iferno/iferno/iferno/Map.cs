@@ -53,6 +53,39 @@ namespace iferno
 
         public virtual void LoadContent()
         {
+            //baum
+            Settings.Textures.Add("block-holz-baum0", screen.Content.Load<Texture2D>("block/baumstamm/1stamm"));
+            Settings.Textures.Add("block-holz-baum1", screen.Content.Load<Texture2D>("block/baumstamm/2stamm"));
+            Settings.Textures.Add("block-holz-baum2", screen.Content.Load<Texture2D>("block/baumstamm/3stamm"));
+            //dorf
+            Settings.Textures.Add("block-dorf0", screen.Content.Load<Texture2D>("block/dorf/1dorf"));
+            Settings.Textures.Add("block-dorf1", screen.Content.Load<Texture2D>("block/dorf/2dorf"));
+            Settings.Textures.Add("block-dorf2", screen.Content.Load<Texture2D>("block/dorf/3dorf"));
+            //stein
+            Settings.Textures.Add("block-stein0", screen.Content.Load<Texture2D>("block/hoehle/1hoehle"));
+            Settings.Textures.Add("block-stein1", screen.Content.Load<Texture2D>("block/hoehle/2hoehle"));
+            Settings.Textures.Add("block-stein2", screen.Content.Load<Texture2D>("block/hoehle/3hoehle"));
+            Settings.Textures.Add("block-stein3", screen.Content.Load<Texture2D>("block/hoehle/4hoehle"));
+            //sand
+            Settings.Textures.Add("block-sand0", screen.Content.Load<Texture2D>("block/sand/1sand"));
+            Settings.Textures.Add("block-sand1", screen.Content.Load<Texture2D>("block/sand/2sand"));
+            Settings.Textures.Add("block-sand2", screen.Content.Load<Texture2D>("block/sand/3sand"));
+            Settings.Textures.Add("block-sand3", screen.Content.Load<Texture2D>("block/sand/4sand"));
+            //dschungel
+            Settings.Textures.Add("block-dschnugel0", screen.Content.Load<Texture2D>("block/wald/1wald"));
+            Settings.Textures.Add("block-dschnugel1", screen.Content.Load<Texture2D>("block/wald/2wald"));
+            Settings.Textures.Add("block-dschnugel2", screen.Content.Load<Texture2D>("block/wald/3wald"));
+            Settings.Textures.Add("block-dschnugel3", screen.Content.Load<Texture2D>("block/wald/4wald"));
+            //uneteres wasser
+            Settings.Textures.Add("block-untereswasser", screen.Content.Load<Texture2D>("block/wasser/wasser_still"));
+            //platform
+            Settings.Textures.Add("block-platform", screen.Content.Load<Texture2D>("block/block-platform"));
+            //kiste
+            Settings.Textures.Add("block-kiste0", screen.Content.Load<Texture2D>("block/kisten/1kiste"));
+            Settings.Textures.Add("block-kiste1", screen.Content.Load<Texture2D>("block/kisten/2kiste"));
+            Settings.Textures.Add("block-kiste2", screen.Content.Load<Texture2D>("block/kisten/3kiste"));
+            Settings.Textures.Add("block-kiste3", screen.Content.Load<Texture2D>("block/kisten/4kiste"));
+
             Settings.Textures.Add("blockgruen", screen.Content.Load<Texture2D>("block/blockgruen"));
 
             Settings.Textures.Add("waterdrop", screen.Content.Load<Texture2D>("block/waterdrop"));
@@ -64,7 +97,6 @@ namespace iferno
             Settings.Textures.Add("block-black", screen.Content.Load<Texture2D>("block/block-black"));
             Settings.Textures.Add("block-feuer", screen.Content.Load<Texture2D>("block/block-feuer"));
             Settings.Textures.Add("block-wasser", screen.Content.Load<Texture2D>("block/block-wasser"));
-            Settings.Textures.Add("block-holz-baum", screen.Content.Load<Texture2D>("block/block-holz-baum"));
             Settings.Textures.Add("block-sand", screen.Content.Load<Texture2D>("block/block-sand"));
             Settings.Textures.Add("block-holz-kiste", screen.Content.Load<Texture2D>("block/block-holz-kiste"));
         }

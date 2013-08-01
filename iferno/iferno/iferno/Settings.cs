@@ -38,5 +38,6 @@ namespace iferno
 
         public static Dictionary<string, Texture2D> Textures =
             new Dictionary<string, Texture2D>();
+
     }
 }

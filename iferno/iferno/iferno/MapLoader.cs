@@ -90,6 +90,14 @@ namespace iferno
                     {
                         newMap.Add(new BlockVentilator(map, x, y));
                     }
+                    if (line[x] == 'D')
+                    {
+                        newMap.Add(new BlockDorf(map, x, y));
+                    }
+                    if (line[x] == 'U')
+                    {
+                        newMap.Add(new BlockUnteresWasser(map, x, y));
+                    }
                 }
                 y++;
             }

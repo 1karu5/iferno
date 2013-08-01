@@ -65,8 +65,8 @@ namespace iferno
             Settings.Textures.Add("level3.1", screen.Content.Load<Texture2D>("background/level1.1"));
             Settings.Textures.Add("level3.2", screen.Content.Load<Texture2D>("background/level1.2"));
             //fünftes level
-            Settings.Textures.Add("level4.1", screen.Content.Load<Texture2D>("background/level1.1"));
-            Settings.Textures.Add("level4.2", screen.Content.Load<Texture2D>("background/level1.2"));  
+            Settings.Textures.Add("level4.1", screen.Content.Load<Texture2D>("background/level4.1"));
+            Settings.Textures.Add("level4.2", screen.Content.Load<Texture2D>("background/level4.2"));  
         }
 
         public void move(float px)

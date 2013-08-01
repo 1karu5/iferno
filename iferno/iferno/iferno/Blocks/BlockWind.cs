@@ -12,6 +12,12 @@ namespace iferno
             collideWithPlayer = false;
         }
 
+        public override Rectangle Collision()
+        {
+            Rectangle collision = base.Collision();
+            collision.Y = collision.Y + (collision.Height*2/3);
+            return collision;
+        }
         public override void OnCollisionWithPlayer(Player p)
         {
             p.changeHP(dmg);

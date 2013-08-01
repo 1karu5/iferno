@@ -8,7 +8,7 @@ namespace iferno
     {
         public BlockWind(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["block-transparent"])
         {
-            dmg = -10;
+            dmg = -5;
             collideWithPlayer = false;
         }
 

@@ -29,6 +29,7 @@ namespace iferno
         //cheat mode :D
         public bool immortal = false;
 
+
         public float DirectionX { get; set; }
         public float DirectionY { get; set; }
 
@@ -50,6 +51,7 @@ namespace iferno
             changeHP(101);
         }
 
+        //lebensanzeige berchnen
         public void changeHP(int hp)
         {
             if (!immortal)

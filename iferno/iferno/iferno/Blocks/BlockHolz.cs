@@ -14,7 +14,8 @@ namespace iferno
 
         public override void OnCollisionWithPlayer(Player p)
         {
-            isDestroying = true;
+            markDestroy = true;
+            burn = true;
         }
     }
 }

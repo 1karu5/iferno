@@ -6,16 +6,18 @@ namespace iferno
 {
     public class BlockKiste : Block
     {
+
+
         public BlockKiste(Map map, int x, int y)
             : base(map, x, y, Color.White, Settings.Textures["block-kiste" + Settings.Rnd.Next(0, 4)])
         {
-            frames = 1;
             delay = 0.1f;
         }
 
         public override void OnCollisionWithPlayer(Player p)
         {
             markDestroy = true;
+            burn = true;
         }
 
         public override void Update(float dt)

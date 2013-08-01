@@ -18,6 +18,13 @@ namespace iferno
         public bool animate = false;
         public bool collideWithPlayer = true;
 
+        public bool burn = false;
+        public int burnFrameCounter = 0;
+        public int burnFrames = 4;
+        public float burnDelay = 0.3f;
+        public float burnTime = 0;
+
+
         public Block(Map map,int x, int y, Color color,Texture2D t):base(x*64,y*64,color,t)
         {
             this.map = map; 
@@ -44,7 +51,7 @@ namespace iferno
         {
             base.Update(dt);
 
-            if (markDestroy || animate)
+            if (animate)
             {
                 //Einzelne Frames abarbeiten
                 time += dt;
@@ -52,11 +59,27 @@ namespace iferno
                 {
                     time -= delay;
                     if (frameCounter < frames - 1)
+                    {
                         frameCounter++;
-                    else if (markDestroy)
-                        isDestroying = true;
+                    }
                     else
                         frameCounter = 0;
+                }
+            }
+
+            if (markDestroy)
+            {
+                //Einzelne Frames abarbeiten
+                burnTime += dt;
+                if (burnTime > burnDelay)
+                {
+                    burnTime -= burnDelay;
+                    if (burnFrameCounter < burnFrames - 1)
+                    {
+                        burnFrameCounter++;
+                    }
+                    else if (markDestroy)
+                        isDestroying = true;
                 }
             }
         }
@@ -74,12 +97,13 @@ namespace iferno
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            if (this.isVisible())
-            {
-                spriteBatch.Draw(this.texture, position,
-                        new Rectangle((int)(frameCounter * (int)Width()), 0, (int)Width(), (int)Height()),
-                        Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.0f);
-            }
+            spriteBatch.Draw(this.texture, position,
+                    new Rectangle((int)(frameCounter * (int)Width()), 0, (int)Width(), (int)Height()),
+                    Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0.0f);
+            if (burn)
+                spriteBatch.Draw(Settings.Textures["block-burn"], position,
+                    new Rectangle((int)(burnFrameCounter * (int)Width()), 0, (int)Width(), (int)Height()),
+                    Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 1.0f);
         }
     }
 }

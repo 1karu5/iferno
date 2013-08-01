@@ -7,7 +7,6 @@ Content\intro\intro1.xnb
 Content\intro\intro2.xnb
 Content\intro\intro3.xnb
 Content\intro\intro4.xnb
-Content\intro\intro5.xnb
 Content\background\level1.1.xnb
 Content\background\level1.2.xnb
 Content\background\level0.1.xnb
@@ -79,3 +78,4 @@ Content\block\blockburn.xnb
 Content\sound\damage.xnb
 Content\sound\death.xnb
 Content\sound\jump.xnb
+Content\laden\karte0.xnb

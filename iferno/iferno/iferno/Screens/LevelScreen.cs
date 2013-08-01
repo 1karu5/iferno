@@ -28,7 +28,8 @@ namespace iferno
 
         public override void activate()
         {
-           
+            Settings.player.reset();
+            Settings.player.map.loadMap(Settings.mapNumber);
         }
 
         public override void LoadContent()

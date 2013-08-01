@@ -23,11 +23,13 @@ namespace iferno
 
         public override void activate()
         {
+            Settings.player.reset();
             oldKeyboardState = Keyboard.GetState();
         }
 
         public override void LoadContent()
         {
+            Settings.Textures.Add("karte0", Content.Load<Texture2D>("laden/karte0"));
             Settings.Textures.Add("karte1", Content.Load<Texture2D>("laden/karte1"));
             Settings.Textures.Add("karte2", Content.Load<Texture2D>("laden/karte2"));
             Settings.Textures.Add("karte3", Content.Load<Texture2D>("laden/karte3"));

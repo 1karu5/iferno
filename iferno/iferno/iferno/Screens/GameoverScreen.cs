@@ -24,6 +24,7 @@ namespace iferno
 
         public override void activate()
         {
+            Settings.didhedied = true;
             oldKeyboardState = Keyboard.GetState();
             Settings.SoundEffects["death"].Play();
         }

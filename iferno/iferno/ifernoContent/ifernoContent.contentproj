@@ -138,8 +138,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="intro\intro5.png">
-      <Name>intro5</Name>
+    <Compile Include="laden\karte0.png">
+      <Name>karte0</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

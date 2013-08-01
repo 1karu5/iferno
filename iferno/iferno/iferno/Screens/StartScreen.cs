@@ -51,7 +51,12 @@ namespace iferno
             {
                 if (indexPos == 0)
                 {
-                    game.switchScreen("intro");
+                    if (Settings.didhedied)
+                    {
+                        game.switchScreen("karte");
+                    }else{
+                        game.switchScreen("intro");
+                    }
                 }
 
                 else if (indexPos == 1)

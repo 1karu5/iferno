@@ -25,6 +25,7 @@ namespace iferno
 
         public override void activate()
         {
+            i = 1;
             oldKeyboardState = Keyboard.GetState();
         }
 
@@ -34,7 +35,6 @@ namespace iferno
             Settings.Textures.Add("intro2", Content.Load<Texture2D>("intro/intro2"));
             Settings.Textures.Add("intro3", Content.Load<Texture2D>("intro/intro3"));
             Settings.Textures.Add("intro4", Content.Load<Texture2D>("intro/intro4"));
-            Settings.Textures.Add("intro5", Content.Load<Texture2D>("intro/intro5"));
         }
 
         public override void Update(GameTime gameTime)
@@ -42,15 +42,13 @@ namespace iferno
             KeyboardState menuState = Keyboard.GetState();
             if (menuState.IsKeyDown(Keys.Enter) && oldKeyboardState.IsKeyUp(Keys.Enter))
             {
-                if (i < 5)
+                if (i < 4)
                 {
                     i++;
                 }
                 else
                 {
-                    Settings.player.reset();
-                    Settings.player.map.loadMap(Settings.mapNumber);
-                    Settings.game.switchScreen("level");  
+                    Settings.game.switchScreen("karte");  
                 }   
             }
             oldKeyboardState = menuState;

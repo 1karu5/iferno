@@ -48,6 +48,7 @@ namespace iferno
         public void reset()
         {
             position = new Vector2(Settings.playerStartX, Settings.playerStartY);
+            
             changeHP(101);
         }
 
@@ -72,10 +73,10 @@ namespace iferno
                         health += hp;
                     if (health > 100)
                         health = 100;
-                    ui.changeHPTo(health);
                     if (health <= 0)
                         Settings.game.switchScreen("gameover");
                 }
+                ui.changeHPTo(health);
             }
         }
 

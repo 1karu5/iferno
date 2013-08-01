@@ -54,6 +54,7 @@ namespace iferno
             Settings.SoundEffects.Add("dmg", Content.Load<SoundEffect>("sound/damage"));
             Settings.SoundEffects.Add("death", Content.Load<SoundEffect>("sound/death"));
             Settings.SoundEffects.Add("jump", Content.Load<SoundEffect>("sound/jump"));
+            Settings.SoundEffects.Add("burn", Content.Load<SoundEffect>("sound/burn"));
 
             Settings.font = Content.Load<SpriteFont>("ui/font");
 

@@ -15,6 +15,7 @@ namespace iferno
 
         public override void OnCollisionWithPlayer(Player p)
         {
+            Settings.SoundEffects["burn"].Play();
             markDestroy = true;
             burn = true;
         }

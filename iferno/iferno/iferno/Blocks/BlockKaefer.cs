@@ -25,8 +25,8 @@ namespace iferno
 
         public override void Update(float dt)
         {
-            if (isVisible())
-            {
+            
+            
                 float newX = X();
                 Rectangle collsionMesh = Collision();
                 
@@ -39,7 +39,7 @@ namespace iferno
                     newX-=speed*dt;
                 }
                 collsionMesh.X = (int)newX;
-                foreach (Block b in map.getVisibleBlocks())
+                foreach (Block b in map.blocks)
                 {
                     if (!(b is BlockKaefer) && b.CheckCollisionWith(collsionMesh))
                     {
@@ -49,6 +49,6 @@ namespace iferno
                 }
                 this.position.X = newX;
             }
-        }
+        
     }
 }

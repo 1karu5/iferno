@@ -48,7 +48,11 @@ namespace iferno
             Settings.Textures.Add("HolzIstBrennbar", Content.Load<Texture2D>("ui/HolzIstBrennbar"));
             Settings.Textures.Add("VorsichtWind", Content.Load<Texture2D>("ui/VorsichtWind"));
             Settings.Textures.Add("VorsichtKäfer", Content.Load<Texture2D>("ui/VorsichtKäfer"));
-            
+
+            //sound
+            Settings.SoundEffects.Add("dmg", Content.Load<SoundEffect>("sound/damage"));
+            Settings.SoundEffects.Add("death", Content.Load<SoundEffect>("sound/death"));
+            Settings.SoundEffects.Add("jump", Content.Load<SoundEffect>("sound/jump"));
 
             Settings.font = Content.Load<SpriteFont>("ui/font");
 

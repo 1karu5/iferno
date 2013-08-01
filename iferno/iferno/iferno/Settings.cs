@@ -39,5 +39,8 @@ namespace iferno
         public static Dictionary<string, Texture2D> Textures =
             new Dictionary<string, Texture2D>();
 
+        public static Dictionary<string, SoundEffect> SoundEffects =
+           new Dictionary<string, SoundEffect>();
+
     }
 }

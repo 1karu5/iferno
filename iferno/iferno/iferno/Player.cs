@@ -62,6 +62,7 @@ namespace iferno
                     dmg = true;
                     frameCounter = 0;
                     delay = 0.5f;
+                    Settings.SoundEffects["dmg"].Play();
                 }
                 if (hp > 100)
                 {
@@ -117,6 +118,7 @@ namespace iferno
         {
             if (this.onGround())
             {
+                Settings.SoundEffects["jump"].Play();
                 DirectionY = -Settings.PlayerMaxYDirection;
             }
         }

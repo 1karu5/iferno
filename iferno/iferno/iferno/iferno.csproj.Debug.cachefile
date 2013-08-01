@@ -76,3 +76,6 @@ Content\text\textGameSound2.xnb
 Content\text\textGameStart2.xnb
 Content\text\textGameWeiter2.xnb
 Content\block\blockburn.xnb
+Content\sound\damage.xnb
+Content\sound\death.xnb
+Content\sound\jump.xnb

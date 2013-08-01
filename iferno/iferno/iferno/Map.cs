@@ -14,11 +14,8 @@ namespace iferno
     public class Map
     {
         public List<Block> blocks;
-        public int firstVisibleBlock;
         public int width;
         public int height;
-        public int visibleWidth;
-        public int visibleHeight;
         public Screen screen;
 
         private float mapPosition = 0.0f;
@@ -30,12 +27,9 @@ namespace iferno
             Settings.mapNumber = -1;
             this.LoadContent();
             this.loadMap(0);
-            this.firstVisibleBlock = 0;
+     
             this.width = 100;
             this.height = 12;
-
-            this.visibleWidth = 16;
-            this.visibleHeight = 12;
         }
 
         /**
@@ -132,7 +126,7 @@ namespace iferno
 
         public void Update(float dt)
         {
-            foreach (Block e in getVisibleBlocks())
+            foreach (Block e in blocks)
             {
                 e.Update(dt);
             }

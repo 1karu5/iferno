@@ -35,9 +35,9 @@ namespace iferno
 
         public bool isVisible()
         {
-            if (this.mapPositionX >= map.firstVisibleBlock && this.mapPositionX < map.firstVisibleBlock+map.visibleWidth)
+            if (X() + Width() < 0 || X()>Settings.Width || Y()+Height() < 0 || Y() > Settings.Height)
             {
-                return true;    //TODO
+                return false;    //TODO
             }
             return true;
         }

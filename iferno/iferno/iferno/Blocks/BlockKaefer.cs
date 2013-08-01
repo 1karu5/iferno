@@ -12,7 +12,7 @@ namespace iferno
         public int speed = 300;
        
         public BlockKaefer(Map map, int x, int y)
-            : base(map, x, y, Color.White, Settings.Textures["blockgruen"])
+            : base(map, x, y, Color.White, Settings.Textures["block-wolkegegner"])
         {
             dmg = 100;
             collideWithPlayer = false;

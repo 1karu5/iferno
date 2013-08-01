@@ -82,6 +82,21 @@ namespace iferno
             Settings.Textures.Add("block-kiste1", screen.Content.Load<Texture2D>("block/kisten/2kiste"));
             Settings.Textures.Add("block-kiste2", screen.Content.Load<Texture2D>("block/kisten/3kiste"));
             Settings.Textures.Add("block-kiste3", screen.Content.Load<Texture2D>("block/kisten/4kiste"));
+            //blätter
+            Settings.Textures.Add("block-blatt0", screen.Content.Load<Texture2D>("block/blaetter/1blatt"));
+            Settings.Textures.Add("block-blatt1", screen.Content.Load<Texture2D>("block/blaetter/2blatt"));
+            Settings.Textures.Add("block-blatt2", screen.Content.Load<Texture2D>("block/blaetter/3blatt"));
+            Settings.Textures.Add("block-blatt3", screen.Content.Load<Texture2D>("block/blaetter/4blatt"));
+            Settings.Textures.Add("block-blatt4", screen.Content.Load<Texture2D>("block/blaetter/5blatt"));
+            Settings.Textures.Add("block-blatt5", screen.Content.Load<Texture2D>("block/blaetter/6blatt"));
+            Settings.Textures.Add("block-blatt6", screen.Content.Load<Texture2D>("block/blaetter/7blatt"));
+            Settings.Textures.Add("block-blatt7", screen.Content.Load<Texture2D>("block/blaetter/8blatt"));
+            //wolken
+            Settings.Textures.Add("block-wolke0", screen.Content.Load<Texture2D>("block/wolke/1wolke"));
+            Settings.Textures.Add("block-wolke1", screen.Content.Load<Texture2D>("block/wolke/2wolke"));
+            //gegner
+            Settings.Textures.Add("block-wolkegegner", screen.Content.Load<Texture2D>("block/wolke/gegner_wolke"));
+
 
             Settings.Textures.Add("blockgruen", screen.Content.Load<Texture2D>("block/blockgruen"));
 

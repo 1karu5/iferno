@@ -8,7 +8,8 @@ namespace iferno
     {
         private bool collided = false;
 
-        public BlockBlatt(Map map,int x, int y):base(map,x,y,Color.White,Settings.Textures["blattSprite"])
+        public BlockBlatt(Map map, int x, int y)
+            : base(map, x, y, Color.White, Settings.Textures["block-blatt" + Settings.Rnd.Next(0, 8)])
         {
             frames = 4;
             delay = 0.1f;

@@ -90,7 +90,7 @@ namespace iferno
                     {
                         newMap.Add(new BlockVentilator(map, x, y));
                     }
-                    if (line[x] == 'D')
+                    if (line[x] == 'Z')
                     {
                         newMap.Add(new BlockDorf(map, x, y));
                     }

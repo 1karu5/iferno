@@ -1,8 +1,4 @@
-Content\textGameBeenden.xnb
-Content\textGameStarten.xnb
 Content\gameover.xnb
-Content\textGameSound.xnb
-Content\textGameWeiter.xnb
 Content\laden\karte1.xnb
 Content\laden\karte2.xnb
 Content\laden\karte3.xnb
@@ -16,13 +12,8 @@ Content\background\level1.1.xnb
 Content\background\level1.2.xnb
 Content\background\level0.1.xnb
 Content\background\level0.2.xnb
-Content\block\blockgelb.xnb
 Content\block\blockgruen.xnb
-Content\block\block-wasser.xnb
 Content\block\block-feuer.xnb
-Content\block\block-holz-baum.xnb
-Content\block\block-sand.xnb
-Content\block\block-holz-kiste.xnb
 Content\block\block-black.xnb
 Content\block\block-transparent.xnb
 Content\player\playersprite.xnb
@@ -70,3 +61,7 @@ Content\block\kisten\3kiste.xnb
 Content\block\kisten\4kiste.xnb
 Content\block\block-platform.xnb
 Content\block\wassersprite.xnb
+Content\text\textGameBeenden.xnb
+Content\text\textGameStarten.xnb
+Content\text\textGameSound.xnb
+Content\text\textGameWeiter.xnb

@@ -29,8 +29,8 @@ namespace iferno
 
         public override void LoadContent()
         {
-             Settings.Textures.Add("textGameStarten", Content.Load<Texture2D>("textGameStarten"));
-             Settings.Textures.Add("textGameBeenden", Content.Load<Texture2D>("textGameBeenden"));
+             Settings.Textures.Add("textGameStarten", Content.Load<Texture2D>("text/textGameStarten"));
+             Settings.Textures.Add("textGameBeenden", Content.Load<Texture2D>("text/textGameBeenden"));
         }
 
         public override void Update(GameTime gameTime)

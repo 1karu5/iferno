@@ -49,12 +49,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="textGameBeenden.png">
+    <Compile Include="text\textGameBeenden.png">
       <Name>textGameBeenden</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="textGameStarten.png">
+    <Compile Include="text\textGameStarten.png">
       <Name>textGameStarten</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -166,14 +166,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="textGameSound.png">
+    <Compile Include="text\textGameSound.png">
       <Name>textGameSound</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="textGameWeiter.png">
+    <Compile Include="text\textGameWeiter.png">
       <Name>textGameWeiter</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>

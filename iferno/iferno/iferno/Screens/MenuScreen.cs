@@ -24,8 +24,8 @@ namespace iferno
 
         public override void LoadContent()
         {
-            Settings.Textures.Add("textGameSound", Content.Load<Texture2D>("textGameSound"));
-            Settings.Textures.Add("textGameWeiter", Content.Load<Texture2D>("textGameWeiter"));
+            Settings.Textures.Add("textGameSound", Content.Load<Texture2D>("text/textGameSound"));
+            Settings.Textures.Add("textGameWeiter", Content.Load<Texture2D>("text/textGameWeiter"));
         }
 
         public override void activate()

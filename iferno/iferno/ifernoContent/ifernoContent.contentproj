@@ -265,13 +265,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ui\jump.png">
-      <Name>jump</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="ui\font.spritefont">
       <Name>font</Name>
       <Importer>FontDescriptionImporter</Importer>
@@ -436,6 +429,40 @@
   <ItemGroup>
     <Compile Include="block\wassersprite.png">
       <Name>wassersprite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ui\rechts_links.png">
+      <Name>rechts_links</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ui\HolzIstBrennbar.png">
+      <Name>HolzIstBrennbar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ui\jump.png">
+      <Name>jump</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ui\VorsichtKäfer.png">
+      <Name>VorsichtKäfer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ui\VorsichtWasser.png">
+      <Name>VorsichtWasser</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ui\VorsichtWind.png">
+      <Name>VorsichtWind</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

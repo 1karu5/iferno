@@ -178,14 +178,40 @@ namespace iferno
             return newX;
         }
 
+        //instruktion texte werden angezeigt
         public void updateHelpText()
         {
             float mapPosition = map.getMapPosition();
 
-            if (!helpOnce.Contains("jump") && mapPosition< -1000)
+            if (!helpOnce.Contains("rechts_links") && mapPosition < 0 )
+            {
+                helpOnce.Add("rechts_links");
+                ui.addHelpText(100, 100, Settings.Textures["rechts_links"], 3.0f);
+            }
+            if (!helpOnce.Contains("jump") && mapPosition< -500)
             {
                 helpOnce.Add("jump");
                 ui.addHelpText(100,100,Settings.Textures["jump"],3.0f);
+            }
+            if (!helpOnce.Contains("VorsichtWasser") && mapPosition < -2200)
+            {
+                helpOnce.Add("VorsichtWasser");
+                ui.addHelpText(100, 100, Settings.Textures["VorsichtWasser"], 3.0f);
+            }
+            if (!helpOnce.Contains("HolzIstBrennbar") && mapPosition < -4800)
+            {
+                helpOnce.Add("HolzIstBrennbar");
+                ui.addHelpText(100, 100, Settings.Textures["HolzIstBrennbar"], 3.0f);
+            }
+            if (!helpOnce.Contains("VorsichtWind") && mapPosition < -1000 && Settings.mapNumber == 2)
+            {
+                helpOnce.Add("VorsichtWind");
+                ui.addHelpText(100, 100, Settings.Textures["VorsichtWind"], 3.0f);
+            }
+            if (!helpOnce.Contains("VorsichtKäfer") && mapPosition < -1000 && Settings.mapNumber == 3)
+            {
+                helpOnce.Add("VorsichtKäfer");
+                ui.addHelpText(100, 100, Settings.Textures["VorsichtKäfer"], 3.0f);
             }
         }
        

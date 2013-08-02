@@ -22,7 +22,7 @@ namespace iferno
 
             //Set starting position
             this.position_ausen = new Vector2(x, y);
-            this.position_innen = new Vector2(x+2, y+2);
+            this.position_innen = new Vector2(x+3, y+3);
         }
 
         public void changeTo(int hp)

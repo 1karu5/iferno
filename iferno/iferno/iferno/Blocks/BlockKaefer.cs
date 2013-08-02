@@ -25,6 +25,11 @@ namespace iferno
         public BlockKaefer(Map map, int x, int y)
             : base(map, x, y, Color.White, Settings.Textures["block-krabbegenger"])
         {
+            frames = 4;
+            delay = 0.3f;
+            animate = true;
+
+
             dmg = 100;
             collideWithPlayer = false;
         }
@@ -44,8 +49,6 @@ namespace iferno
 
         public override void Update(float dt)
         {
-            
-            
                 float newX = X();
                 Rectangle collsionMesh = Collision();
                 

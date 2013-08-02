@@ -27,7 +27,6 @@ Content\block\waterdrop.xnb
 Content\background\level2.1.xnb
 Content\background\level2.2.xnb
 Content\ende.xnb
-Content\ui\healthbar.xnb
 Content\ui\font.xnb
 Content\background\level4.2.xnb
 Content\background\level4.1.xnb
@@ -110,6 +109,8 @@ Content\block\wind_rechts_sprite.xnb
 Content\block\wind_links_sprite.xnb
 Content\block\gras\gras_block.xnb
 Content\block\gras\gras_zacken.xnb
+Content\ui\health_balken_ausen.xnb
+Content\ui\health_balken_innen.xnb
 Content\sound\songs\dorf.wma
 Content\sound\songs\hoehle.wma
 Content\sound\songs\strand.wma

@@ -94,7 +94,7 @@ namespace iferno
                     {
                         newMap.Add(new BlockWind(map, x, y, Settings.Textures["block-windrechts"]));
                     }
-                    if (line[x] == 'B')
+                    if (line[x] == '#')
                     {
                         newMap.Add(new BlockWind(map, x, y, Settings.Textures["block-windlinks"]));
                     }

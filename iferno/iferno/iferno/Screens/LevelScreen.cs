@@ -44,7 +44,8 @@ namespace iferno
             Settings.Textures.Add("ifernodmg", Content.Load<Texture2D>("player/playerdmgsprite"));
             Settings.Textures.Add("ifernodmgback", Content.Load<Texture2D>("player/playerdmgspriteback"));
             //ui laden
-            Settings.Textures.Add("healthbar", Content.Load<Texture2D>("ui/healthbar"));
+            Settings.Textures.Add("healthbar_innen", Content.Load<Texture2D>("ui/health_balken_innen"));
+            Settings.Textures.Add("healthbar_ausen", Content.Load<Texture2D>("ui/health_balken_ausen"));
             //instruktion texte 
             Settings.Textures.Add("jumpLaufen", Content.Load<Texture2D>("ui/jumpLaufen"));
             Settings.Textures.Add("VorsichtWasser", Content.Load<Texture2D>("ui/VorsichtWasser"));

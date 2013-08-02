@@ -116,7 +116,7 @@ namespace iferno
 
             Settings.Textures.Add("block-burn", screen.Content.Load<Texture2D>("block/blockburn"));
             
-            Settings.Textures.Add("blattSprite", screen.Content.Load<Texture2D>("block/blattSprite"));
+            
             Settings.Textures.Add("ventilatorSprite", screen.Content.Load<Texture2D>("block/ventilatorSprite"));
             Settings.Textures.Add("block-white", screen.Content.Load<Texture2D>("block/block-white"));
             Settings.Textures.Add("block-transparent", screen.Content.Load<Texture2D>("block/block-transparent"));

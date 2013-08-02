@@ -22,7 +22,6 @@ Content\player\playerwaitsprite.xnb
 Content\player\playerdmgsprite.xnb
 Content\player\playerdmgspriteback.xnb
 Content\block\ventilatorSprite.xnb
-Content\block\blattSprite.xnb
 Content\block\waterdrop.xnb
 Content\background\level2.1.xnb
 Content\background\level2.2.xnb
@@ -111,6 +110,8 @@ Content\block\gras\gras_block.xnb
 Content\block\gras\gras_zacken.xnb
 Content\ui\health_balken_ausen.xnb
 Content\ui\health_balken_innen.xnb
+Content\block\gegner\gegner_bubble_sprite.xnb
+Content\block\gegner\gegner_krabbe_sprite.xnb
 Content\sound\songs\dorf.wma
 Content\sound\songs\hoehle.wma
 Content\sound\songs\strand.wma

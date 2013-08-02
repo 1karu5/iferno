@@ -15,6 +15,7 @@ namespace iferno
     public class IntroScreen : Screen
     {
         int i = 1;
+        int max = 8;
         KeyboardState oldKeyboardState=Keyboard.GetState();
 
         public IntroScreen(Game1 game, SpriteBatch spriteBatch)
@@ -35,6 +36,10 @@ namespace iferno
             Settings.Textures.Add("intro2", Content.Load<Texture2D>("intro/intro2"));
             Settings.Textures.Add("intro3", Content.Load<Texture2D>("intro/intro3"));
             Settings.Textures.Add("intro4", Content.Load<Texture2D>("intro/intro4"));
+            Settings.Textures.Add("intro5", Content.Load<Texture2D>("intro/intro5"));
+            Settings.Textures.Add("intro6", Content.Load<Texture2D>("intro/intro6"));
+            Settings.Textures.Add("intro7", Content.Load<Texture2D>("intro/intro7"));
+            Settings.Textures.Add("intro8", Content.Load<Texture2D>("intro/intro8"));
         }
 
         public override void Update(GameTime gameTime)
@@ -42,7 +47,7 @@ namespace iferno
             KeyboardState menuState = Keyboard.GetState();
             if (menuState.IsKeyDown(Keys.Enter) && oldKeyboardState.IsKeyUp(Keys.Enter))
             {
-                if (i < 4)
+                if (i < max)
                 {
                     i++;
                 }

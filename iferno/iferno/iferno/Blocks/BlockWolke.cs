@@ -13,5 +13,10 @@ namespace iferno
             dmg = 0;
             collideWithPlayer = false;
         }
+
+        public override bool CheckCollisionWith(Rectangle r)
+        {
+            return false;
+        }
     }
 }

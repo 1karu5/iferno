@@ -79,8 +79,10 @@ namespace iferno
                     if (health <= 100)
                         health += hp;
                     if (health > 100)
+                    {
                         ui.changePointsTo(health - 100);
                         health = 100;
+                    }
                     if (health <= 0)
                         Settings.game.switchScreen("gameover");
                 }

@@ -48,7 +48,7 @@ namespace iferno
                 indexPos++;
             }
 
-            if (menuState.IsKeyDown(Keys.Enter))
+            if (menuState.IsKeyDown(Keys.Enter) || menuState.IsKeyDown(Keys.Space))
             {
                 switch (indexPos)
                 { 

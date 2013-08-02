@@ -197,7 +197,7 @@ namespace iferno
         {
             float mapPosition = map.getMapPosition();
 
-            if (!helpOnce.Contains("jumpLaufen") && mapPosition < 0 && Settings.mapNumber == 0)
+            if (!helpOnce.Contains("jumpLaufen") && mapPosition < 1 && Settings.mapNumber == 0)
             {
                 helpOnce.Add("jumpLaufen");
                 ui.addHelpText(-50, 0, Settings.Textures["jumpLaufen"], 3.0f);
@@ -210,9 +210,9 @@ namespace iferno
             if (!helpOnce.Contains("HolzIstBrennbar") && mapPosition < -4800 && Settings.mapNumber == 0)
             {
                 helpOnce.Add("HolzIstBrennbar");
-                ui.addHelpText(350, 0, Settings.Textures["HolzIstBrennbar"], 3.0f);
+                ui.addHelpText(-50, 0, Settings.Textures["HolzIstBrennbar"], 3.0f);
             }
-            if (!helpOnce.Contains("FeuerIstLeben") && mapPosition < -4800 && Settings.mapNumber == 0)
+            if (!helpOnce.Contains("FeuerIstLeben") && mapPosition < -5500 && Settings.mapNumber == 0)
             {
                 helpOnce.Add("FeuerIstLeben");
                 ui.addHelpText(-50, 0, Settings.Textures["FeuerIstLeben"], 3.0f);

@@ -49,6 +49,7 @@ namespace iferno
 
         public override void Update(float dt)
         {
+                
                 float newX = X();
                 Rectangle collsionMesh = Collision();
                 
@@ -70,6 +71,7 @@ namespace iferno
                     }
                 }
                 this.position.X = newX;
+                base.Update(dt);
             }
         
     }

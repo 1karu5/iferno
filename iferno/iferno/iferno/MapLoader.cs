@@ -48,7 +48,11 @@ namespace iferno
                     }
                     if (line[x] == 'I')
                     {
-                        newMap.Add(new BlockWiese(map, x, y));
+                        newMap.Add(new BlockWiese(map, x, y, Settings.Textures["block-grasoben"]));
+                    }
+                    if (line[x] == 'J')
+                    {
+                        newMap.Add(new BlockWiese(map, x, y, Settings.Textures["block-gras"]));
                     }
                     if (line[x] == 'G')
                     {
@@ -88,7 +92,11 @@ namespace iferno
                     }
                     if (line[x] == 'D')
                     {
-                        newMap.Add(new BlockWind(map, x, y));
+                        newMap.Add(new BlockWind(map, x, y, Settings.Textures["block-windrechts"]));
+                    }
+                    if (line[x] == 'B')
+                    {
+                        newMap.Add(new BlockWind(map, x, y, Settings.Textures["block-windlinks"]));
                     }
                     if (line[x] == 'V')
                     {

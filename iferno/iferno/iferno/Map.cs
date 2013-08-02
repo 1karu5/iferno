@@ -97,6 +97,13 @@ namespace iferno
             //gegner
             Settings.Textures.Add("block-wolkegegner", screen.Content.Load<Texture2D>("block/wolke/gegner_wolke"));
 
+            //gras
+            Settings.Textures.Add("block-grasoben", screen.Content.Load<Texture2D>("block/gras/gras_zacken"));
+            Settings.Textures.Add("block-gras", screen.Content.Load<Texture2D>("block/gras/gras_block"));
+
+            //wind
+            Settings.Textures.Add("block-windlinks", screen.Content.Load<Texture2D>("block/wind_links_sprite"));
+            Settings.Textures.Add("block-windrechts", screen.Content.Load<Texture2D>("block/wind_rechts_sprite"));
 
             Settings.Textures.Add("blockgruen", screen.Content.Load<Texture2D>("block/blockgruen"));
 

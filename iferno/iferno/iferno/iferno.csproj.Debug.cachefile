@@ -105,6 +105,11 @@ Content\block\blaetter\6blatt.xnb
 Content\ui\VorsichtKaefer.xnb
 Content\startbildschirm.xnb
 Content\ui\jumpLaufen.xnb
+Content\wind_rechts_sprite.xnb
+Content\block\wind_rechts_sprite.xnb
+Content\block\wind_links_sprite.xnb
+Content\block\gras\gras_block.xnb
+Content\block\gras\gras_zacken.xnb
 Content\sound\songs\dorf.wma
 Content\sound\songs\hoehle.wma
 Content\sound\songs\strand.wma

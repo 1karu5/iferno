@@ -15,7 +15,7 @@ namespace iferno
     public class IntroScreen : Screen
     {
         int i = 1;
-        int max = 8;
+        int max = 11;
         KeyboardState oldKeyboardState=Keyboard.GetState();
 
         public IntroScreen(Game1 game, SpriteBatch spriteBatch)
@@ -40,6 +40,8 @@ namespace iferno
             Settings.Textures.Add("intro6", Content.Load<Texture2D>("intro/intro6"));
             Settings.Textures.Add("intro7", Content.Load<Texture2D>("intro/intro7"));
             Settings.Textures.Add("intro8", Content.Load<Texture2D>("intro/intro8"));
+            Settings.Textures.Add("intro9", Content.Load<Texture2D>("intro/intro9"));
+            Settings.Textures.Add("intro10", Content.Load<Texture2D>("intro/intro10"));
         }
 
         public override void Update(GameTime gameTime)

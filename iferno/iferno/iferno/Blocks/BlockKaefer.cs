@@ -10,9 +10,20 @@ namespace iferno
         public int timer=0;
         public bool direction = false;
         public int speed = 300;
-       
+
+        public BlockKaefer(Map map, int x, int y,Texture2D t)
+            : base(map, x, y, Color.White, t)
+        {
+            frames = 4;
+            delay = 0.3f;
+            animate = true;
+
+            dmg = 100;
+            collideWithPlayer = false;
+        }
+
         public BlockKaefer(Map map, int x, int y)
-            : base(map, x, y, Color.White, Settings.Textures["block-wolkegegner"])
+            : base(map, x, y, Color.White, Settings.Textures["block-krabbegenger"])
         {
             dmg = 100;
             collideWithPlayer = false;

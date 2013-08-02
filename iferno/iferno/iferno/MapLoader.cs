@@ -82,6 +82,10 @@ namespace iferno
                     {
                         newMap.Add(new BlockKaefer(map, x, y));
                     }
+                    if (line[x] == 'A')
+                    {
+                        newMap.Add(new BlockKaefer(map, x, y, Settings.Textures["block-bubblegenger"]));
+                    }
                     if (line[x] == 'O')
                     {
                         newMap.Add(new BlockDschungel(map, x, y));

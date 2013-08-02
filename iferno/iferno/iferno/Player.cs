@@ -228,6 +228,13 @@ namespace iferno
                 helpOnce.Add("VorsichtKabbe");
                 ui.addHelpText(-50, 0, Settings.Textures["VorsichtKabbe"], 3.0f);
             }
+
+            //easteregg
+            if (!helpOnce.Contains("easteregg") && mapPosition < -5130 && mapPosition > -5150 && Y() ==-128 &&Settings.mapNumber == 4)
+            {
+                helpOnce.Add("easteregg");
+                ui.addHelpText(0, 0, Settings.Textures["easteregg"], 5.0f);
+            }
         }
        
         public override void Update(float dt)

@@ -53,6 +53,8 @@ namespace iferno
             Settings.Textures.Add("FeuerIstLeben", Content.Load<Texture2D>("ui/FeuerIstLeben"));
             Settings.Textures.Add("VorsichtWind", Content.Load<Texture2D>("ui/VorsichtWind"));
             Settings.Textures.Add("VorsichtKabbe", Content.Load<Texture2D>("ui/VorsichtKrabbe"));
+            //easteregg
+            Settings.Textures.Add("easteregg", Content.Load<Texture2D>("easteregg"));
 
             //##########sound
             Settings.SoundEffects.Add("dmg", Content.Load<SoundEffect>("sound/damage"));

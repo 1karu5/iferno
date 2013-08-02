@@ -232,7 +232,7 @@ namespace iferno
             }
 
             //easteregg
-            if (!helpOnce.Contains("easteregg") && mapPosition < -5130 && mapPosition > -5150 && Y() ==-128 &&Settings.mapNumber == 4)
+            if (!helpOnce.Contains("easteregg") && mapPosition > -5130 && mapPosition < -5000 && Y() ==-128 &&Settings.mapNumber == 4)
             {
                 helpOnce.Add("easteregg");
                 ui.addHelpText(0, 0, Settings.Textures["easteregg"], 5.0f);

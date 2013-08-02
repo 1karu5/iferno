@@ -649,13 +649,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ui\VorsichtKaefer.png">
-      <Name>VorsichtKaefer</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="startbildschirm.png">
       <Name>startbildschirm</Name>
       <Importer>TextureImporter</Importer>
@@ -715,6 +708,25 @@
     </Compile>
     <Compile Include="block\gegner\gegner_krabbe_sprite.png">
       <Name>gegner_krabbe_sprite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ui\FeuerIstLeben.png">
+      <Name>FeuerIstLeben</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ui\tutorial_brett.png">
+      <Name>tutorial_brett</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="ui\VorsichtKrabbe.png">
+      <Name>VorsichtKrabbe</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

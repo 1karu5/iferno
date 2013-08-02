@@ -200,27 +200,32 @@ namespace iferno
             if (!helpOnce.Contains("jumpLaufen") && mapPosition < 0 && Settings.mapNumber == 0)
             {
                 helpOnce.Add("jumpLaufen");
-                ui.addHelpText(-50, 0, Settings.Textures["jumpLaufen"], 4.0f);
+                ui.addHelpText(-50, 0, Settings.Textures["jumpLaufen"], 3.0f);
             }
             if (!helpOnce.Contains("VorsichtWasser") && mapPosition < -2200 && Settings.mapNumber == 0)
             {
                 helpOnce.Add("VorsichtWasser");
-                ui.addHelpText(-50, 0, Settings.Textures["VorsichtWasser"], 4.0f);
+                ui.addHelpText(-50, 0, Settings.Textures["VorsichtWasser"], 3.0f);
             }
             if (!helpOnce.Contains("HolzIstBrennbar") && mapPosition < -4800 && Settings.mapNumber == 0)
             {
                 helpOnce.Add("HolzIstBrennbar");
-                ui.addHelpText(-50, 0, Settings.Textures["HolzIstBrennbar"], 4.0f);
+                ui.addHelpText(350, 0, Settings.Textures["HolzIstBrennbar"], 3.0f);
+            }
+            if (!helpOnce.Contains("FeuerIstLeben") && mapPosition < -4800 && Settings.mapNumber == 0)
+            {
+                helpOnce.Add("FeuerIstLeben");
+                ui.addHelpText(-50, 0, Settings.Textures["FeuerIstLeben"], 3.0f);
             }
             if (!helpOnce.Contains("VorsichtWind") && mapPosition < 0 && Settings.mapNumber == 2)
             {
                 helpOnce.Add("VorsichtWind");
-                ui.addHelpText(-50, 0, Settings.Textures["VorsichtWind"], 4.0f);
+                ui.addHelpText(-50, 0, Settings.Textures["VorsichtWind"], 3.0f);
             }
             if (!helpOnce.Contains("VorsichtKabbe") && mapPosition < 0 && Settings.mapNumber == 3)
             {
                 helpOnce.Add("VorsichtKabbe");
-                ui.addHelpText(-50, 0, Settings.Textures["VorsichtKabbe"], 4.0f);
+                ui.addHelpText(-50, 0, Settings.Textures["VorsichtKabbe"], 3.0f);
             }
         }
        

@@ -42,6 +42,7 @@ namespace iferno
             Settings.Textures.Add("intro8", Content.Load<Texture2D>("intro/intro8"));
             Settings.Textures.Add("intro9", Content.Load<Texture2D>("intro/intro9"));
             Settings.Textures.Add("intro10", Content.Load<Texture2D>("intro/intro10"));
+            Settings.Textures.Add("intro11", Content.Load<Texture2D>("intro/intro11"));
         }
 
         public override void Update(GameTime gameTime)

@@ -31,7 +31,7 @@ namespace iferno
         public static float playerStartX = 250;
         public static float playerStartY = 400;
 
-        public static bool debug = true;
+        public static bool debug = false;
 
         public static bool didhedied = false;
         //zufalls zahlen

@@ -434,20 +434,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ui\rechts_links.png">
-      <Name>rechts_links</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="ui\HolzIstBrennbar.png">
       <Name>HolzIstBrennbar</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="ui\jump.png">
-      <Name>jump</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -668,6 +656,13 @@
   <ItemGroup>
     <Compile Include="block\wolke\gegner_wolke.png">
       <Name>gegner_wolke</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ui\jumpLaufen.png">
+      <Name>jumpLaufen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

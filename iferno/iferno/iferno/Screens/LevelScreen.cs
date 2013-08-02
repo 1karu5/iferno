@@ -46,8 +46,7 @@ namespace iferno
             //ui laden
             Settings.Textures.Add("healthbar", Content.Load<Texture2D>("ui/healthbar"));
             //instruktion texte 
-            Settings.Textures.Add("rechts_links", Content.Load<Texture2D>("ui/rechts_links"));
-            Settings.Textures.Add("jump", Content.Load<Texture2D>("ui/jump"));
+            Settings.Textures.Add("jumpLaufen", Content.Load<Texture2D>("ui/jumpLaufen"));
             Settings.Textures.Add("VorsichtWasser", Content.Load<Texture2D>("ui/VorsichtWasser"));
             Settings.Textures.Add("HolzIstBrennbar", Content.Load<Texture2D>("ui/HolzIstBrennbar"));
             Settings.Textures.Add("VorsichtWind", Content.Load<Texture2D>("ui/VorsichtWind"));

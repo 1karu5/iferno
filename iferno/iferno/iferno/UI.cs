@@ -10,12 +10,15 @@ namespace iferno
         public HealthBar healthbar;
         public List<HelpText> texts;
         public Console console;
+        public Points points;
+        
 
         public UI()
         {
             healthbar = new HealthBar(10,210);
             texts = new List<HelpText>();
             console = new Console(800,0);
+            points = new Points(10, 50);
         }
 
         public void debug(string s)
@@ -32,10 +35,16 @@ namespace iferno
             healthbar.changeTo(hp);    
         }
 
+        public void changePointsTo(int p)
+        {
+            points.changeTo(p);
+        }
+
         public void Update(float dt)
         {
             healthbar.Update(dt);
             console.Update(dt);
+            points.Update(dt);
             foreach (HelpText t in texts)
             {
                 t.Update(dt);
@@ -56,6 +65,7 @@ namespace iferno
                 t.Draw(spriteBatch);
             }
             healthbar.Draw(spriteBatch);
+            //points.Draw(spriteBatch);
         }
     }
 }

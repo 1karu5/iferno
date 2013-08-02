@@ -439,11 +439,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="ui\VorsichtKäfer.png">
-      <Name>VorsichtKäfer</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="ui\VorsichtWasser.png">
       <Name>VorsichtWasser</Name>
       <Importer>TextureImporter</Importer>
@@ -663,6 +658,20 @@
   <ItemGroup>
     <Compile Include="ui\jumpLaufen.png">
       <Name>jumpLaufen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ui\VorsichtKaefer.png">
+      <Name>VorsichtKaefer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="startbildschirm.png">
+      <Name>startbildschirm</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

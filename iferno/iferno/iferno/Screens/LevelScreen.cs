@@ -50,7 +50,7 @@ namespace iferno
             Settings.Textures.Add("VorsichtWasser", Content.Load<Texture2D>("ui/VorsichtWasser"));
             Settings.Textures.Add("HolzIstBrennbar", Content.Load<Texture2D>("ui/HolzIstBrennbar"));
             Settings.Textures.Add("VorsichtWind", Content.Load<Texture2D>("ui/VorsichtWind"));
-            Settings.Textures.Add("VorsichtKäfer", Content.Load<Texture2D>("ui/VorsichtKäfer"));
+            Settings.Textures.Add("VorsichtKäfer", Content.Load<Texture2D>("ui/VorsichtKaefer"));
 
             //##########sound
             Settings.SoundEffects.Add("dmg", Content.Load<SoundEffect>("sound/damage"));

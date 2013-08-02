@@ -16,6 +16,7 @@ namespace iferno
     {
         int indexPos = 0;
         KeyboardState oldKeyboardState = Keyboard.GetState();
+        
 
         public StartScreen(Game1 game, SpriteBatch spriteBatch) : base(game, spriteBatch)
         {
@@ -33,6 +34,8 @@ namespace iferno
              Settings.Textures.Add("textGameBeenden", Content.Load<Texture2D>("text/textGameBeenden"));
              Settings.Textures.Add("textGameStarten2", Content.Load<Texture2D>("text/textGameStart2"));
              Settings.Textures.Add("textGameBeenden2", Content.Load<Texture2D>("text/textGameBeenden2"));
+             Settings.Textures.Add("startscreen", Content.Load<Texture2D>("startbildschirm"));
+            
         }
 
         public override void Update(GameTime gameTime)
@@ -74,6 +77,9 @@ namespace iferno
 
         public override void Draw(GameTime gameTime)
         {
+
+            spriteBatch.Draw(Settings.Textures["startscreen"], new Vector2(0, 0), Color.White);
+
             //Spiel im Hintergrund verdunkeln
             //spriteBatch.Draw(Const.TEX_EMPTY, Const.SCREEN_RECTANGLE, new Color(0, 0, 0, 0.75f));
             if (indexPos == 0)
@@ -86,6 +92,8 @@ namespace iferno
                 spriteBatch.Draw(Settings.Textures["textGameStarten"], new Vector2(750, 550), Color.White);
                 spriteBatch.Draw(Settings.Textures["textGameBeenden2"], new Vector2(750, 630), Color.White);
             }
+
+            
             /*
             //New Game
            spriteBatch.Draw(Settings.Textures["textGameStarten"], new Vector2(750, 550), indexPos == 0 ? Color.White : Color.DimGray);

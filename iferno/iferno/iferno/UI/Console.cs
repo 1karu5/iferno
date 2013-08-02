@@ -15,7 +15,7 @@ namespace iferno
         public List<string> output;
         public string outputString;
 
-        public int maxLines = 3;
+        public int maxLines = 4;
 
         public Console(float x, float y)
         {

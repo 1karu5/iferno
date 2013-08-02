@@ -237,7 +237,8 @@ namespace iferno
             {
                 ui.debug("fps: " + (1 / dt));
                 ui.debug("map: " + Settings.mapNumber);
-                ui.debug("mappos: " + map.getMapPosition());
+                ui.debug("mapXpos: " + map.getMapPosition());
+                ui.debug("mapYpos: " + this.Y());
             }
             
 

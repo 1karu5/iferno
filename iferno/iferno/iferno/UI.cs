@@ -49,12 +49,13 @@ namespace iferno
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            healthbar.Draw(spriteBatch);
+            
             console.Draw(spriteBatch);
             foreach (HelpText t in texts)
             {
                 t.Draw(spriteBatch);
             }
+            healthbar.Draw(spriteBatch);
         }
     }
 }

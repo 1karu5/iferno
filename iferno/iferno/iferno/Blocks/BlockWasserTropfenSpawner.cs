@@ -30,7 +30,7 @@ namespace iferno
         }
 
         public BlockWasserTropfenSpawner(Map map, int x, int y)
-            : base(map, x, y, Color.White, Settings.Textures["block-wolke" + Settings.Rnd.Next(0, 2)])
+            : base(map, x, y, Color.White, Settings.Textures["block-wolkegegner"])
         {
             dmg = -10;
             anzahl = 100;

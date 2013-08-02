@@ -147,6 +147,7 @@
     <Compile Include="Blocks\BlockVentilator.cs" />
     <Compile Include="Blocks\BlockDorf.cs" />
     <Compile Include="Blocks\BlockUnteresWasser.cs" />
+    <Compile Include="Blocks\BlockWolke.cs" />
     <Compile Include="Particel\WaterDrop.cs" />
     <Compile Include="Screens\GameoverScreen.cs" />
     <Compile Include="Screens\KarteScreen.cs" />

@@ -232,13 +232,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="block\blattSprite.png">
-      <Name>blattSprite</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="background\level2.1.png">
       <Name>level2.1</Name>
       <Importer>TextureImporter</Importer>

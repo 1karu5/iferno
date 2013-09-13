@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.iferno</string>
+	<string>com.iferno.ifernoGame</string>
 	<key>CFBundleName</key>
 	<string>iferno</string>
 	<key>CFBundleVersion</key>
@@ -14,5 +14,9 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.games</string>
+	<key>CFBundleIconFile</key>
+	<string>iferno_icon</string>
 </dict>
 </plist>

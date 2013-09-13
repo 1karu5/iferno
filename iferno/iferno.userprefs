@@ -1,5 +1,5 @@
-﻿<Properties MonoDevelop.MonoMac.LastXamMacNagTime="13.09.2013 11:14:04">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+﻿<Properties MonoDevelop.MonoMac.LastXamMacNagTime="13.09.2013 12:48:27">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="../../MonoGame/MonoGame.Framework/Graphics/GraphicsExtensions.cs">
     <Files>
       <File FileName="iferno/MainMenu.xib" Line="1" Column="1" />
@@ -8,8 +8,8 @@
       <File FileName="iferno/Screens/LevelScreen.cs" Line="1" Column="1" />
       <File FileName="iferno/MapLoader.cs" Line="1" Column="1" />
       <File FileName="iferno/Program.cs" Line="1" Column="1" />
-      <File FileName="iferno/UI/Console.cs" Line="26" Column="4" />
-      <File FileName="../../MonoGame/MonoGame.Framework/Graphics/GraphicsExtensions.cs" Line="747" Column="1" />
+      <File FileName="iferno/UI/Console.cs" Line="1" Column="1" />
+      <File FileName="../../MonoGame/MonoGame.Framework/Graphics/GraphicsExtensions.cs" Line="725" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

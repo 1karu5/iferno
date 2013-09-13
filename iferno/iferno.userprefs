@@ -9,7 +9,7 @@
       <File FileName="iferno/MapLoader.cs" Line="1" Column="1" />
       <File FileName="iferno/Program.cs" Line="1" Column="1" />
       <File FileName="iferno/UI/Console.cs" Line="1" Column="1" />
-      <File FileName="../../MonoGame/MonoGame.Framework/Graphics/GraphicsExtensions.cs" Line="725" Column="10" />
+      <File FileName="../../MonoGame/MonoGame.Framework/Graphics/GraphicsExtensions.cs" Line="690" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

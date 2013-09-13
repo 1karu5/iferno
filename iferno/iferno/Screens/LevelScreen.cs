@@ -79,7 +79,7 @@ namespace iferno
             Settings.Songs.Add("level4", Content.Load<Song>("sound/songs/hoehle"));
 
 
-            Settings.font = Content.Load<SpriteFont>("ui/font");
+            //Settings.font = Content.Load<SpriteFont>("ui/font");
 
             background = new Background(this);
             map = new Map(this, background);

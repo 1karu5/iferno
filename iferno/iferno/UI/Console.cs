@@ -49,7 +49,7 @@ namespace iferno
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(font, outputString, position, Color.Black);
+            //spriteBatch.DrawString(font, outputString, position, Color.Black);
         }
     }
 }
